@@ -4,7 +4,7 @@
 </div>
 
  - See main branch for instructions, info and stuff: https://github.com/end-4/dots-hyprland/tree/main
- 
+ - click the circles
 
 # Previews
  ![dots-hyprland](./screenshot-11.png)
