@@ -68,9 +68,9 @@ chargestatus() {
 
 circolor() {
 	if [[ "$CAPACITY" -le 20 && "$STATE" = "Discharging" ]]; then
-		echo '#5AA8ED'
+		echo 'white'
 	else
-		echo '#9ECE6A'
+		echo 'white'
 	fi
 }
 
@@ -86,7 +86,7 @@ color() {
 	if [ "$CAPACITY" -le 20 ]; then
 		echo '#EF738A'
 	else
-		echo '#9ECE6A'
+		echo 'white'
 	fi
 }
 

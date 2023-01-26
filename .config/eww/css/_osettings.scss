@@ -1,5 +1,13 @@
 .osettings-window {
-    padding-top: 50px;
+    min-width: 529px;
+    padding-top: 30px;
+    background-color: #302E38;
+    color: #F8F8F8;
+    font-family: Torus;
+}
+
+.onotify-window {
+    min-width: 529px;
     background-color: #302E38;
     color: #F8F8F8;
     font-family: Torus;
@@ -12,7 +20,7 @@
 }
 
 .osettings-content {
-    padding-top: 13px;
+    // padding-top: 13px;
     padding-bottom: 10px;
     background-color: #302E38;
     color: #F8F8F8;
@@ -42,7 +50,7 @@
 }
 
 .osettings-section {
-    margin-top: 20px;
+    margin-top: 33px;
     margin-bottom: 9px;
     background-color: #302E38;
     color: #FAFAFA;
@@ -61,7 +69,7 @@
 .osettings-search {
     margin-left: 28px;
     margin-right: 28px;
-    margin-top: 65px;
+    margin-top: 35px;
     background-color: #24222A;
     color: #FAFAFA;
     border-radius: 6px;
@@ -96,8 +104,6 @@
     padding-left: 28px;
     padding-right: 28px;
 }
-
-.osettings-settings {}
 
 .osettings-btn {
     margin-top: 10px;

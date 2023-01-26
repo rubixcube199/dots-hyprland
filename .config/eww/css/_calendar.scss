@@ -4,7 +4,7 @@
   border: 3px solid $color7;
   color: $colortext;
   padding: .2em;
-  font-family: 'Product Sans';
+  font-family: 'Torus';
 }
 
 calendar {
@@ -19,22 +19,22 @@ calendar {
     font-weight: bolder;
     background-color: $overlay0;
     border-radius: 8px;
-    font-family: 'Product Sans';
+    font-family: 'Torus';
   }
 
   .header {
-    font-family: 'Product Sans';
+    font-family: 'Torus';
     color: $color6;
   }
 
   .highlight {
-    font-family: 'Product Sans';
+    font-family: 'Torus';
     color: $color0;
     font-weight: bold;
   }
 
   .button {
-    font-family: 'Product Sans';
+    font-family: 'Torus';
     color: $colortext;
   }
 
@@ -44,8 +44,9 @@ calendar {
 }
 
 .date-clock{
-  font-family: 'Product Sans';
+  font-family: 'Torus';
   background: transparent;
   color: $color6;
-  padding-left: 5px;
+  padding-left: 13px;
+  padding-right: 13px;
 }

@@ -11,6 +11,16 @@
   padding-right: 4px;
 }
 
+.cpubar-circle {
+  background-color: #5c5b5b;
+}
+.membar-circle {
+  background-color: #5c5b5b;
+}
+.batbar-circle {
+  background-color: #5c5b5b;
+}
+
 // .batbar-circle {
 //   color: $battcolor;
 //   padding-right: 4px;
@@ -81,7 +91,7 @@
   @include rounding;
   background-color: $surface0;
   margin: .5rem 1rem;
-  padding: .5rem;
+  // padding: .5rem;
 }
 
 .sys-mem,
@@ -110,13 +120,13 @@
 }
 
 .cpu-menu {
-  font-family: 'Product Sans', 'Material Symbols Rounded';
+  font-family: 'Torus', 'Material Symbols Rounded';
   color: $cpucolor;
   padding-left: 5px;
 }
 
 .mem-menu {
-  font-family: 'Product Sans', 'Material Symbols Rounded';
+  font-family: 'Torus', 'Material Symbols Rounded';
   color: $memcolor;
   padding-left: 5px;
   padding-right: 5px;
@@ -141,7 +151,7 @@
 }
 
 .sys-menu {
-  font-family: 'Product Sans', 'Material Symbols Rounded';
+  font-family: 'Torus', 'Material Symbols Rounded';
   color: $battcolor;
   margin: 0px;
   padding: 0px;
@@ -166,4 +176,9 @@
 
 .sys-toggle {
   font-size: 3pt;
+}
+
+.inside-circle {
+  min-height: 27px;
+  min-width: 27px;
 }

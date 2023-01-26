@@ -86,7 +86,7 @@
           ; :hscroll false
           ; :halign "fill"
           :class "osettings-content"
-          :style "min-height: 765px;"
+          :style "min-height: 813px;"
           (box
             :halign "fill"
             :class "osettings-scroll-bg"
@@ -269,7 +269,7 @@
                     :text "Mouse & Touchpad"
                   )
                   (revealer
-                    :reveal "${matches('mouse speed osu raw input sensitivity',oquery)}"
+                    :reveal "${matches('mouse and touchpad touch pad speed osu raw input sensitivity',oquery)}"
                     :transition "slidedown"
                     :duration "0ms"
                     (box
@@ -314,7 +314,7 @@
                     )
                   )
                   (revealer
-                    :reveal "${matches('touch pad touchpad disable while typing disable_while_typing',oquery)}"
+                    :reveal "${matches('mouse and touch pad touchpad disable while typing disable_while_typing',oquery)}"
                     :transition "slidedown"
                     :duration "0ms"
                     (box
@@ -339,7 +339,7 @@
                     )
                   )
                   (revealer
-                    :reveal "${matches('touch pad touchpad tap to click clickfinger_behavior',oquery)}"
+                    :reveal "${matches('mouse and touchpad touch pad tap to click clickfinger_behavior',oquery)}"
                     :transition "slidedown"
                     :duration "0ms"
                     (box
@@ -635,14 +635,23 @@
   ; :focusable true
   :geometry (geometry
     :x "0"
-    :y "0"
-    ; :width "27.8%"
-    ; :width "535px"
+    :y "53px"
     :width "0px"
-    :height "100%"
-    ; :height "1048px"
-    :anchor "bottom left"
+    :height "1027px"
+    :anchor "top left"
   )
   (osettings)
 )
 
+(defwidget osettings-button []
+  (eventbox
+    :class "osettings-toggle-button-${rev_ostg}"
+    :onmiddleclick "playerctl play-pause"
+    :onrightclick "playerctl next"
+    :onscroll "echo {} | sed -e 's/down/-/g' -e 's/up/+/g' | xargs -I% wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.03%"
+    (button
+      :class "osettings-toggle-button-${rev_ostg}"
+      :onclick "scripts/toggle-osettings.sh"
+    )
+  )
+)

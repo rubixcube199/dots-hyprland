@@ -9,38 +9,44 @@
 
 .music-window {
   @include window;
+  @include rounding;
   background-color: $colorbg;
   border: 3px solid;
   color: $colortext;
-  padding: 3px;
   margin: 3px;
 }
 
 .music-cover-art {
   @include rounding;
+  background-color: $colorbg;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   // border-radius: 5px;
-  margin: 1em;
-  min-height: 200px;
+  // margin: 1em;
+  // min-height: 200px;
   min-width: 200px;
   // background-image: url("/home/end/.config/eww/images/LinageTrack.png");
 }
 
 .music-box {
-  margin: 1rem 1rem 1rem 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-position: top;
+  @include rounding;
 }
 
-.music-title {
+.music-title { 
   // font-weight: bold;
-  font-family: 'Product Sans', 'Material Symbols Rounded';
-  font-size: 1.1rem;
+  font-family: 'Torus', 'Material Symbols Rounded';
+  font-size: 19pt;
+  color: $colortext;
 }
 
 .music-artist {
-  font-family: 'Product Sans', 'Material Symbols Rounded';
-  color: $color1;
+  color: $colortext;
+  font-family: 'Torus', 'Material Symbols Rounded';
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .music-button label {
@@ -52,7 +58,7 @@
 }
 
 .music-time {
-  font-family: 'Product Sans', 'Material Symbols Rounded';
+  font-family: 'Torus', 'Material Symbols Rounded';
   color: $color1;
   margin: 0 1rem;
 }
@@ -69,7 +75,6 @@
   trough {
     background-color: $surface0;
     border-radius: 24px;
-    margin-top: 0;
     min-height: 10px;
     min-width: 170px;
   }
@@ -79,7 +84,7 @@
   border-radius: 0px;
   color: $color1;
   // padding-right: 10px;
-  min-height: 32px;
+  min-height: 53px;
 }
 
 .music-icon {
@@ -94,14 +99,79 @@
 }
 
 .music-ctl-revealer {
-  padding-left: 10px;
+  // padding-left: 10px;
 }
 
 .song-button {
-  color: $color1;
-  padding: 0px;
+  color: $colortext;
 }
 
 .music-button-box {
+  @include rounding;
   font-family: 'Material Symbols Rounded';
+  font-size: 39pt;
+  color: $colortext;
+  min-width: 160px;
+  margin-top: 8px;
+  padding-bottom: 0px;
+}
+
+.osu-music-box {
+  min-width: 80px;
+  min-height: 53px;
+  background-image: url('./images/lazer_icons/music.png');
+  background-color: $colorbg;
+  background-repeat: no-repeat;
+  // :hover {
+  //   background-image: url('./images/lazer_icons/music_hover.png');
+  //   background-color: #838383;
+  // }
+}
+
+.osu-music-box-dummy {
+  min-width: 50px;
+  min-height: 53px;
+}
+
+.osu-music-slider {
+  margin-top: 9px;
+  margin-bottom: 9px;
+  min-height: 6px;
+  padding-left: 13px;
+
+  trough {
+    border-radius: 9999px;
+    background-color: #24222A;
+    min-height: 6px;
+    // margin-left: 32px;
+    // margin-right: 32px;
+    // min-width: 70px;
+    min-width: 3px;
+  }
+
+  highlight {
+    min-width: 3px;
+    border-radius: 9999px;
+    background-color: $colortext;
+  }
+}
+
+.track-scale {
+  trough {
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    background-color: rgba(129, 78, 24, 0.5);
+    min-height: 8px;
+    // margin-left: 32px;
+    // margin-right: 32px;
+    // min-width: 70px;
+    min-width: 3px;
+  }
+
+  highlight {
+    min-width: 8px;
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    background-color: #FFCC22;
+  }
 }

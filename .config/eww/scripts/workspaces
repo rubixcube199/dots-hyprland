@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # define colors
-colors=("#f38ba8" "#fab387" "#a6e3a1" "#89b4fa") # Active Workspaces
-dimmed=("#7DCFFF" "#f9e2af" "#94e2d5" "#b4befe") # Inactive workspaces
+colors=("#FFFFFF" "#fab387" "#a6e3a1" "#89b4fa") # Active Workspaces
+dimmed=("#838383" "#f9e2af" "#94e2d5" "#b4befe") # Inactive workspaces
 empty="#313244" # Empty workspaces
 
 # get initial focused workspace
