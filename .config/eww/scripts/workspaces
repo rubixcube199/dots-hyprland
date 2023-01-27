@@ -83,19 +83,25 @@ socat -u UNIX-CONNECT:/tmp/hypr/"$HYPRLAND_INSTANCE_SIGNATURE"/.socket2.sock - |
   case ${line%>>*} in
     "workspace")
       focusedws=${line#*>>}
+      generate
       ;;
     "focusedmon")
       focusedws=${line#*,}
+      generate
       ;;
     "createworkspace")
       workspace_event "${line#*>>}" 1
+      generate
       ;;
     "destroyworkspace")
       workspace_event "${line#*>>}" 0
+      generate
       ;;
     "monitor"*)
       monitor_event
+      generate
       ;;
   esac
-  generate
+  # echo $line
+  # generate
 done
