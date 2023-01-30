@@ -37,6 +37,11 @@
         :class "osettings-window"
         :orientation "v"
         :space-evenly false
+        ; (input
+          ;   :halign "start"
+          ;   :class "osettings-search-text"
+          ;   :onchange "${EWW_CMD} update oquery=\"$(echo {} | tr [:upper:] [:lower:])\""
+        ; )
         (box
           :orientation "v"
           :space-evenly false
@@ -199,7 +204,7 @@
                         :halign "fill"
                         :wrap true
                         :class "osettings-btn osettings-btn-neutral"
-                        :onclick "scripts/toggle-osettings.sh && ~/.local/bin/lock.sh"
+                        :onclick "~/.local/bin/lock.sh"
                         "Lock"
                       )
                     )
@@ -215,7 +220,7 @@
                         :halign "fill"
                         :wrap true
                         :class "osettings-btn osettings-btn-neutral"
-                        :onclick "scripts/toggle-osettings.sh && systemctl suspend"
+                        :onclick "systemctl suspend"
                         "Suspend"
                       )
                     )
@@ -231,7 +236,7 @@
                         :halign "fill"
                         :wrap true
                         :class "osettings-btn osettings-btn-destructive"
-                        :onclick "scripts/toggle-osettings.sh && kill Hyprland"
+                        :onclick "kill Hyprland"
                         "Logout"
                       )
                     )
@@ -247,7 +252,7 @@
                         :halign "fill"
                         :wrap true
                         :class "osettings-btn osettings-btn-destructive"
-                        :onclick "scripts/toggle-osettings.sh && systemctl poweroff"
+                        :onclick "systemctl poweroff"
                         "Shutdown"
                       )
                     )
@@ -628,11 +633,11 @@
   )
 )
 
+
 (defwindow osettings
-  :focusable true
   :wm-ignore true
   :monitor 0
-  ; :focusable true
+  :focusable true
   :geometry (geometry
     :x "0"
     :y "53px"

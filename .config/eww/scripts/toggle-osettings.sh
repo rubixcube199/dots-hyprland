@@ -16,7 +16,8 @@ if [[ "$state" == "false" ]]; then
     if [[ "$state_ostg" == "true" ]]; then
         eww close onotify 
     fi
-    wtype -k tab
+    sleep 1
+    # wtype -k tab
 else
     eww update rev_ostg=false
     hyprctl keyword monitor eDP-1,addreserved,53,0,0,0

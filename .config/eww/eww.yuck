@@ -3,6 +3,7 @@
 (include "./modules/bluetooth.yuck")
 (include "./modules/bright.yuck")
 (include "./modules/clock.yuck")
+(include "./modules/editmode.yuck")
 (include "./modules/music.yuck")
 (include "./modules/net.yuck")
 (include "./modules/sys.yuck")
@@ -22,7 +23,9 @@
 (include "./windows/system-menu.yuck")
 (include "./windows/win-workspace.yuck")
 (include "./windows/themer.yuck")
+
 (defvar popup "none")
+(defvar right_hover false)
 
 (defwidget themer []
   (eventbox
@@ -55,29 +58,30 @@
 ; clipboard 󰅌 󰅍 󰄷
 
 (defwidget left []
-  (box
-    :space-evenly false
-    :valign "start"
-    :halign "start"
-    :class "bar"
-    (osettings-button)
+  (eventbox
+    :onhover "${EWW_CMD} update music_reveal=true"
+    :onhoverlost "${EWW_CMD} update music_reveal=false"
+    (box
+      :space-evenly false
+      :valign "start"
+      :halign "start"
+      :class "bar"
+      (osettings-button)
+      (osu-music-module)
+    )
   )
 )
 
 (defwidget right []
-  (eventbox
-    :onhover "${EWW_CMD} update music_reveal=true && ${EWW_CMD} update date_rev=true"
-    :onhoverlost "${EWW_CMD} update music_reveal=false && ${EWW_CMD} update date_rev=false"
-    (box
-      :space-evenly false
-      :halign "end"
-      :valign "start"
-      :class "bar"
-      (osu-music-module)
-      ; (user)
-      ; (clock_module)
-      (onotify-button)
-    )
+  (box
+    :space-evenly false
+    :halign "end"
+    :valign "start"
+    :class "bar"
+    (editmode)
+    ; (user)
+    ; (clock_module)
+    (onotify-button)
   )
 )
 
@@ -116,7 +120,6 @@
 
 (defwindow bar
   :wm-ignore true
-  :windowtype dock
   :monitor 0
   :geometry (geometry
     :x "0%"
@@ -132,7 +135,6 @@
 
 (defwindow barbg
   :wm-ignore true
-  :windowtype dock
   :monitor 0
   :geometry (geometry
     :x "0%"

@@ -70,6 +70,6 @@
     :y "67px"
     :width "540px"
     :height "173px"
-  :anchor "top right")
+  :anchor "top left")
   (music)
 )

@@ -109,6 +109,7 @@ $border: $color7;
 
 @import 'css/bgdecor';
 @import 'css/calendar';
+@import 'css/editmode';
 @import 'css/music';
 @import 'css/notification';
 @import 'css/overview';
@@ -272,15 +273,22 @@ tooltip {
 }
 
 .ws-active {
-  color: $color1;
+  // color: $color1;
+  background: rgb(148, 226, 213);
+  background: linear-gradient(52deg, rgba(148, 226, 213, 1) 0%, rgba(137, 220, 235, 1) 19%, rgba(116, 199, 236, 1) 43%, rgba(137, 180, 250, 1) 56%, rgba(180, 190, 254, 1) 80%, rgba(186, 187, 241, 1) 100%);
+  background-size: 300% 300%;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+  animation: gradient 15s ease infinite;
+  font-weight: bolder;
+  color: #fff;
 }
 
 .ws-inactive {
-  color: $color6;
+  // color: $color6;
 }
 
 .ws-empty {
-  color: #313244;
+  // color: #313244;
 }
 
 .activewin {
@@ -345,6 +353,7 @@ tooltip {
 .username {
   color: $colortext;
 }
+
 .userpic {
   margin: 5px;
   min-height: 42px;
@@ -355,17 +364,18 @@ tooltip {
 }
 
 .osettings-toggle-button-false {
-  min-width: 80px;
+  min-width: 75px;
   min-height: 53px;
   background-image: url('./images/lazer_icons/options.png');
   background-repeat: no-repeat;
+
   :hover {
     background-image: url('./images/lazer_icons/options_hover.png');
   }
 }
 
 .osettings-toggle-button-true {
-  min-width: 80px;
+  min-width: 75px;
   min-height: 53px;
   background-image: url('./images/lazer_icons/options_hover.png');
   background-repeat: no-repeat;
@@ -376,6 +386,7 @@ tooltip {
   min-height: 53px;
   // background-image: url('./images/lazer_icons/notifications.png');
   background-repeat: no-repeat;
+
   :hover {
     background-color: #838383;
     // background-image: url('./images/lazer_icons/notifications_hover.png');
@@ -395,6 +406,7 @@ tooltip {
   min-height: 53px;
   background-image: url('./images/lazer_icons/notifications.png');
   background-repeat: no-repeat;
+
   :hover {
     background-color: #838383;
     background-image: url('./images/lazer_icons/notifications_hover.png');
