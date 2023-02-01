@@ -6,7 +6,7 @@ dimmed=("#838383" "#f9e2af" "#94e2d5" "#b4befe") # Inactive workspaces
 empty="#313244" # Empty workspaces
 
 # get initial focused workspace
-focusedws=$(hyprctl -j monitors | jaq -r '.[] | select(.focused == true) | .activeWorkspace.id')
+focusedws=$(hyprctl -j monitors | gojq -r '.[] | select(.focused == true) | .activeWorkspace.id')
 
 declare -A o=([1]=0 [2]=0 [3]=0 [4]=0 [5]=0 [6]=0 [7]=0 [8]=0 [9]=0 [10]=0)
 declare -A monitormap
@@ -59,6 +59,8 @@ generate() {
     echo -n ''$([ $i -eq 1 ] || echo ,)'{"num":"'$i'","clr":"'$(status "$i")'"}'
     # echo -n ''$([ $i -eq 1 ] || echo ,) '{ "number": "'"$i"'", "activity": "'"$(status_activity $i)"'", "color": "'$(status "$i")'" }'
   done
+
+  # echo -n ',{"num":"'$focusedws'","clr":"'$(status "$focusedws")'"}'
 
   echo ']'
 }

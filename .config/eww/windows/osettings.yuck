@@ -625,6 +625,52 @@
                   (calendar)
                 )
               )
+              ; Super secret settings
+              (revealer
+                :reveal "${oquery == '!secret'}"
+                :transition "slidedown"
+                :duration "0ms"
+                (box
+                  :orientation "v"
+                  :space-evenly false
+                  (label
+                    :halign "start"
+                    :wrap true
+                    :class "osettings-section"
+                    :text "Super secret settings"
+                  )
+                  (button
+                    :halign "fill"
+                    :wrap true
+                    :class "osettings-btn osettings-btn-informative"
+                    :onclick "scripts/supersecretsettings/culture"
+                    "Activate culture mode"
+                  )
+                  (button
+                    :halign "fill"
+                    :wrap true
+                    :class "osettings-btn osettings-btn-informative"
+                    :onclick "scripts/doreload"
+                    "Reset these stuff"
+                  )
+                  ; (centerbox
+                  ;   :orientation "h"
+                  ;   :space-evenly false
+                  ;   :halign "fill"
+                  ;   (label
+                  ;     :halign "start"
+                  ;     :wrap true
+                  ;     :class "osettings-text"
+                  ;     :text "Culture mode"
+                  ;   )
+                  ;   (box)
+                  ;   (checkboxcmd
+                  ;     :value "${volume.audio}"
+                  ;     :changecmd "notify-send 'i see ur a man of culture as well'"
+                  ;   )
+                  ; )
+                )
+              )
             )
           )
         )

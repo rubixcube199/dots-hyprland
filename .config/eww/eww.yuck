@@ -14,6 +14,7 @@
 (include "./modules/workspaces.yuck")
 
 (include "./windows/bg-decor.yuck")
+(include "./windows/dynamic-bg.yuck")
 (include "./windows/calendar.yuck")
 (include "./windows/music.yuck")
 (include "./windows/notifications.yuck")
@@ -26,6 +27,7 @@
 
 (defvar popup "none")
 (defvar right_hover false)
+(defvar music_hover false)
 
 (defwidget themer []
   (eventbox

@@ -4,16 +4,19 @@
 
 (defwidget osu-music-module []
   (eventbox
+    :class "dummy-${mcover}" ; Dummy class to keep the listener active
     :onscroll "echo {} | sed -e 's/down/-/g' -e 's/up/+/g' | xargs -I% wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.03%"
     :onclick "eww open --toggle music"
     :onmiddleclick "playerctl play-pause"
     :onrightclick "playerctl next"
+    :onhover "${EWW_CMD} update music_hover=true"
+    :onhoverlost "${EWW_CMD} update music_hover=false"
     (box
       :space-evenly false
       (box
         :space-evenly false
         :valign "start"
-        :class "osu-music-box"
+        :class "osu-music-box-${music_hover}"
         (box
           :class "osu-music-box-dummy"
         )
@@ -37,7 +40,7 @@
           :class "music-ctl-revealer"
           :onscroll "echo {} | sed -e 's/down/-/g' -e 's/up/+/g' | xargs -I% wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.03%"
           (label
-            :class "music-title"
+            :class "${music_hover ? 'music-title-hover' : 'music-title'}"
             :limit-width 50
             :text "${music.title == '' ? 'Not playing' : music.title}"
           )

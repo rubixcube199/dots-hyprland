@@ -41,6 +41,17 @@
   font-family: 'Torus', 'Material Symbols Rounded';
   font-size: 19pt;
   color: $colortext;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.music-title-hover { 
+  // font-weight: bold;
+  font-family: 'Torus', 'Material Symbols Rounded';
+  font-size: 19pt;
+  color: $colortext;
+  background-color: #838383;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .music-artist {
@@ -108,25 +119,31 @@
 }
 
 .music-button-box {
-  @include rounding;
   font-family: 'Material Symbols Rounded';
   font-size: 39pt;
   color: $colortext;
   min-width: 160px;
   margin-top: 8px;
   padding-bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.osu-music-box {
-  min-width: 80px;
+.osu-music-box-false {
+  min-width: 75px;
   min-height: 53px;
+  // background-size: 45%;
+  // background-position: 31% 50%;
+  // background-image: url('images/lazer_icons/transparent/svg/beatmaps.svg');
   background-image: url('./images/lazer_icons/music.png');
   background-color: $colorbg;
   background-repeat: no-repeat;
-  // :hover {
-  //   background-image: url('./images/lazer_icons/music_hover.png');
-  //   background-color: #838383;
-  // }
+}
+.osu-music-box-true {
+  min-width: 75px;
+  min-height: 53px;
+  background-image: url('./images/lazer_icons/music_hover.png');
+  background-color: $colorbg;
+  background-repeat: no-repeat;
 }
 
 .osu-music-box-dummy {

@@ -30,7 +30,6 @@
         (box
           :halign "fill"
           :class "music-button-box"
-          :style "background-color: rgba(0, 0, 0, 0.5);"
           (centerbox
             :halign "center"
             (button

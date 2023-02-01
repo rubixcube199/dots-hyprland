@@ -53,6 +53,7 @@ get_cover() {
 	cd "eww_covers" || exit
 
 	IMGPATH="cover_art"
+	echo '{"image": "eww_covers/cover_art_default"}'
 
 	playerctl -F metadata mpris:artUrl 2>/dev/null | while read -r COVER_URL; do
 		if [[ "$COVER_URL" = https* ]]; then

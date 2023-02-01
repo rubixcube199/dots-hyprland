@@ -1,0 +1,27 @@
+(defvar MOVEMULTIPLIER 4)
+  
+(deflisten activews :initial 5 `scripts/activews`)
+(deflisten morebgoffset 4)
+
+(defwidget dynbg []
+  (box
+    :class "dynbg-image"
+    :style "background-position: ${(activews - 5)*MOVEMULTIPLIER > 50 ? 100 : 50+(activews - 5)*MOVEMULTIPLIER}% 50%"
+  )
+)
+
+(defwindow dynamic-bg
+  :focusable false
+  :stacking "bg"
+  :windowtype "normal"
+  :wm-ignore true
+  :geometry (geometry
+    :x 0
+    :y 0
+    :width "100%"
+    :height "100%"
+    :anchor "center center"
+  )
+  :monitor 0
+  (dynbg)
+)
