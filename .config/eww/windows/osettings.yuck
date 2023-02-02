@@ -6,9 +6,8 @@
   (eventbox
     :onclick "hyprctl keyword ${changevalue} ${1 - value} && scripts/hyprsettings tickle"
     (box
-      :class "osettings-checkbox"
+      :class "osettings-checkbox-${value}"
       :halign "end"
-      :style "${value == 1 ? 'background-color: #8C66FF' : ''}"
     )
   )
 )
@@ -17,9 +16,8 @@
   (eventbox
     :onclick "${changecmd}"
     (box
-      :class "osettings-checkbox"
+      :class "osettings-checkbox-${value}"
       :halign "end"
-      :style "${value == 1 ? 'background-color: #8C66FF' : ''}"
     )
   )
 )

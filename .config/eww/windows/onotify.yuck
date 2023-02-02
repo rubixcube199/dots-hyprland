@@ -92,6 +92,7 @@
               :class "element icon"
               (button
                 :halign "end"
+                ; :onclick "wlogout -p layer-shell &"
                 :onclick "wlogout -p layer-shell &"
                 ""
               )
@@ -193,6 +194,7 @@
                 :space-evenly false
                 :halign "start"
                 (circular-progress
+                  :start-at 75
                   :value "${EWW_CPU.avg}"
                   :class "sys-cpu"
                   :thickness 3
@@ -230,6 +232,7 @@
                 :space-evenly false
                 :halign "end"
                 (circular-progress
+                  :start-at 75
                   :value {memory.percentage}
                   :class "sys-mem"
                   :thickness 3
@@ -254,7 +257,72 @@
               ;   :text "Calendar"
             ; )
             (calendar)
-            (notifications)
+            ;
+            (centerbox
+              (label
+                :class "osettings-section"
+                :halign "start"
+                :text "Notifications"
+              )
+              (box)
+              (box
+                :class "icon"
+                :halign "end"
+                :space-evenly false
+                :spacing 10
+                (button
+                  :class "notification-action"
+                  :tooltip "Refresh"
+                :onclick "dunstctl history > $XDG_CACHE_HOME/dunst-history.json" "")
+                (button
+                  :class "notification-action"
+                  :tooltip "Pause/Resume Notifications"
+                :onclick "scripts/notifications toggle" {notif_icons.toggle_icon})
+                (button
+                  :class "notification-action"
+                  :tooltip "Clear Notifications"
+                  :onclick "scripts/notifications clear" ""
+                )
+              )
+            )
+            (box
+              :class "container"
+              :orientation "v"
+              :space-evenly false
+              (for i in notifications
+                (eventbox
+                  :onclick "dunstctl history-pop ${i.id} && dunstctl action 0 && dunstctl close"
+                  (box
+                    :class "notification"
+                    :orientation "v"
+                    :width 300
+                    :space-evenly false
+                    (centerbox
+                      :space-evenly false
+                      (label
+                        :xalign 0
+                        :wrap true
+                        :class "summary"
+                        :text {i.summary}
+                      )
+                      (label)
+                      (label
+                        :xalign 1
+                        :wrap true
+                        :class "appname"
+                        :text {i.appname}
+                      )
+                    )
+                    (label
+                      :xalign 0
+                      :wrap true
+                      :class "body"
+                      :text {i.body}
+                    )
+                  )
+                )
+              )
+            )
           )
         )
       )

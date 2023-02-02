@@ -67,7 +67,15 @@ get_cover() {
 
 			# echo "$IMGPATH"
 			coverurl="$(playerctl metadata mpris:artUrl)"
-			wget -O "$IMGPATH" "$coverurl" -q
+			coverurl_highres="$(echo $coverurl | sed 's/hqdefault/maxresdefault/g')"
+			wget -O "$IMGPATH" "$coverurl_highres" -q –read-timeout=0.1
+			# curl "$coverurl_highres" --output "cover_art"
+			imgsize=$(echo $(du -b '/home/end/.config/eww/eww_covers/cover_art' | tr '\t' '\n' | grep -v 'cover_art'))
+			if [ $imgsize -eq "0" ]; then
+				# curl "$coverurl" --output "cover_art"
+				wget -O "$IMGPATH" "$coverurl" -q
+			fi
+			
 			coverpath="$IMGPATH"
 			wal -c
 			themejson=$(wal -i "$IMGPATH" -n -t -e -s | grep -e 'color1' | sed 's/'\''/"/g')

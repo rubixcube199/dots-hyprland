@@ -1,12 +1,45 @@
 (defvar MOVEMULTIPLIER 4)
-  
+
 (deflisten activews :initial 5 `scripts/activews`)
 (deflisten morebgoffset 4)
 
 (defwidget dynbg []
-  (box
-    :class "dynbg-image"
-    :style "background-position: ${(activews - 5)*MOVEMULTIPLIER > 50 ? 100 : 50+(activews - 5)*MOVEMULTIPLIER}% 50%"
+  (overlay
+    (box
+      :class "dynbg-image"
+      :style "background-position: ${(activews - 5)*MOVEMULTIPLIER > 50 ? 100 : 50+(activews - 5)*MOVEMULTIPLIER}% 50%"
+    )
+    (box
+      :space-evenly false
+      :spacing 5
+      :orientation "v"
+      :halign "fill"
+      :valign "center"
+      :style "margin-left: 5rem;"
+      (label
+        :xalign 0
+        :class "bg-decor-dow"
+        :text "${time.day}"
+      )
+      (label
+        :xalign 0
+        :class "bg-decor-date"
+        :text "${time.date}"
+      )
+      ; I don't like focus being moved to this on reload
+      ; (box
+      ;   :spacing 0
+      ;   :space-evenly false
+      ;   (input
+      ;     :class "bg-decor-input-left"
+      ;     :onaccept "firefox https://www.google.com/search?q={}"
+      ;   )
+      ;   (button
+      ;     :class "bg-decor-input-right"
+      ;     ""
+      ;   )
+      ; )
+    )
   )
 )
 

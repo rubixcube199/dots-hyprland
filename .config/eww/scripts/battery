@@ -3,8 +3,8 @@
 icons=("" "" "" "" "" "" "" "")
 
 gettime() {
-	FULL=$(cat /sys/class/power_supply/BATT/energy_full)
-	NOW=$(cat /sys/class/power_supply/BATT/energy_now)
+	FULL=$(cat /sys/class/power_supply/BATT/charge_full)
+	NOW=$(cat /sys/class/power_supply/BATT/charge_now)
 
 	if [ "$RATE" -gt 0 ]; then
 		if [ "$STATE" = "Discharging" ]; then
@@ -105,7 +105,7 @@ wattage() {
 warnedlow=0
 
 while true; do
-	RATE=$(cat /sys/class/power_supply/BATT/power_now)
+	RATE=$(cat /sys/class/power_supply/BATT/voltage_now)
 	CAPACITY=$(cat /sys/class/power_supply/BATT/capacity)
 	STATE=$(cat /sys/class/power_supply/BATT/status)
 

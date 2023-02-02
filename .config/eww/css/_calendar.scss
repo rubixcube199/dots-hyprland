@@ -1,16 +1,13 @@
 .calendar-win {
   @include window;
   background-color: $colorbg;
-  border: 3px solid $color7;
+  border: 3px solid $colortext;
   color: $colortext;
   padding: .2em;
   font-family: 'Torus';
 }
 
 calendar {
-  //padding: 5px;
-  // padding-top: 4px;
-  // padding-left: 4px;
   padding: 7px;
 
 
@@ -24,7 +21,7 @@ calendar {
 
   .header {
     font-family: 'Torus';
-    color: $color6;
+    color: $colortext;
   }
 
   .highlight {
@@ -46,7 +43,7 @@ calendar {
 .date-clock{
   font-family: 'Torus';
   background: transparent;
-  color: $color6;
+  color: white;
   padding-left: 13px;
   padding-right: 13px;
 }

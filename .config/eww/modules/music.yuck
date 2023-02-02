@@ -42,6 +42,7 @@
           (label
             :class "${music_hover ? 'music-title-hover' : 'music-title'}"
             :limit-width 50
+            :style "color: ${mcover.color.colors.color4};"
             :text "${music.title == '' ? 'Not playing' : music.title}"
           )
         )

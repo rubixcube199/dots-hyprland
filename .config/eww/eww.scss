@@ -1,11 +1,17 @@
 @import 'css/colors';
 @import 'css/colorscheme';
 
-$battcolor: $color4;
-$memcolor: $color2;
-$cpucolor: $color5;
+$battcolor: white;
+$memcolor: $color1;
+$cpucolor: $color3;
 $border: $color7;
 
+@function tint($color, $percentage) {
+  @return mix(rgb(245, 250, 255), $color, $percentage);
+}
+@function shade($color, $percentage) {
+  @return mix(rgb(0, 7, 18), $color, $percentage);
+}
 //thanks flick0!
 @keyframes gradient {
   0% {
@@ -131,6 +137,8 @@ $border: $color7;
 
 .bar {
   background-color: $colorbg;
+  // background-color: rgba(25, 25, 25, 0.5);
+  // background-color: transparent;
   min-height: 53px;
   // background-image: url("/home/end/.config/eww/images/topbar.png");
   color: $fg;
@@ -172,11 +180,11 @@ tooltip {
 .hour {
   // font-weight: bold;
   padding-left: 13px;
-  color: $color5;
+  color: white;
 }
 
 .clock {
-  color: $color5;
+  color: white;
   font-family: 'Torus', 'Material Symbols Rounded';
 }
 
@@ -185,14 +193,14 @@ tooltip {
 // }
 
 .minute {
-  color: $color5;
+  color: white;
   font-family: 'Torus', 'Material Symbols Rounded';
 }
 
 .date {
   font-family: 'Torus', 'Material Symbols Rounded';
   background: $barbg;
-  color: $color5;
+  color: white;
   padding-left: 4px;
 
   label {
@@ -276,7 +284,7 @@ tooltip {
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
   animation: gradient 15s ease infinite;
   font-weight: bolder;
-  color: #fff;
+  color: #ffffff;
 }
 
 .ws-inactive {
@@ -362,29 +370,38 @@ tooltip {
 .osettings-toggle-button-false {
   min-width: 75px;
   min-height: 53px;
-  background-image: url('./images/lazer_icons/options.png');
+  background-color: transparent;
+  background-image: url('/home/end/.config/eww/images/lazer_icons/transparent/svg/settings.svg');
+  background-size: auto 65%;
+  background-position: center;
   background-repeat: no-repeat;
 
   :hover {
-    background-image: url('./images/lazer_icons/options_hover.png');
+    background-color: $overlay0;
   }
 }
 
 .osettings-toggle-button-true {
   min-width: 75px;
   min-height: 53px;
-  background-image: url('./images/lazer_icons/options_hover.png');
+  background-image: url('/home/end/.config/eww/images/lazer_icons/transparent/svg/settings.svg');
+  background-size: auto 65%;
+  background-position: center;
   background-repeat: no-repeat;
+  background-color: $overlay0;
 }
 
 .onotify-toggle-button-false {
   min-width: 53px;
   min-height: 53px;
+  background-color: transparent;
   // background-image: url('./images/lazer_icons/notifications.png');
   background-repeat: no-repeat;
+  background-size: auto 65%;
+  background-position: center;
 
   :hover {
-    background-color: #838383;
+    background-color: $overlay0;
     // background-image: url('./images/lazer_icons/notifications_hover.png');
   }
 }
@@ -392,28 +409,33 @@ tooltip {
 .onotify-toggle-button-true {
   min-width: 53px;
   min-height: 53px;
-  background-color: #838383;
+  background-color: $overlay0;
   // background-image: url('./images/lazer_icons/notifications_hover.png');
   background-repeat: no-repeat;
+  background-size: auto 65%;
+  background-position: center;
 }
 
 .real-onotify-toggle-button-false {
   min-width: 53px;
   min-height: 53px;
-  background-image: url('./images/lazer_icons/notifications.png');
+  background-image: url('./images/lazer_icons/transparent/svg/forum.svg');
   background-repeat: no-repeat;
+  background-size: auto 65%;
+  background-position: center;
 
   :hover {
-    background-color: #838383;
-    background-image: url('./images/lazer_icons/notifications_hover.png');
+    background-color: $overlay0;
   }
 }
 
 .real-onotify-toggle-button-true {
   min-width: 53px;
   min-height: 53px;
-  background-color: #838383;
-  background-image: url('./images/lazer_icons/notifications_hover.png');
+  background-color: $overlay0;
+  background-size: auto 65%;
+  background-position: center;
+  background-image: url('./images/lazer_icons/transparent/svg/forum.svg');
   background-repeat: no-repeat;
 }
 

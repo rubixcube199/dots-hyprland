@@ -1,7 +1,7 @@
 .song-cover-art {
   @include rounding;
   background-position: center;
-  background-size: cover;
+  background-size: 100%;
   margin: 4px 5px 4px 0;
   min-height: 24px;
   min-width: 24px;
@@ -18,19 +18,19 @@
 
 .music-cover-art {
   @include rounding;
-  background-color: $colorbg;
-  background-position: center;
+  background-color: transparent;
   background-size: cover;
   background-repeat: no-repeat;
+  background-image: url("eww_covers/cover_art_default");
+  background-position: 50% 15%;
   // border-radius: 5px;
   // margin: 1em;
   // min-height: 200px;
   min-width: 200px;
-  // background-image: url("/home/end/.config/eww/images/LinageTrack.png");
 }
 
 .music-box {
-  padding-top: 31px;
+  padding-top: 24px;
   background-color: rgba(0, 0, 0, 0.5);
   background-position: top;
   @include rounding;
@@ -39,6 +39,7 @@
 .music-title { 
   // font-weight: bold;
   font-family: 'Torus', 'Material Symbols Rounded';
+  min-height: 39px;
   font-size: 19pt;
   color: $colortext;
   padding-left: 10px;
@@ -49,7 +50,7 @@
   font-family: 'Torus', 'Material Symbols Rounded';
   font-size: 19pt;
   color: $colortext;
-  background-color: #838383;
+  background-color: $overlay0;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -131,18 +132,19 @@
 .osu-music-box-false {
   min-width: 75px;
   min-height: 53px;
-  // background-size: 45%;
-  // background-position: 31% 50%;
-  // background-image: url('images/lazer_icons/transparent/svg/beatmaps.svg');
-  background-image: url('./images/lazer_icons/music.png');
-  background-color: $colorbg;
+  background-size: auto 65%;
+  background-position: 35% 50%;
+  background-image: url('images/lazer_icons/transparent/svg/beatmaps.svg');
+  // background-color: $colorbg;
   background-repeat: no-repeat;
 }
 .osu-music-box-true {
   min-width: 75px;
   min-height: 53px;
-  background-image: url('./images/lazer_icons/music_hover.png');
-  background-color: $colorbg;
+  background-size: auto 65%;
+  background-position: 35% 50%;
+  background-color: $overlay0;
+  background-image: url('images/lazer_icons/transparent/svg/beatmaps.svg');
   background-repeat: no-repeat;
 }
 
@@ -170,7 +172,7 @@
   highlight {
     min-width: 3px;
     border-radius: 9999px;
-    background-color: $colortext;
+    background-color: white;
   }
 }
 
@@ -178,7 +180,7 @@
   trough {
     border-bottom-left-radius: 9999px;
     border-bottom-right-radius: 9999px;
-    background-color: rgba(129, 78, 24, 0.5);
+    background-color: $overlay0;
     min-height: 8px;
     // margin-left: 32px;
     // margin-right: 32px;
@@ -190,6 +192,6 @@
     min-width: 8px;
     border-bottom-left-radius: 9999px;
     border-bottom-right-radius: 9999px;
-    background-color: #FFCC22;
+    background-color: $color0;
   }
 }
