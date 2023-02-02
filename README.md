@@ -7,5 +7,5 @@
  - click the circles
 
 # Previews
- ![dots-hyprland](./screenshot-11.png)
  ![dots-hyprland](./screenshot-10.png)
+ ![dots-hyprland](./screenshot-11.png)
