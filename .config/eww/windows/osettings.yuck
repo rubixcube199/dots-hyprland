@@ -259,7 +259,7 @@
               )
               ; Mouse
               (revealer
-                :reveal "${matches('mouse and touchpad touch pad mouse speed osu raw input sensitivity disable while typing disable_while_typing tap to click clickfinger_behavior',oquery)}"
+                :reveal "${matches('mouse and touchpad touch pad mouse speed mouse acceleration osu raw input sensitivity disable while typing disable_while_typing tap to click clickfinger_behavior',oquery)}"
                 :transition "slidedown"
                 :duration "0ms"
                 (box
@@ -272,7 +272,7 @@
                     :text "Mouse & Touchpad"
                   )
                   (revealer
-                    :reveal "${matches('mouse and touchpad touch pad speed osu raw input sensitivity',oquery)}"
+                    :reveal "${matches('mouse and touchpad touch pad speed mouse acceleration osu raw input sensitivity',oquery)}"
                     :transition "slidedown"
                     :duration "0ms"
                     (box

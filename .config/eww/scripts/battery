@@ -112,17 +112,17 @@ while true; do
 	if [[ "$CAPACITY" -le 5 && "$STATE" = "Discharging" ]]; then
 		if [ $warnedlow == 0 ]; then 
 			warnedlow=1
-			notify-send 'FREAKING PLUG IN THE CHARGER ALREADY' '!!111!!1!123!!!' -u critical
+			notify-send 'FREAKING PLUG IN THE CHARGER ALREADY' '!!111!!1!123!!!' -u critical -a 'eww'
 		fi
 	elif [[ "$CAPACITY" -le 10 && "$STATE" = "Discharging" ]]; then
 		if [ $warnedlow == 0 ]; then 
 			warnedlow=1
-			notify-send 'Battery verrry low' 'Hello?' -u critical
+			notify-send 'Battery verrry low' 'Hello?' -u critical -a 'eww'
 		fi
 	elif [[ "$CAPACITY" -le 20 && "$STATE" = "Discharging" ]]; then
 		if [ $warnedlow == 0 ]; then 
 			warnedlow=1
-			notify-send 'Battery' 'Batterry low. Plug in your charger.' -u critical
+			notify-send 'Battery' 'Batterry low. Plug in your charger.' -u critical -a 'eww'
 		fi
 	else
 	    warnedlow=0

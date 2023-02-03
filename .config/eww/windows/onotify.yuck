@@ -92,8 +92,8 @@
               :class "element icon"
               (button
                 :halign "end"
+                :onclick "wlogout &"
                 ; :onclick "wlogout -p layer-shell &"
-                :onclick "wlogout -p layer-shell &"
                 ""
               )
             )
@@ -256,7 +256,7 @@
               ;   :class "osettings-section"
               ;   :text "Calendar"
             ; )
-            (calendar)
+            ; (calendar)
             ;
             (centerbox
               (label

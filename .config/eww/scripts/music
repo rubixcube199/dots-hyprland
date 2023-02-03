@@ -217,6 +217,18 @@ sanitize() {
 
 if [ "$1" = "cover" ]; then
 	get_cover
+elif [ "$1" = "name" ]; then
+	echo '{"artist": "", "title": ""}'
+	playerctl -F metadata -f '{{title}}\{{artist}}\' 2>/dev/null | while IFS="$(printf '\\')" read -r title artist; do
+	
+		len=$(playerctl metadata mpris:length)
+
+		gojq --null-input -r -c \
+			--arg artist "$(sanitize "$artist")" \
+			--arg title "$(sanitize "$title")" \
+			'{"artist": $artist, "title": $title}'
+		
+	done
 else
 	echo '{"artist": "", "title": "", "status": "", "position": "", "position_time": "", "length": ""}'
 	playerctl -F metadata -f '{{title}}\{{artist}}\{{status}}\{{position}}\' 2>/dev/null | while IFS="$(printf '\\')" read -r title artist status position; do
