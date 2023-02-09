@@ -9,7 +9,7 @@
   (eventbox
     :class "dummy-${mcover}" ; Dummy class to keep the listener active
     :onscroll "echo {} | sed -e 's/down/-/g' -e 's/up/+/g' | xargs -I% wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.03%"
-    :onclick "eww open --toggle music"
+    :onclick "eww open --toggle music && ${EWW_CMD} ${music_open ? 'update music_open=false' : 'update music_open=true'}"
     :onmiddleclick "playerctl play-pause"
     :onrightclick "playerctl next"
     :onhover "${EWW_CMD} update music_hover=true"
@@ -19,7 +19,7 @@
       (box
         :space-evenly false
         :valign "start"
-        :class "osu-music-box-${music_hover}"
+        :class "osu-music-box-${music_hover || music_open}"
         (box
           :class "osu-music-box-dummy"
         )
@@ -34,16 +34,16 @@
       )
       (revealer
         :transition "slideright"
-        :reveal "${music_reveal && ! rev_ontf}"
+        :reveal "${music_reveal}"
         :duration "300ms"
         :class "music-ctl-revealer"
         :onscroll "echo {} | sed -e 's/down/-/g' -e 's/up/+/g' | xargs -I% wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.03%"
         :limit-width 20
         (eventbox
-          :class "music-ctl-revealer"
+          :class "music-ctl-revealer-${music_hover || music_open}"
           :onscroll "echo {} | sed -e 's/down/-/g' -e 's/up/+/g' | xargs -I% wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.03%"
           (label
-            :class "${music_hover ? 'music-title-hover' : 'music-title'}"
+            :class "music-title"
             :limit-width 50
             :style "color: ${mcover.color.colors.color4};"
             :text "${mname.title == '' ? 'Not playing' : mname.title}"

@@ -28,23 +28,9 @@
 (defvar popup "none")
 (defvar right_hover false)
 (defvar music_hover false)
-
-(defwidget themer []
-  (eventbox
-    (box
-      :style "padding-right: 5px;"
-      :valign "start"
-      :space-evenly false
-      :spacing 4
-      (button
-        :class "themer-button"
-        :onclick "eww open --toggle themer"
-        :style "font-family: 'Material Symbols Rounded';"
-        ''
-      )
-    )
-  )
-)
+(defvar themer_hover false)
+(defvar music_open false)
+(defvar themer_open false)
 
 (defwidget separator []
   (box
@@ -81,8 +67,8 @@
     :valign "start"
     :class "bar"
     (editmode)
+    (themer)
     ; (user)
-    ; (clock_module)
     (onotify-button)
   )
 )

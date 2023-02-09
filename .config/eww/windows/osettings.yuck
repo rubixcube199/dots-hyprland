@@ -641,14 +641,14 @@
                     :halign "fill"
                     :wrap true
                     :class "osettings-btn osettings-btn-informative"
-                    :onclick "scripts/supersecretsettings/culture"
+                    :onclick "scripts/supersecretsettings/culture &"
                     "Activate culture mode"
                   )
                   (button
                     :halign "fill"
                     :wrap true
                     :class "osettings-btn osettings-btn-informative"
-                    :onclick "scripts/doreload"
+                    :onclick "scripts/supersecretsettings/doreload"
                     "Reset these stuff"
                   )
                   ; (centerbox
@@ -683,7 +683,7 @@
   :monitor 0
   :focusable true
   :geometry (geometry
-    :x "0"
+    :x "0px"
     :y "53px"
     :width "0px"
     :height "1027px"
@@ -694,7 +694,7 @@
 
 (defwidget osettings-button []
   (eventbox
-    :class "osettings-toggle-button-${rev_ostg}"
+    :class "osettings-toggle-button-false"
     :onmiddleclick "playerctl play-pause"
     :onrightclick "playerctl next"
     :onscroll "echo {} | sed -e 's/down/-/g' -e 's/up/+/g' | xargs -I% wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.03%"

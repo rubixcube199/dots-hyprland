@@ -1,14 +1,14 @@
 .osettings-window {
     min-width: 529px;
     padding-top: 30px;
-    background-color: tint($colorbg, 15%);
+    background-color: tint($colorbg, 12.5%);
     color: $colortext;
     font-family: Torus;
 }
 
 .onotify-window {
     min-width: 529px;
-    background-color: tint($colorbg, 15%);
+    background-color: tint($colorbg, 12.5%);
     color: $colortext;
     font-family: Torus;
 }
@@ -22,7 +22,7 @@
 .osettings-content {
     // padding-top: 13px;
     padding-bottom: 10px;
-    background-color: tint($colorbg, 15%);
+    background-color: tint($colorbg, 12.5%);
     color: $colortext;
     font-family: Torus;
 }
@@ -30,21 +30,20 @@
 .osettings-heading {
     padding-left: 28px;
     padding-right: 28px;
-    background-color: tint($colorbg, 15%);
+    background-color: tint($colorbg, 12.5%);
     color: $colortext;
     font-family: Torus;
 }
 
 .osettings-title {
-    background-color: tint($colorbg, 15%);
+    background-color: tint($colorbg, 12.5%);
     color: $colortext;
     font-family: Torus;
     font-size: 30pt;
 }
 
 .osettings-subtitle {
-    background-color: tint($colorbg, 15%);
-    color: #DCD7EC;
+    color: $color5;
     font-family: Torus;
     font-size: 14pt;
 }
@@ -52,7 +51,6 @@
 .osettings-section {
     margin-top: 33px;
     margin-bottom: 9px;
-    background-color: tint($colorbg, 15%);
     color: $colortext;
     font-family: Torus;
     font-size: 20pt;
@@ -71,10 +69,15 @@
     margin-right: 28px;
     margin-top: 35px;
     background-color: tint($colorbg, 10%);
+    border: 2px solid $colortext;
     color: $colortext;
-    border-radius: 6px;
+    border-radius: 10px;
     font-size: 11pt;
     min-height: 45px;
+    caret-color: $colortext;
+    selection {
+        background-color: rgba(154, 152, 152, 0.5);
+    }
 }
 
 .osettings-search-text {
@@ -82,15 +85,6 @@
     padding: 10px;
     font-size: 13pt;
     min-width: 420px;
-
-    cursor {
-        color: #7F7E83;
-    }
-
-    highlight {
-        color: green;
-        background-color: green;
-    }
 }
 
 .osettings-search-icon {
@@ -200,6 +194,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
 .osettings-checkbox-1 {
     border-radius: 9999px;
     // min-height: 20px;
@@ -212,6 +207,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
 .osettings-checkbox-0 {
     border-radius: 9999px;
     // min-height: 20px;
