@@ -1,7 +1,0 @@
-[theme]
-name = "finalstep"
-desc = "purple colors, osu icons, fast animations"
-version = "0.69"
-author = "end-4"
-git = "https://github.com/end-4/finalstep"
-config = "hyprland.conf"

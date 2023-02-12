@@ -1,3 +1,0 @@
-# hyprland-aurora
-
-hyprland theme
