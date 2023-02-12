@@ -8,6 +8,7 @@
  - im not good at this game; im just amazed by how cool the interface is ;)
 
 # Previews
+ ![dots-hyprland](./screenshot-all-1.png)
  ![dots-hyprland](./screenshot-12.png)
  ![dots-hyprland](./screenshot-10.png)
  ![dots-hyprland](./screenshot-11.png)

@@ -1,0 +1,8 @@
+[theme]
+name="aurora"
+description="A soothing catppuccin theme for winter ❄️"
+author="flick0"
+version="1.0.0"
+git="https://github.com/flick0/hyprland-aurora"
+config="aurora.conf"
+
