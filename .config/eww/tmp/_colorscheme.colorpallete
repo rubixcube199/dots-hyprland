@@ -1,13 +1,13 @@
-//Auto generated color theme for image at: https://i.ytimg.com/vi/tmn2Z4qQ5Nc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDUJPN08CZ2QdnjC8ILveEln6H5jw
+//Auto generated color theme for image at: https://media.discordapp.net/attachments/961693710968557598/1078962257561653359/not_gnome_but_its_great.mp4?format=jpeg&width=600&height=337
 @function bluetint($color, $percentage) { @return mix(#CDDFED, $color, $percentage); }
 @function blueshade($color, $percentage) { @return mix(#152E50, $color, $percentage); }
-$colorbg: #140f0f;
-$colortext: #dcd2d1;
-$color0: #8E7775;
-$color1: #99837D;
-$color2: #75768D;
-$color3: #9A8888;
-$color4: #A6938F;
-$color5: #B2A3A6;
-$color6: #dcd2d1;
-$color7: #9A8888;
+$colorbg: #080E12;
+$colortext: #91bfc6;
+$color0: #394B54;
+$color1: #286664;
+$color2: #3A1591;
+$color3: #5C049C;
+$color4: #5D01E0;
+$color5: #9609C3;
+$color6: #91bfc6;
+$color7: #5C049C;
