@@ -19,23 +19,27 @@
 )
 
 (defwidget osettings []
-  (revealer
-    :reveal rev_ostg
-    :transition "slideright"
-    :duration "250ms"
-    (revealer
-      :reveal rev_ostg
-      :transition "crossfade"
-      :duration "300ms"
+  (box
+    :orientation "v"
+    :space-evenly false
+    :style "
+    ${anim_open_ostg ? 'transition: 300ms cubic-bezier(0.05, 0.7, 0.1, 1);' : 'transition: 200ms cubic-bezier(0.3, 0, 0.8, 0.15);'}
+    ${rev_ostg ? '' : 'margin-left: -533px;'}
+    "
+    (eventbox
+      :onclick "scripts/toggle-osettings.sh --close &"
+      :onmiddleclick "scripts/toggle-osettings.sh --close &"
+      :onrightclick "scripts/toggle-osettings.sh --close &"
       (box
-        :class "osettings-window"
+        :class "box-that-is-there" :style "min-height: 1px;"
+      )
+    )
+    (eventbox
+      ; :onhoverlost "scripts/toggle-osettings.sh --close &"
+      (box
         :orientation "v"
         :space-evenly false
-        ; (input
-          ;   :halign "start"
-          ;   :class "osettings-search-text"
-          ;   :onchange "${EWW_CMD} update oquery=\"$(echo {} | tr [:upper:] [:lower:])\""
-        ; )
+        :class "osettings-window"
         (box
           :orientation "v"
           :space-evenly false
@@ -538,25 +542,41 @@
                   )
                 )
               )
+              ; Hyperland
               (revealer
-                :reveal "${matches('appearance looks customization gaps gaps_in inner gaps: inner gaps_out outer gaps: outer space border_size border size border thickness reload config configuration blur size blur strength blur passes',oquery)}"
+                :reveal "${matches(oquery, 'hyperland')}"
                 :transition "slidedown"
                 :duration "0ms"
                 (box
                   :space-evenly false
                   :orientation "v"
-                  (button
-                    :halign "fill"
+                  (label
+                    :halign "start"
                     :wrap true
-                    :class "osettings-btn osettings-btn-neutral"
-                    :onclick "cp ~/.config/hypr/hyprland.conf temporary_config.conf && cp temporary_config.conf ~/.config/hypr/hyprland.conf &"
-                    "Reload config"
+                    :class "osettings-section"
+                    :text "Hyperland"
+                  )
+                  (revealer
+                    :reveal "${matches(oquery, 'hyperland')}"
+                    :transition "slidedown"
+                    :duration "0ms"
+                    (box
+                      :space-evenly false
+                      :orientation "v"
+                      (button
+                        :halign "fill"
+                        :wrap true
+                        :class "osettings-btn osettings-btn-neutral"
+                        :onclick "notify-send whyyyyyyy 😭"
+                        "Check the spelling and try again"
+                      )
+                    )
                   )
                 )
               )
               ; Hyprland
               (revealer
-                :reveal "${matches('hyprland options open the wiki guide help social hypr development discord',oquery)}"
+                :reveal "${matches('hyprland options open the wiki guide help social hypr development discord reload config configuration',oquery)}"
                 :transition "slidedown"
                 :duration "0ms"
                 (box
@@ -567,6 +587,22 @@
                     :wrap true
                     :class "osettings-section"
                     :text "Hyprland options"
+                  )
+                  (revealer
+                    :reveal "${matches('hyprland options reload config configuration',oquery)}"
+                    :transition "slidedown"
+                    :duration "0ms"
+                    (box
+                      :space-evenly false
+                      :orientation "v"
+                      (button
+                        :halign "fill"
+                        :wrap true
+                        :class "osettings-btn osettings-btn-neutral"
+                        :onclick "cp ~/.config/hypr/hyprland.conf temporary_config.conf && cp temporary_config.conf ~/.config/hypr/hyprland.conf && rm temporary_config.conf &"
+                        "Reload config"
+                      )
+                    )
                   )
                   (revealer
                     :reveal "${matches('hyprland open the wiki guide help',oquery)}"
@@ -621,7 +657,7 @@
               )
               ; Super secret settings
               (revealer
-                :reveal "${oquery == '!secret'}"
+                :reveal "${oquery == '!secret' || oquery == '!sekret'}"
                 :transition "slidedown"
                 :duration "0ms"
                 (box
@@ -647,21 +683,35 @@
                     :onclick "scripts/supersecretsettings/doreload &"
                     "Reset these stuff"
                   )
+                  (button
+                    :halign "fill"
+                    :wrap true
+                    :class "osettings-btn osettings-btn-destructive"
+                    :onclick "hyprctl keyword bind ,c,exec,wtype k"
+                    "Bekome a KDE developer"
+                  )
+                  (button
+                    :halign "fill"
+                    :wrap true
+                    :class "osettings-btn osettings-btn-destructive"
+                    :onclick "hyprctl keyword unbind ,c"
+                    "Un-become a KDE developer"
+                  )
                   ; (centerbox
-                  ;   :orientation "h"
-                  ;   :space-evenly false
-                  ;   :halign "fill"
-                  ;   (label
-                  ;     :halign "start"
-                  ;     :wrap true
-                  ;     :class "osettings-text"
-                  ;     :text "Culture mode"
-                  ;   )
-                  ;   (box)
-                  ;   (checkboxcmd
-                  ;     :value "${volume.audio}"
-                  ;     :changecmd "notify-send 'i see ur a man of culture as well'"
-                  ;   )
+                    ;   :orientation "h"
+                    ;   :space-evenly false
+                    ;   :halign "fill"
+                    ;   (label
+                      ;     :halign "start"
+                      ;     :wrap true
+                      ;     :class "osettings-text"
+                      ;     :text "Culture mode"
+                    ;   )
+                    ;   (box)
+                    ;   (checkboxcmd
+                      ;     :value "${volume.audio}"
+                      ;     :changecmd "notify-send 'i see ur a man of culture as well'"
+                    ;   )
                   ; )
                 )
               )

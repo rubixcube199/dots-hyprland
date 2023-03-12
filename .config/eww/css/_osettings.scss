@@ -1,20 +1,20 @@
 .osettings-window {
     min-width: 529px;
     padding-top: 30px;
-    background-color: tint($colorbg, 12.5%);
+    background-color: tint($colorbg, 10%);
     color: $colortext;
     font-family: Torus;
 }
 
 .onotify-window {
     min-width: 529px;
-    background-color: tint($colorbg, 12.5%);
+    background-color: tint($colorbg, 10%);
     color: $colortext;
     font-family: Torus;
 }
 
 .osettings-separator {
-    background-color: $colorbg;
+    background-color: shade($colorbg, 5%);
     min-height: 6px;
     margin-top: 27px;
 }
@@ -22,7 +22,6 @@
 .osettings-content {
     // padding-top: 13px;
     padding-bottom: 10px;
-    background-color: tint($colorbg, 12.5%);
     color: $colortext;
     font-family: Torus;
 }
@@ -30,13 +29,11 @@
 .osettings-heading {
     padding-left: 28px;
     padding-right: 28px;
-    background-color: tint($colorbg, 12.5%);
     color: $colortext;
     font-family: Torus;
 }
 
 .osettings-title {
-    background-color: tint($colorbg, 12.5%);
     color: $colortext;
     font-family: Torus;
     font-size: 30pt;
@@ -104,39 +101,45 @@
     margin-bottom: 10px;
     border-radius: 9999px;
     min-height: 50px;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 13pt;
+}
+.osettings-btn {
+    font-weight: bold;
 }
 
 .osettings-btn-destructive {
     color: white;
     background-color: $color1;
+    background-image: linear-gradient(to right, $color1 0%, $color3 100%);
 }
 
 .osettings-btn-neutral {
     color: white;
     background-color: $color2;
+    background-image: linear-gradient(to right, $color2 0%, $color4 100%);
 }
 
 .osettings-btn-informative {
     color: white;
     background-color: $color3;
+    background-image: linear-gradient(to right, $color2 0%, $color4 100%);
 }
 
-// .osettings-btn-neutral:hover,
-// .osettings-btn-neutral:focus {
-//     background-color: #8C66FF;
-// }
+.osettings-btn-neutral:hover,
+.osettings-btn-neutral:focus {
+    background-image: linear-gradient(to right, $color2 0%, $color4 50%);
+}
 
-// .osettings-btn-destructive:hover,
-// .osettings-btn-destructive:focus {
-//     background-color: #F53D90;
-// }
+.osettings-btn-destructive:hover,
+.osettings-btn-destructive:focus {
+    background-image: linear-gradient(to right, $color1 0%, $color3 50%);
+}
 
-// .osettings-btn-informative:hover,
-// .osettings-btn-informative:focus {
-//     background-color: #FFCC00;
-// }
+.osettings-btn-informative:hover,
+.osettings-btn-informative:focus {
+    background-image: linear-gradient(to right, $color2 0%, $color4 50%);
+}
 
 .rounder {
     border-radius: 9999px;
@@ -147,7 +150,7 @@
     margin-bottom: 10px;
     min-height: 6px;
     border-radius: 9999px;
-    background-image: linear-gradient(to right, $color0 50%, #24222A 50%);
+    background-image: linear-gradient(45deg, $color4 50%, #24222A 50%);
     padding: 0px;
 
     trough {
@@ -162,6 +165,7 @@
     highlight {
         border-radius: 9999px;
         background-color: $color0;
+        background-image: linear-gradient(45deg, $color4 0%, $color0 100%);
     }
 
     slider {
@@ -174,12 +178,12 @@
     }
 
     slider:hover {
-        background-color: $color0;
+        background-color: $color4;
     }
 
-    slider:focus {
-        background-color: $color0;
-    }
+    // slider:focus {
+    //     background-color: $color4;
+    // }
 }
 
 .osettings-checkbox {

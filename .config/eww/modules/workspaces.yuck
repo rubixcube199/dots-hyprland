@@ -1,12 +1,10 @@
 (defwidget workspaces []
   (eventbox
     :onscroll "echo {} | sed -e \"s/up/-1/g\" -e \"s/down/+1/g\" | xargs hyprctl dispatch workspace"
-    :onmiddleclick "${EWW_CMD} open --toggle overview"
-    :onrightclick "${EWW_CMD} open --toggle overview"
+    :onmiddleclick "scripts/toggle-overview.sh &"
+    :onrightclick "scripts/toggle-overview.sh &"
     (overlay
-      ; :class "module workspaces"
-      ; :spacing 0
-      ; :space-evenly false
+      ; Only displays workspace state (has windows or not)
       (box
         :class "module workspaces"
         :spacing 0
@@ -20,7 +18,8 @@
           )
         )
       )
-      (button
+      ; Use a separate indicator for active workspace (animations, yay) (and more performant)
+      (button 
         :class "ws"
         :style "
         margin-left:  ${10 + 31 * (activews - 1)}px;

@@ -5,7 +5,7 @@
     :orientation "v"
     (label
       :xalign 0
-      :class "bg-decor-dow"
+      :class "bg-decor-dow" ; Hyperland maybe?
       :text "${time.day}"
     )
     (label
@@ -37,8 +37,8 @@
   :geometry (geometry
     :x 80
     :y 0
-    :width "30%"
-    :height "25%"
+    :width "100%"
+    :height "100%"
     :anchor "left center"
   )
   :monitor 0

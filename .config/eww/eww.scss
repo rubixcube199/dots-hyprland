@@ -47,7 +47,7 @@ $bg1: $surface0;
 }
 
 @mixin rounding {
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 @mixin filter {
@@ -97,7 +97,7 @@ $bg1: $surface0;
 
 * {
   all: unset;
-  transition: 200ms cubic-bezier(0.05, 0.9, 0.1, 1);
+  transition: 200ms cubic-bezier(0.05, 0.7, 0.1, 1);
   // font-family: 'Torus', 'Material Symbols Rounded';
   background-repeat: no-repeat;
 }
@@ -116,6 +116,7 @@ $bg1: $surface0;
 
 @import 'css/bgdecor';
 @import 'css/calendar';
+@import 'css/dashboard';
 @import 'css/editmode';
 @import 'css/music';
 @import 'css/notification';
@@ -142,7 +143,7 @@ $bg1: $surface0;
 }
 
 .bar {
-  background-color: $colorbg;
+  background-color: $colorbarbg;
   // background-color: rgba(25, 25, 25, 0.5);
   // background-color: transparent;
   min-height: 53px;
@@ -184,9 +185,14 @@ tooltip {
   min-height: 53px;
 }
 
+.module-timedate {
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
 .hour {
   // font-weight: bold;
-  padding-left: 13px;
+  // padding-left: 13px;
   color: $colorbar;
 }
 
@@ -206,13 +212,7 @@ tooltip {
 
 .date {
   font-family: 'Torus', 'Material Symbols Rounded';
-  background: $barbg;
   color: $colorbar;
-  padding-left: 4px;
-
-  label {
-    font-size: 1.2rem;
-  }
 }
 
 .bright-icon {
@@ -231,6 +231,7 @@ tooltip {
 
 .workspaces {
   margin-left: 10px;
+  background-color: transparent;
 }
 
 .player-controls {
@@ -263,7 +264,7 @@ tooltip {
 
 .ws {
   font-size: 6rem;
-  transition: 60ms cubic-bezier(0.05, 0.9, 0.1, 1); //Hyprland, no overshot
+  transition: 80ms cubic-bezier(0.05, 0.9, 0.1, 1); //Hyprland, no overshot
   // transition: 400ms cubic-bezier(0.2, 0.0, 0, 1.0); //Material 3
 }
 
@@ -294,7 +295,7 @@ tooltip {
 
 .ws-inactive {
   // background-color: tint($colorbg, 37%);
-  background-color: rgba(154, 152, 152, 0.7);
+  background-color: rgba(194, 192, 192, 0.7);
 }
 
 .ws-empty {
@@ -546,4 +547,8 @@ tooltip {
 
 progressbar>trough {
   min-width: 3px;
+}
+
+.box-that-is-there {
+  background-color: $colorbg;
 }
