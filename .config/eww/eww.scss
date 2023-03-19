@@ -10,12 +10,20 @@
   @return mix(rgb(0, 7, 18), $color, $percentage);
 }
 
-$battcolor: $colorbar;
-$memcolor: $color1;
+$battcolor: $color6;
+$memcolor: $color4;
 $cpucolor: $color3;
 $border: $color7;
 $surface0: tint($colorbg, 10%);
 $bg1: $surface0;
+
+$colormusic: $color4;
+$colorws: $color4;
+$coloredit: $color1;
+$colortime: $colortext;
+$colordate: shade($colortext, 25%);
+$colornotif: $color5;
+$colorthemer: $color3;
 
 //thanks flick0!
 @keyframes gradient {
@@ -89,35 +97,23 @@ $bg1: $surface0;
 }
 
 @mixin window {
-  border: 3px solid $color7;
+  border: 3px solid $color3;
   // box-shadow: 0 2px 3px $shadow;
   margin: 5px 5px 10px;
-  @include rounding;
+  // @include rounding;
 }
+
+//////////////// Globals ///////////////
 
 * {
   all: unset;
   transition: 200ms cubic-bezier(0.05, 0.7, 0.1, 1);
-  // font-family: 'Torus', 'Material Symbols Rounded';
   background-repeat: no-repeat;
-}
-
-.scale slider {
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1);
-}
-
-.progress slider {
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1);
-}
-
-.music-ctl-revealer {
-  font-family: Material Symbols Rounded;
 }
 
 @import 'css/bgdecor';
 @import 'css/calendar';
 @import 'css/dashboard';
-@import 'css/editmode';
 @import 'css/music';
 @import 'css/notification';
 @import 'css/overview';
@@ -129,426 +125,163 @@ $bg1: $surface0;
 @import 'css/volume';
 @import 'css/winctl';
 
-.barbg {
-  background-color: #191919;
-  // background-image: url("/home/end/.config/eww/images/topbar.png");
-  color: $colortext;
-  border-radius: 0px;
-
-  label {
-    font-size: 1.2rem;
-  }
-
-  font-family: 'Torus';
-}
-
 .bar {
   background-color: $colorbarbg;
   // background-color: rgba(25, 25, 25, 0.5);
   // background-color: transparent;
-  min-height: 53px;
   // background-image: url("/home/end/.config/eww/images/topbar.png");
   color: $fg;
-  border-radius: 0px;
 
   label {
     font-size: 1.2rem;
   }
 
-  font-family: 'Torus';
+  font-family: 'Config';
 }
 
 tooltip {
-  background: $colorbg;
-  border: 2px solid $colortext;
-  border-radius: 8px;
+  background-color: $colorbarbg;
   color: $colortext;
-
-  label {
-    font-family: Torus;
-    font-size: 13pt;
-  }
-}
-
-.music-module {
-  font-family: Material Symbols Rounded;
-}
-
-.icon {
-  font-family: Material Symbols Rounded;
-  // padding-left: 4px;
-  // padding-right: 4px;
+  border: 1px solid $colortext;
 }
 
 .module {
-  font-family: Material Symbols Rounded;
-  min-height: 53px;
+  
 }
 
-.module-timedate {
-  padding-left: 13px;
-  padding-right: 13px;
+.icon {
+  font-family: Material Symbols Outlined;
 }
 
-.hour {
-  // font-weight: bold;
-  // padding-left: 13px;
-  color: $colorbar;
+.icon-square {
+  min-width: 30px;
+  min-height: 30px;
 }
 
-.clock {
-  color: $colorbar;
-  font-family: 'Torus', 'Material Symbols Rounded';
+.button-true {
+  background-color: $light0;
 }
 
-// .clock-module:hover {
-//   border-top: 2px solid $color5;
-// }
-
-.minute {
-  color: $colorbar;
-  font-family: 'Torus', 'Material Symbols Rounded';
+.button-border-true {
+  border-color: $light0;
 }
 
-.date {
-  font-family: 'Torus', 'Material Symbols Rounded';
-  color: $colorbar;
+.icon-square-true {
+  background-color: $overlay0;
 }
 
-.bright-icon {
-  color: $color3;
-  padding-right: 4px;
-  padding-top: 4px;
+.window {
+  border: 2px solid;
 }
 
-.bright-icon:hover {
-  border-top: 2px solid;
+.window-text {
+  font-family: 'HUN-DIN 1451';
+  padding-top: 5px;
 }
 
-.module-bt {
-  font-size: 1.2rem;
-}
-
-.workspaces {
-  // margin-left: 10px;
-  background-color: transparent;
-}
-
-.player-controls {
-  font-family: Material Symbols Rounded;
-}
-
-.volume-icon {
-  padding-left: 3px;
-  padding-right: 3px;
-}
-
-.net-icon {
-  color: $color7;
-  font-family: Material Symbols Rounded;
-  padding-left: 4px;
-  padding-right: 4px;
-  padding-top: 4px;
-}
-
-.net-icon:hover {
-  border-top: 2px solid;
-}
-
-.my-separator {
-  padding-left: 15px;
-  padding-right: 15px;
-  color: $colortext;
-  min-height: 53px;
-}
-
-.ws {
-  font-size: 6rem;
-  transition: 80ms cubic-bezier(0.05, 0.9, 0.1, 1); //Hyprland, no overshot
-  // transition: 400ms cubic-bezier(0.2, 0.0, 0, 1.0); //Material 3
-}
-
-.ws-text {
-  font-size: 16pt;
-  font-family: Torus;
-  border-radius: 9999px;
-  // padding-left: 3px;
-  // padding-right: 3px;
-  min-width: 27px;
-  color: $colorbg;
-  margin-top: 13px;
-  margin-bottom: 13px;
-  margin-left: 2px;
-  margin-right: 2px;
-}
-.ws-text-active {
-  background-color: $colortext;
-}
-
-.ws:hover {
-  color: $color5;
-}
-
-.ws-active {
-  background-color: $colortext;
-}
-
-.ws-inactive {
-  // background-color: tint($colorbg, 37%);
-  background-color: rgba(194, 192, 192, 0.7);
-}
-
-.ws-empty {
-  // background-color: tint($colorbg, 10%);
-  background-color: rgba(146, 145, 145, 0.3);
-}
-
-.activewin {
-  color: $color3;
-  // padding-left: 8px;
-  // padding-right: 8px;
-}
-
-// .themer-get {
-//   padding-top: 4px;
-//   padding-left: 10px;
-//   padding-right: 10px;
-//   background-image: url("images/grayscale/Add.png");
-//   background-repeat: no-repeat;
-//   background-position: center;
-//   background-size: 100%;
-// }
-
-// .themer-restore {
-//   padding-top: 7px;
-//   padding-left: 10px;
-//   padding-right: 10px;
-//   padding-bottom: 16px;
-//   background-image: url("images/grayscale/Backup.png");
-//   background-repeat: no-repeat;
-//   background-position: center;
-//   background-size: 100%;
-// }
-
-
-.icon,
-.icon,
-.icon-text,
-.vol-icon label {
-  font-family: "Material Symbols Rounded";
-}
-
-.username {
-  color: $colortext;
-}
-
-.userpic {
-  margin: 5px;
-  min-height: 42px;
-  min-width: 42px;
-  background-size: 100%;
-  border-radius: 5px;
-  background-repeat: no-repeat;
-}
+//////////////// Other specific stuff ///////////////
 
 .osettings-toggle-button-false {
-  min-width: 75px;
-  min-height: 53px;
-  background-color: transparent;
-  background-image: url('images/svg/settings.svg');
-  background-size: auto 65%;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  :hover {
-    background-color: $overlay0;
-  }
+  min-width: 32px;
+  min-height: 32px;
+  background-color: $color3;
+  color: $colorbarbg;
 }
 
 .osettings-toggle-button-true {
-  min-width: 75px;
-  min-height: 53px;
-  background-image: url('images/svg/settings.svg');
-  background-size: auto 65%;
-  background-position: center;
-  background-repeat: no-repeat;
+  min-width: 32px;
+  min-height: 32px;
+  background-color: $color3;
+  color: $colorbarbg;
+}
+
+.module-music {
+  color: $colormusic
+}
+
+.icon-music {
+  min-width: 32px;
+  min-height: 32px;
+  background-color: $colormusic;
+  color: $colorbarbg;
+}
+
+.editmode {
+  color: $coloredit;
+  min-width: 32px;
+  min-height: 32px;
+  margin-left: -5px;
+}
+
+.edit-mode-checkbox {
+  color: transparent;
+}
+
+.edit-mode-checkbox-true {
   background-color: $overlay0;
 }
 
-.onotify-toggle-button-false {
-  min-width: 53px;
-  min-height: 53px;
-  background-color: transparent;
-  // background-image: url('./images/lazer_icons/notifications.png');
-  background-repeat: no-repeat;
-  background-size: auto 65%;
-  background-position: center;
-
-  :hover {
-    background-color: $overlay0;
-    // background-image: url('./images/lazer_icons/notifications_hover.png');
-  }
+.timedate{
+  padding: 0px 5px;
 }
 
-.onotify-toggle-button-true {
-  min-width: 53px;
-  min-height: 53px;
-  background-color: $overlay0;
-  // background-image: url('./images/lazer_icons/notifications_hover.png');
-  background-repeat: no-repeat;
-  background-size: auto 65%;
-  background-position: center;
+.clock {
+  color: $colortime;
+  padding: 0px 5px;
 }
 
-.real-onotify-toggle-button-false {
-  min-width: 53px;
-  min-height: 53px;
-  background-image: url('./images/svg/forum.svg');
-  background-repeat: no-repeat;
-  background-size: auto 65%;
-  background-position: center;
-
-  :hover {
-    background-color: $overlay0;
-  }
+.date {
+  color: $colordate;
+  padding: 0px 5px;
 }
 
-.real-onotify-toggle-button-true {
-  min-width: 53px;
-  min-height: 53px;
-  background-color: $overlay0;
-  background-size: auto 65%;
-  background-position: center;
-  background-image: url('./images/svg/forum.svg');
-  background-repeat: no-repeat;
+.ws {
+  min-height: 32px;
+  min-width: 32px;
 }
 
-// .music-ctl-revealer:hover {
-//   border-top: 2px solid;
-// }
-// .bright-icon:hover {
-//   border-top: 2px solid;
-// }
-// .net-icon:hover {
-//   border-top: 2px solid;
-// }
-
-.dynbg-image {
-  transition: 900ms cubic-bezier(0.05, 0.9, 0.1, 1); // Hyprland default bezier but no overshot
-  background-image: url('images/wallpaper/wallpaper');
-  background-size: 120%;
-  min-height: 1080px;
-  min-width: 1920px;
+.ws-text {
+  color: $colorbarbg;
 }
 
-.rect-progress-box {
-  min-height: 53px;
-  min-width: 53px;
+.ws-active {
+  transition: 80ms cubic-bezier(0.05, 0.9, 0.1, 1);
+  color: $colorws;
 }
 
-.rect-progress-h-u {
-  // border: 1px solid purple;
-  padding: 0px;
-  min-width: 26px;
-  margin-top: 13.5px;
-  margin-bottom: 35.5px;
-  margin-right: -39.5px;
-  margin-left: 13.5px;
-
-  trough {
-    background-color: #5c5b5b;
-    min-height: 6px;
-  }
-
-  highlight {
-    background-color: $colortext;
-  }
-
-  slider {
-    min-height: 0px;
-    min-width: 0px;
-    background-color: transparent;
-  }
+.real-onotify-toggle-button {
+  min-width: 32px;
+  min-height: 32px;
+  color: $colorbarbg;
+  border-color: $colornotif;
+  background-color: $colornotif;
 }
 
-.rect-progress-h-d {
-  // border: 1px solid purple;
-  padding: 0px;
-  min-width: 26px;
-  margin-bottom: 13.5px;
-  margin-top: 36.5px;
-  margin-right: -22.5px;
-  margin-left: 2.5px;
-
-  trough {
-    background-color: #5c5b5b;
-    min-height: 6px;
-  }
-
-  highlight {
-    background-color: $colortext;
-  }
-
-  slider {
-    min-height: 0px;
-    min-width: 0px;
-    background-color: transparent;
-  }
+.window-music {
+  border-color: $colormusic;
 }
 
-.rect-progress-v-r {
-  // border: 1px solid purple;
-  padding: 0px;
-  min-width: 26px;
-  margin-top: 13.5px;
-  margin-bottom: 13.5px;
-  margin-right: -39.5px;
-  margin-left: 25.5px;
-
-  trough {
-    background-color: #5c5b5b;
-    min-width: 6px;
-  }
-
-  highlight {
-    background-color: $colortext;
-  }
-
-  slider {
-    min-height: 0px;
-    min-width: 0px;
-    background-color: transparent;
-  }
+.window-themer {
+  border-color: $colorthemer;
+  background-color: tint($colorbarbg, 12.5%);
 }
 
-.rect-progress-v-l {
-  padding: 0px;
-  min-width: 26px;
-  margin-top: 13.5px;
-  margin-bottom: 13.5px;
-  margin-right: -2.5px;
-  margin-left: -16.5px;
-
-  trough {
-    background-color: #5c5b5b;
-    min-width: 6px;
-  }
-
-  highlight {
-    background-color: $colortext;
-  }
-
-  slider {
-    min-height: 0px;
-    min-width: 0px;
-    background-color: transparent;
-  }
+.window-titlebar-music {
+  font-size: 1.2rem;
+  padding-left: 3px;
+  min-height: 16px;
+  background-color: $colormusic;
+  color: $colorbarbg;
 }
 
-progressbar>trough {
-  min-width: 3px;
+.window-titlebar-themer {
+  font-size: 1.2rem;
+  padding-left: 3px;
+  min-height: 16px;
+  background-color: $colorthemer;
+  color: $colorbarbg;
 }
 
 .box-that-is-there {
-  background-color: tint($colorbg, 10%);
+  background-color: $colorpanel;
 }

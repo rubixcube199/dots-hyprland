@@ -2,7 +2,7 @@
     min-height: 53px;
     min-width: 53px;
     color: $colortext;
-    font-family: Material Symbols Rounded;
+    font-family: Material Symbols Outlined;
     background-image: url('images/svg/beatmappacks.svg');
     background-size: auto 65%;
     background-position: center;
@@ -12,7 +12,7 @@
     min-height: 53px;
     min-width: 53px;
     color: $colortext;
-    font-family: Material Symbols Rounded;
+    font-family: Material Symbols Outlined;
     background-color: $overlay0;
     background-image: url('images/svg/beatmappacks.svg');
     background-size: auto 65%;
@@ -23,18 +23,18 @@
     min-height: 53px;
     min-width: 53px;
     color: $colortext;
-    font-family: Material Symbols Rounded;
+    font-family: Material Symbols Outlined;
     background-image: url('images/svg/beatmappacks.svg');
     background-size: auto 65%;
     background-position: center;
 }
 
 .themer-action-button {
-    @include rounding;
+    // @include rounding;
     min-height: 53px;
     min-width: 53px;
     color: $colortext;
-    font-family: Material Symbols Rounded;
+    font-family: Material Symbols Outlined;
 }
 
 .themer-action-button:hover {
@@ -50,16 +50,16 @@
 }
 
 .themer-menu-box {
-    @include window;
-    @include rounding;
-    border-radius: 15px;
+    // @include window;
+    // @include rounding;
+    // border-radius: 15px;
     background-color: tint($colorbarbg, 12.5%);
     margin: 14px;
     transition: 250ms cubic-bezier(0.05, 0.7, 0.1, 1);
 }
 
 .themer-title {
-    font-family: 'Torus', 'Material Symbols Rounded';
+    font-family: 'Config';
     font-size: 15pt;
     padding: .6rem;
     color: $colortext;
@@ -68,17 +68,17 @@
 
 .themer-prompt {
     color: $colortext;
-    font-family: 'Torus', 'Material Symbols Rounded';
+    font-family: 'Config';
     font-size: 12pt;
     padding: .6rem;
 }
 
 .themer-input {
-    font-family: 'Torus', 'Material Symbols Rounded';
+    font-family: 'Config';
     // background-color: $surface0;
     background-color: tint($colorbarbg, 10%);
     color: $colortext;
-    border-radius: 10px;
+    // border-radius: 10px;
     padding: 7px;
     margin-top: 2px;
     margin-bottom: 2px;
@@ -101,7 +101,7 @@
 .themer-color-preview {
     min-height: 25px;
     min-width: 25px;
-    border-radius: 5px;
+    // border-radius: 5px;
     border-width: 55px;
 }
 

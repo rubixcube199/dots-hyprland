@@ -2,14 +2,21 @@
   (eventbox
     :onhoverlost "scripts/toggle-music.sh --close &"
     (box
-      :class "music-area"
+      :class "window window-music"
+      :orientation "v"
+      :space-evenly false
       :style "
       ${music_open ? '' : 'margin-top: -233px; margin-bottom: 233px;'}
       ${anim_open_music ? 'transition: 200ms cubic-bezier(0.05, 0.7, 0.1, 1);' : 'transition: 150ms cubic-bezier(0.3, 0, 0.8, 0.15);'}
       "
+      (box
+        :class "window-titlebar-music"
+        (label :class "window-text" :xalign 0 :text "MUSIC")
+      )
       (overlay
         (box ; Fallback
           :class "music-cover-art"
+          :style "min-height: 166px;"
         )
         (box ; Cover art
           :class "music-cover-art"
@@ -65,11 +72,20 @@
           )
         )
         (box
-          :class "music-media-source"
-          :halign "start"
-          :valign "start"
           :orientation "h"
-          (label :class "music-source-icon" :text "${mcover.color.source}" :style "color: ${mcover.color.colors.color4};")
+          :space-evenly false
+          (box
+            :class "music-media-source"
+            :halign "start"
+            :valign "start"
+            :orientation "h"
+            (label :class "music-source-icon" :text "${mcover.color.source}" :style "color: ${mcover.color.colors.color4};")
+          )
+          (box
+            :halign "start"
+            :valign "start"
+            :class "music-media-source-wedge"
+          )
         )
       )
     )
@@ -82,7 +98,7 @@
   :monitor 0
   :geometry (geometry
     ; :x "53px"
-    :y "53px"
+    :y "32px"
     :width "558px"
     :height "191px"
   :anchor "top left")

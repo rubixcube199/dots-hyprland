@@ -32,7 +32,7 @@
 }
 
 .system-row {
-  font-family: Torus;
+  font-family: 'Config';
   // margin: .5rem .7rem;
   margin-top: 20px;
 
@@ -51,10 +51,11 @@
 }
 
 .element {
-  font-family: 'Torus';
-  @include rounding;
+  font-family: 'Config';
+  border: 2px solid $color5;
   background: $surface0;
-  margin: .3rem;
+  // margin: .3rem;
+  margin: 5px;
 
   button {
     @include rounding;
@@ -70,8 +71,19 @@
   }
 }
 
+.element-bottomleft {
+  border-top: 23px solid transparent;
+  border-left: 23px solid $color5;
+  margin: 5px;
+}
+
+.element-bottomleft-cut {
+  border-top: 20px solid transparent;
+  border-left: 20px solid $colorpanel;
+  margin: 5px;
+}
+
 .sliders {
-  font-family: 'Torus', 'Material Symbols Rounded';
   @include rounding;
   background-color: $surface0;
   margin: .5rem 1rem;

@@ -1,14 +1,12 @@
 .notifications-box {
   // @include window;
   // padding: 1rem;
-  font-family: 'Torus';
+  font-family: 'Config';
 }
 
 .notification {
-  // @include rounding;
-  border-radius: 8px;
   font-size: 12pt;
-  font-family: 'Torus';
+  font-family: 'Config';
   background-color: $surface0;
   // border-bottom: 3px solid $colorbg;
   padding: .7rem;
@@ -42,6 +40,11 @@
   .body {
     color: $colortext;
   }
+}
+
+.notification-bottomleft {
+  border-top: 20px solid transparent;
+  border-left: 20px solid tint($colorbarbg, 10%);
 }
 
 // .container {

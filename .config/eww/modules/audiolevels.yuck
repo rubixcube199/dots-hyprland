@@ -52,7 +52,7 @@
               :onscroll "pactl set-sink-input-volume ${i.sink} $(echo {} | sed -e \"s/up/+10/g\" -e \"s/down/-10/g\")%"
               :onrightclick "pactl set-sink-input-volume ${i.sink} 100%"
               (label
-                :style "font-family: 'Material Symbols Rounded';"
+                :style "font-family: 'Material Symbols Outlined';"
                 :text "${volume.icon}"
               )
             )

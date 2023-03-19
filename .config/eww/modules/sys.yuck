@@ -58,7 +58,7 @@
       :space-evenly false
       :orientation "v"
       (box
-        :class "module"
+        :class ""
         :space-evenly false
         :spacing 5
         :halign "end"
@@ -112,13 +112,13 @@
                         (button
                           ; :class "wifi-button"
                           :onclick "scripts/net toggle"
-                          :style "font-family: Material Symbols Rounded;"
+                          :style "font-family: Material Symbols Outlined;"
                           {net.icon}
                         )
                         (label :class "separator" :text "|")
                         (button
                           :class "wifi-arrow-btn"
-                          :style "font-family: Material Symbols Rounded;"
+                          :style "font-family: Material Symbols Outlined;"
                           :onclick "nm-connection-editor &"
                           ""
                         )
@@ -136,7 +136,7 @@
                         (button
                           :class "bluetooth-button"
                           :onclick "scripts/bluetooth toggle"
-                          :style "font-family: 'Material Symbols Rounded';"
+                          :style "font-family: 'Material Symbols Outlined';"
                           {bluetooth.icon}
                         )
                         (label :class "separator" :text "|")
@@ -277,7 +277,6 @@
       (box
         :class "cpubar"
         :space-evenly false
-        :onclick "${EWW_CMD} update popup='system-menu'"
         (circular-progress
           :value "${EWW_CPU.avg}"
           :class "cpubar-circle"
@@ -313,16 +312,20 @@
       :class "membar"
       :space-evenly false
       :onclick "${EWW_CMD} update popup='system-menu'"
-      (circular-progress
-        :value {memory.percentage}
-        :class "membar-circle"
-        :thickness 4
-        :start-at 75
-        (button
-          :class "inside-circle"
-          :tooltip "RAM: ${round(memory.percentage,0)}%"
-          :onclick "${EWW_CMD} update popup='system-menu'"
-          (label :class "icon-text" :text "")
+      (box
+        :class "icon-square icon-mem"
+        :space-evenly false
+        (circular-progress
+          :value {memory.percentage}
+          :class "membar-circle"
+          :thickness 4
+          :start-at 75
+          (button
+            :class "inside-circle"
+            :tooltip "RAM: ${round(memory.percentage,0)}%"
+            :onclick "${EWW_CMD} update popup='system-menu'"
+            (label :class "icon-text" :text "")
+          )
         )
       )
       ; Separate swap usage circle
@@ -365,18 +368,22 @@
           ;     :value "${volume.percent}"
         ;   )
       ; )
-      (circular-progress
-        :value "${EWW_BATTERY["BATT"].capacity}"
-        :class "batbar-circle"
-        :thickness 4
-        :start-at 75
-        :style "border-radius: 99px; color: ${battery.circolor};"
-        (button
-          :class "inside-circle"
-          :tooltip "Battery: ${EWW_BATTERY["BATT"].capacity}%"
-          :onclick "${EWW_CMD} update popup='system-menu'"
-          :style "border-radius: 99px; color: ${battery.color}; background-color: ${battery.bgcolor};"
-          (label :class "icon-text" :text "")
+      (box
+        :class "icon-batt"
+        :style "background-color: $colorbatt;"
+        (circular-progress
+          :value "${EWW_BATTERY["BATT"].capacity}"
+          :class "batbar-circle"
+          :thickness 4
+          :start-at 75
+          :style "border-radius: 99px;"
+          (button
+            :class "inside-circle"
+            :tooltip "Battery: ${EWW_BATTERY["BATT"].capacity}%"
+            :onclick "${EWW_CMD} update popup='system-menu'"
+            :style "border-radius: 99px; background-color: ${battery.bgcolor};"
+            (label :class "icon-text" :text "")
+          )
         )
       )
       (revealer

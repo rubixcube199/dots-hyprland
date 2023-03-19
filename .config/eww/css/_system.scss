@@ -3,22 +3,25 @@
 }
 
 .cpubar {
-  color: $colorbar;
+  color: $cpucolor;
 }
 
 .batbar {
-  color: $colorbar;
+  color: $battcolor;
   padding-right: 4px;
 }
 
 .cpubar-circle {
-  background-color: #5c5b5b;
+  color: $cpucolor;
+  background-color: $surface1;
 }
 .membar-circle {
-  background-color: #5c5b5b;
+  color: $memcolor;
+  background-color: $surface1;
 }
 .batbar-circle {
-  background-color: #5c5b5b;
+  color: $battcolor;
+  background-color: $surface1;
 }
 
 // .batbar-circle {
@@ -40,19 +43,9 @@
 }
 
 .batt-percentage {
-  color: $colorbar;
+  color: $battcolor;
   padding-right: 5px;
   padding-left: 4px;
-}
-
-.batt-low {
-  background-color: #B5E8E0;
-  color: #161320;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
 }
 
 .sys-menu-charge {
@@ -61,11 +54,11 @@
 }
 
 .iconmem {
-  color: $colorbar;
+  color: $memcolor;
 }
 
 .iconcpu {
-  color: $colorbar;
+  color: $cpucolor;
 }
 
 .icon-text {
@@ -122,38 +115,38 @@
 }
 
 .cpu-menu {
-  font-family: 'Torus', 'Material Symbols Rounded';
-  color: $colorbar;
+  font-family: 'Config';
+  color: $cpucolor;
   padding-left: 5px;
 }
 
 .mem-menu {
-  font-family: 'Torus', 'Material Symbols Rounded';
-  color: $colorbar;
+  font-family: 'Config';
+  color: $memcolor;
   padding-left: 5px;
   padding-right: 5px;
 }
 
 .mem-menu-left {
-  color: $colorbar;
+  color: $memcolor;
   padding-left: 5px;
   padding-right: 0px;
 }
 
 .mem-menu-mid {
-  color: $colorbar;
+  color: $memcolor;
   padding-left: 0px;
   padding-right: 0px;
 }
 
 .mem-menu-right {
-  color: $colorbar;
+  color: $memcolor;
   padding-left: 0px;
   padding-right: 5px;
 }
 
 .sys-menu {
-  font-family: 'Torus', 'Material Symbols Rounded';
+  font-family: 'Config';
   color: $battcolor;
   margin: 0px;
   padding: 0px;

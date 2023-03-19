@@ -24,20 +24,20 @@
 .osd-incircle {
     font-size: 19pt;
     padding: 6px;
-    font-family: "Material Symbols Rounded"; //AAAAAAAAAGGGHHH
+    font-family: "Material Symbols Outlined"; //AAAAAAAAAGGGHHH
     color: $colortext;
 }
 
 .osd-incircle-bright {
     font-size: 19pt;
     padding: 6px;
-    font-family: "Material Symbols Rounded"; //AAAAAAAAAGGGHHH
+    font-family: "Material Symbols Outlined"; //AAAAAAAAAGGGHHH
     color: $colortext;
 }
 
 .osd-text {
     font-size: 15pt;
-    font-family: "Torus"; //AAAAAAAAAGGGHHH
+    font-family: 'Config'; //AAAAAAAAAGGGHHH
     color: $colortext;
     padding-right: 5px;
 }

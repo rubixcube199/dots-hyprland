@@ -53,7 +53,7 @@
 )
 
 (defwindow osd
-  :stacking "overlay"
+  :stacking "fg"
   :wm-ignore true
   :monitor 0
   :geometry (geometry

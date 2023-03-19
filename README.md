@@ -1,13 +1,10 @@
 <div align="center">
-    <h1>[ osu!lazer branch ]</h1>
+    <h1>[ TETR.IO branch ]</h1>
     <h3></h3>
 </div>
 
  - See main branch for instructions, info and stuff: https://github.com/end-4/dots-hyprland/tree/main
- - click the circles
- - im not good at this game; im just amazed by how cool the interface is ;)
+ - im not too good at this game; i just wanted to try a rectangular rice
 
 # Previews
- ![dots-hyprland](./screenshot-13.png)
- ![dots-hyprland](./screenshot-all-1.png)
- ![dots-hyprland](./screenshot-11.png)
+ ![dots-hyprland](./rice-all.png)

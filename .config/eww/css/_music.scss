@@ -1,10 +1,7 @@
 .music-area {
-  padding: 9px;
-  @include rounding;
 }
 
 .song-cover-art {
-  @include rounding;
   background-position: center;
   background-size: 100%;
   margin: 4px 5px 4px 0;
@@ -13,8 +10,6 @@
 }
 
 .music-window {
-  @include window;
-  @include rounding;
   background-color: $colorbarbg;
   border: 3px solid;
   color: $colortext;
@@ -22,7 +17,6 @@
 }
 
 .music-cover-art {
-  @include rounding;
   background-color: transparent;
   background-size: cover;
   background-repeat: no-repeat;
@@ -35,24 +29,33 @@
 }
 
 .music-box {
-  @include rounding;
   padding-top: 24px;
   background-color: rgba(0, 0, 0, 0.6);
   background-position: top;
 }
 
+.music-title-bar { 
+  // font-weight: bold;
+  font-family: 'Config';
+  min-height: 30px;
+  font-size: 19pt;
+  color: $colormusic;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .music-title { 
   // font-weight: bold;
-  font-family: 'Torus', 'Material Symbols Rounded';
-  min-height: 39px;
+  font-family: 'Config';
+  min-height: 38px;
   font-size: 19pt;
-  color: $colortext;
+  color: $colormusic;
   padding-left: 10px;
   padding-right: 10px;
 }
 .music-title-hover { 
   // font-weight: bold;
-  font-family: 'Torus', 'Material Symbols Rounded';
+  font-family: 'Config';
   font-size: 19pt;
   color: $colortext;
   background-color: $overlay0;
@@ -62,14 +65,14 @@
 
 .music-artist {
   color: $colortext;
-  font-family: 'Torus', 'Material Symbols Rounded';
+  font-family: 'Config';
   font-weight: bold;
   margin-bottom: 5px;
   min-height: 25px;
 }
 
 .music-button label {
-  font-family: 'Material Symbols Rounded';
+  font-family: 'Material Symbols Outlined';
   // color: $text;
   font-size: 2rem;
   font-family: SF Mono Nerd Font;
@@ -77,45 +80,34 @@
 }
 
 .music-time {
-  font-family: 'Torus', 'Material Symbols Rounded';
+  font-family: 'Config';
   color: $color1;
   margin: 0 1rem;
 }
 
 .music-bar scale {
-  font-family: 'Material Symbols Rounded';
+  font-family: 'Material Symbols Outlined';
   font-family: SF Mono Nerd Font;
 
   highlight {
     background-color: $color1;
-    border-radius: 24px;
   }
 
   trough {
     background-color: $surface0;
-    border-radius: 24px;
     min-height: 10px;
     min-width: 170px;
   }
 }
 
 .music-ctl {
-  border-radius: 0px;
+  // border-radius: 0px;
   color: $color1;
   // padding-right: 10px;
-  min-height: 53px;
+  min-height: 32px;
 }
 
-.music-icon {
-  padding-top: 5px; //Because the music icon is a bit high
-  padding-left: 16px;
-  padding-right: 16px;
-  color: $color1;
-  background-image: url("images/LinageMusic.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
+
 
 .music-ctl-revealer {
   // transition: 200ms cubic-bezier(0.3, 0, 0.8, 0.15);
@@ -130,11 +122,15 @@
 }
 
 .music-media-source {
-  border-top-left-radius: 10px;
-  border-bottom-right-radius: 15px;
   min-width: 40px;
   min-height: 20px;
+  padding-left: 5px;
   background-color: rgba(0, 0, 0, 0.6);
+}
+
+.music-media-source-wedge {
+  border-left: 29px solid rgba(0, 0, 0, 0.6);
+  border-bottom: 29px solid transparent;
 }
 
 .music-source-icon {
@@ -145,7 +141,7 @@
 
 .song-button {
   color: $colortext;
-  border-radius: 9999px;
+  // border-radius: 9999px;
   margin: 3px 3px;
   min-width: 58px;
   font-size: 36pt;
@@ -155,36 +151,34 @@
 }
 
 .music-button-box {
-  font-family: 'Material Symbols Rounded';
+  font-family: 'Material Symbols Outlined';
   color: $colortext;
   min-width: 160px;
-  margin-top: 8px;
+  margin-top: 2px;
   padding-bottom: 0px;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
 .osu-music-box-false {
   min-width: 75px;
-  min-height: 53px;
+  min-height: 32px;
   background-size: auto 65%;
   background-position: 35% 50%;
-  background-image: url('images/svg/beatmaps.svg');
   // background-color: $colorbarbg;
   background-repeat: no-repeat;
 }
 .osu-music-box-true {
   min-width: 75px;
-  min-height: 53px;
+  min-height: 32px;
   background-size: auto 65%;
   background-position: 35% 50%;
   background-color: $overlay0;
-  background-image: url('images/svg/beatmaps.svg');
   background-repeat: no-repeat;
 }
 
 .osu-music-box-dummy {
   min-width: 50px;
-  min-height: 53px;
+  min-height: 32px;
 }
 
 .osu-music-slider {
@@ -194,7 +188,7 @@
   padding-left: 13px;
 
   trough {
-    border-radius: 9999px;
+    // border-radius: 9999px;
     background-color: #24222A;
     min-height: 6px;
     // margin-left: 32px;
@@ -205,16 +199,16 @@
 
   highlight {
     min-width: 3px;
-    border-radius: 9999px;
+    // border-radius: 9999px;
     background-color: $colorbar;
   }
 }
 
 .track-scale {
-  @include rounding;
+  // @include rounding;
   trough {
-    border-bottom-left-radius: 9999px;
-    border-bottom-right-radius: 9999px;
+    // border-bottom-left-radius: 9999px;
+    // border-bottom-right-radius: 9999px;
     background-color: $overlay0;
     min-height: 8px;
     // margin-left: 32px;
@@ -225,8 +219,8 @@
 
   highlight {
     min-width: 8px;
-    border-bottom-left-radius: 9999px;
-    border-bottom-right-radius: 9999px;
+    // border-bottom-left-radius: 9999px;
+    // border-bottom-right-radius: 9999px;
     background-color: $color0;
   }
 }
