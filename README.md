@@ -3,8 +3,7 @@
     <h3></h3>
 </div>
 
- - See main branch for instructions, info and stuff: https://github.com/end-4/dots-hyprland/tree/main
- - im not too good at this game; i just wanted to try a rectangular rice
+ - **NOTE: ** I fucked up this branch; for my widgets, see the main branch instead: https://github.com/end-4/dots-hyprland/tree/main
 
 # Previews
  ![dots-hyprland](./rice-all.png)
