@@ -7,3 +7,4 @@
  - Inspired by Material 3 (read more here: https://m3.material.io/)
  
  ![dots-hyprland](./screenshot-18.png)
+ ![dots-hyprland](./screenshot-19.png)
