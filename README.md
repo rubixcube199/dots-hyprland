@@ -8,3 +8,4 @@
 
 # Previews
  ![dots-hyprland](./rice-all.png)
+hmm
