@@ -1,5 +1,6 @@
 @import 'css/colors';
 @import 'css/colorscheme';
+@import 'css/material';
 @import 'images/svg/color.scss';
 
 @function tint($color, $percentage) {
@@ -11,8 +12,8 @@
 }
 
 $battcolor: $colorbar;
-$memcolor: $color1;
-$cpucolor: $color3;
+$memcolor: $tertiary;
+$cpucolor: $secondary;
 $border: $color7;
 $surface0: tint($colorbg, 10%);
 $bg1: $surface0;
@@ -89,7 +90,7 @@ $bg1: $surface0;
 }
 
 @mixin window {
-  border: 3px solid $color7;
+  border: 3px solid $primary;
   // box-shadow: 0 2px 3px $shadow;
   margin: 5px 5px 10px;
   @include rounding;
@@ -128,11 +129,12 @@ $bg1: $surface0;
 @import 'css/themer';
 @import 'css/volume';
 @import 'css/winctl';
+@import 'css/winstuff';
 
 .barbg {
   background-color: #191919;
   // background-image: url("/home/end/.config/eww/images/topbar.png");
-  color: $colortext;
+  color: $onBackground;
   border-radius: 0px;
 
   label {
@@ -160,13 +162,13 @@ $bg1: $surface0;
 }
 
 tooltip {
-  background: $colorbg;
-  border: 2px solid $colortext;
+  background: $colorbarbg;
+  border: 1px solid rgba(60, 60, 60, 0.4);
   border-radius: 8px;
-  color: $colortext;
+  color: white;
 
   label {
-    font-family: Torus;
+    font-family: 'Segoe UI Variable';
     font-size: 13pt;
   }
 }
@@ -272,7 +274,7 @@ tooltip {
 .my-separator {
   padding-left: 15px;
   padding-right: 15px;
-  color: $colortext;
+  color: $onBackground;
   min-height: 53px;
 }
 
@@ -289,7 +291,7 @@ tooltip {
   // padding-left: 3px;
   // padding-right: 3px;
   min-width: 27px;
-  color: $colorbg;
+  color: $colorbarbg;
   margin-top: 13px;
   margin-bottom: 13px;
   margin-left: 2px;
@@ -297,15 +299,15 @@ tooltip {
 }
 
 .ws-text-active {
-  background-color: $colortext;
+  background-color: $onBackground;
 }
 
 .ws:hover {
-  color: $color5;
+  color: tint($onBackground, 10%);
 }
 
 .ws-active {
-  background-color: $colortext;
+  background-color: $onBackground;
 }
 
 .ws-inactive {
@@ -354,7 +356,7 @@ tooltip {
 }
 
 .username {
-  color: $colortext;
+  color: $onBackground;
 }
 
 .userpic {
@@ -379,6 +381,7 @@ tooltip {
   :hover {
     background-color: $overlay0;
   }
+
   border-radius: 26px;
 }
 
@@ -407,6 +410,7 @@ tooltip {
     background-color: $overlay0;
     // background-image: url('./images/lazer_icons/notifications_hover.png');
   }
+
   border-radius: 26px;
 }
 
@@ -474,7 +478,7 @@ tooltip {
   min-width: 1920px;
 }
 
-progressbar > trough {
+progressbar>trough {
   min-width: 30px;
 }
 

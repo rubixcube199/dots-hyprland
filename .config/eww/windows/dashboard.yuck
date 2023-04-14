@@ -74,6 +74,7 @@
                   :valign "center"
                   :class "dash-user-pic"
                   :style "background-image: url('/var/lib/AccountsService/icons/${username == "" ? username_default : username}');"
+                  ; :style "background-image: url('${waifu}');"
                 )
                 (box
                   :orientation "v" :space-evenly false :valign "center"
