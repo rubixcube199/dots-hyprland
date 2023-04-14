@@ -7,4 +7,4 @@
  - who says cinnamon is most windows-like? 
 
  # Screenshots
- ![dots-hyprland](./windoes.png)
+ ![dots-hyprland](./screenshot.png)
