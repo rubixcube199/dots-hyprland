@@ -1,7 +1,7 @@
 .overview-window {
   @include window 
   font-family: 'Config';
-  // border-radius: 22px;
+  border-radius: 22px;
   background-color: $colorbarbg;
   // background-color: transparent;
   // border: 3px solid $color0;
@@ -11,7 +11,7 @@
 .overview-window-title {
   font-size: 15pt;
   color: $colortext;
-  // border-radius: 15px;
+  border-radius: 15px;
   background-color: $surface0;
   margin: 4px;
   padding: 4px;
@@ -27,7 +27,7 @@
 
 .overview-ws {
   border: 2px solid;
-  // border-radius: 15px;
+  border-radius: 15px;
   background-color: $surface0;
   margin: 4px;
 }
@@ -41,13 +41,13 @@
 
 .overview-ws-window {
   border: 2px solid $color0;
-  // border-radius: 15px;
+  border-radius: 15px;
   background-color: $overlay0;
   // //margin: 3px; 
 }
 
 .overview-ws-window-content {
-  // border-radius: 11px;
+  border-radius: 11px;
   // background-color: rgba(135, 147, 163, 0.7);
 }
 
@@ -62,7 +62,7 @@
   min-width: 30px;
   min-height: 30px;
   margin: 5px;
-  // border-radius: 8px;
+  border-radius: 8px;
 }
 
 .overview-topbar-button:hover {
@@ -78,7 +78,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
-  // border-radius: 15px;
+  border-radius: 15px;
 }
 
 .overview-ws-text {
@@ -94,7 +94,7 @@
 .overview-ws-number {
   //Note: height 100px width 356px
   font-size: 25pt;
-  // border-radius: 11px;
+  border-radius: 11px;
   background-color: $overlay0;
   color: $colortext;
   //margin: 10px;
@@ -110,11 +110,11 @@
 }
 
 .overview-search-area {
-  font-family: 'Config'
+  
 }
 
 .overview-search-box {
-  // border-radius: 20px;
+  border-radius: 20px;
   border: 2px solid $colortext;
   background-color: tint($colorbarbg, 10%);
   color: $colortext;
@@ -144,7 +144,7 @@
 }
 
 .overview-search-result {
-  // border-radius: 20px;
+  border-radius: 20px;
   border: 2px solid;
   background-color: tint($colorbarbg, 10%);
   color: $colortext;

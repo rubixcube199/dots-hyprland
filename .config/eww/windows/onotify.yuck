@@ -309,7 +309,7 @@
                       :orientation "v"
                       (label :style "font-size: 12pt;" :text "Memory" :halign "start" :class "sys-text-mem")
                       (label :style "font-size: 12pt;" :text "${memory.used} / ${memory.total}" :halign "start" :class "sys-text-sub")
-                      (label :style "font-size: 12pt;" :text " ${memory.swapused} / ${memory.swaptotal}" :halign "start" :class "sys-text-sub")
+                      (label :style "font-size: 12pt;" :text "Swap ${memory.swapused} / ${memory.swaptotal}" :halign "start" :class "sys-text-sub")
                     )
                   )
                 )

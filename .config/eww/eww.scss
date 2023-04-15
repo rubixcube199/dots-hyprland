@@ -97,10 +97,10 @@ $colorthemer: $color3;
 }
 
 @mixin window {
-  border: 3px solid $color3;
+  border: 3px solid $color7;
   // box-shadow: 0 2px 3px $shadow;
   margin: 5px 5px 10px;
-  // @include rounding;
+  @include rounding;
 }
 
 //////////////// Globals ///////////////
@@ -280,8 +280,4 @@ tooltip {
   min-height: 16px;
   background-color: $colorthemer;
   color: $colorbarbg;
-}
-
-.box-that-is-there {
-  background-color: $colorpanel;
 }
