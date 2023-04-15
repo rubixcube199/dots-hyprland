@@ -3,7 +3,8 @@
     <h3></h3>
 </div>
 
- - **NOTE:** I fucked up this branch; for my widgets, see the main branch instead: https://github.com/end-4/dots-hyprland/tree/main
+ - Inspired by the web game TETR.IO and other rectangular stuff
+ - A for-fun one that isn't anywhere complete
 
 # Previews
  ![dots-hyprland](./rice-all.png)
