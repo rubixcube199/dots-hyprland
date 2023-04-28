@@ -1,13 +1,12 @@
 <div align="center">
-    <h1>[ end-4/dots-hyprland ]</h1>
-    <h1> a windoes 11 </h1>
-    <h3></h3>
+    <h1>[ end-4/dots-hyprland > windoes branch ]</h1>
+    <h3> still wip! </h3>
 </div>
 
  - Who says cinnamon is most windows-like? 
  - See the main branch for dependencies
- - Load bar with `eww open winbar`
- - Enjoy! maybe add an Activate Lincox and it'll be perfect ;)
+ - For instructions see main branch. Start bar with `eww open winbar`
 
  # Screenshots
+ ![dots-hyprland](./screenshot2.png)
  ![dots-hyprland](./screenshot.png)
