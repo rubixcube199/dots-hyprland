@@ -47,6 +47,28 @@ $bg1: $surface0;
   }
 }
 
+@keyframes flyin-bottom {
+  from {
+    margin-bottom: -55px;
+    margin-top: 55px;
+  } 
+  to {
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+}
+
+@keyframes flyin-top {
+  from {
+    margin-bottom: 55px;
+    margin-top: -55px;
+  } 
+  to {
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+}
+
 @mixin rounding {
   border-radius: 10px;
 }
@@ -131,28 +153,29 @@ $bg1: $surface0;
 @import 'css/winctl';
 @import 'css/winstuff';
 
-.barbg {
-  background-color: #191919;
-  // background-image: url("/home/end/.config/eww/images/topbar.png");
-  color: $onBackground;
-  border-radius: 0px;
+.bar-normal {
+  background-color: $colorbg;
+  min-height: 53px;
+  color: $fg;
+  border-bottom-right-radius: 26px;
+  border-bottom-left-radius: 26px;
 
   label {
     font-size: 1.2rem;
   }
 
   font-family: 'Torus';
+  animation-name: flyin-top;
+  animation-duration: 350ms;
+  animation-timing-function: cubic-bezier(0.05, 0.7, 0.1, 1);  
+  animation-iteration-count: 1;
 }
 
-.bar {
-  background-color: $colorbarbg;
-  // background-color: rgba(25, 25, 25, 0.5);
-  // background-color: transparent;
+.bar-compact {
+  background-color: $colorbg;
+  border-bottom: 1px solid $primary;
   min-height: 53px;
-  // background-image: url("/home/end/.config/eww/images/topbar.png");
   color: $fg;
-  border-bottom-right-radius: 26px;
-  border-bottom-left-radius: 26px;
 
   label {
     font-size: 1.2rem;
@@ -280,7 +303,7 @@ tooltip {
 
 .ws {
   font-size: 6rem;
-  transition: 80ms cubic-bezier(0.05, 0.9, 0.1, 1); //Hyprland, no overshot
+  transition: 75ms cubic-bezier(0.05, 0.9, 0.1, 1); //Hyprland, no overshot
   // transition: 400ms cubic-bezier(0.2, 0.0, 0, 1.0); //Material 3
 }
 
@@ -299,11 +322,13 @@ tooltip {
 }
 
 .ws-text-active {
-  background-color: $onBackground;
+  background-color: $colorbar;
 }
 
 .ws:hover {
-  color: tint($onBackground, 10%);
+  :first-child {
+    color: $tertiary;
+  }
 }
 
 .ws-active {
@@ -373,7 +398,7 @@ tooltip {
   min-width: 53px;
   min-height: 53px;
   background-color: transparent;
-  background-image: url('images/svg/settings.svg');
+  // background-image: url('images/svg/settings.svg');
   background-size: auto 65%;
   background-position: center;
   background-repeat: no-repeat;
@@ -389,7 +414,6 @@ tooltip {
   padding: 0px 11px;
   min-width: 53px;
   min-height: 53px;
-  background-image: url('images/svg/settings.svg');
   background-size: auto 65%;
   background-position: center;
   background-repeat: no-repeat;
@@ -401,7 +425,6 @@ tooltip {
   min-width: 53px;
   min-height: 53px;
   background-color: transparent;
-  // background-image: url('./images/lazer_icons/notifications.png');
   background-repeat: no-repeat;
   background-size: auto 65%;
   background-position: center;
@@ -427,7 +450,7 @@ tooltip {
 .real-onotify-toggle-button {
   min-width: 53px;
   min-height: 53px;
-  background-image: url('./images/svg/forum.svg');
+  // background-image: url('./images/svg/forum.svg');
   background-repeat: no-repeat;
   background-size: auto 65%;
   background-position: center;
@@ -443,7 +466,7 @@ tooltip {
   background-color: $overlay0;
   background-size: auto 65%;
   background-position: center;
-  background-image: url('./images/svg/forum.svg');
+  // background-image: url('./images/svg/forum.svg');
   background-repeat: no-repeat;
 }
 

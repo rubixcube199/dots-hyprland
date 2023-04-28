@@ -824,29 +824,29 @@
               )
               ; Waifu
               ; (revealer
-              ;   :reveal "${oquery == 'uwu' || oquery == 'sex'}"
-              ;   :transition "slidedown"
-              ;   :duration "0ms"
-              ;   (box
-              ;     :space-evenly false
-              ;     :orientation "v"
-              ;     (input
-              ;       :wrap true
-              ;       :class "osettings-btn osettings-btn-neutral"
-              ;       :style "padding: 0 20px;"
-              ;       :onaccept "python3 scripts/waifupics.py &"
-              ;       "segs"
-              ;     )
-              ;     (box
-              ;       :valign "center"
-              ;       :width 400
-              ;       :height 400
-              ;       :class "osettings-waifu"
-              ;       :style "
-              ;       background-image: url('eww_covers/waifu');
-              ;       "
-              ;     )
-              ;   )
+                ;   :reveal "${oquery == 'uwu' || oquery == 'sex'}"
+                ;   :transition "slidedown"
+                ;   :duration "0ms"
+                ;   (box
+                  ;     :space-evenly false
+                  ;     :orientation "v"
+                  ;     (input
+                    ;       :wrap true
+                    ;       :class "osettings-btn osettings-btn-neutral"
+                    ;       :style "padding: 0 20px;"
+                    ;       :onaccept "python3 scripts/waifupics.py &"
+                    ;       "segs"
+                  ;     )
+                  ;     (box
+                    ;       :valign "center"
+                    ;       :width 400
+                    ;       :height 400
+                    ;       :class "osettings-waifu"
+                    ;       :style "
+                    ;       background-image: url('eww_covers/waifu');
+                    ;       "
+                  ;     )
+                ;   )
               ; )
             )
           )
@@ -880,6 +880,11 @@
     (button
       :class "osettings-toggle-button-${rev_ostg}"
       :onclick "scripts/toggle-osettings.sh &"
+      (image
+        :path "images/svg/settings.svg"
+        :image-height 33
+        :image-width 33
+      )
     )
   )
 )

@@ -4,7 +4,6 @@ reserves=$(hyprctl monitors -j | gojq -r -c '.[0]["reserved"]')
 if [[ "$reserves" == "[0,53,0,0]" ]]; then
     eww open winbar &
     eww close bar &
-    eww close bg-decor &
     hyprctl keyword monitor eDP-1,addreserved,0,50,0,0
 
     hyprctl keyword decoration:rounding 0 
@@ -16,13 +15,12 @@ if [[ "$reserves" == "[0,53,0,0]" ]]; then
 else
     eww close winbar &
     eww open bar &
-    eww open bg-decor &
     hyprctl keyword monitor eDP-1,addreserved,53,0,0,0
 
     hyprctl keyword decoration:rounding 17 
     hyprctl keyword general:gaps_in 4 
     hyprctl keyword general:gaps_out 8
-    hyprctl keyword general:border_size 3
+    hyprctl keyword general:border_size 2
     hyprctl keyword windowrulev2 'unset, floating:1'
     hyprctl keyword decoration:drop_shadow false
 fi

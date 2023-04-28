@@ -164,7 +164,11 @@
       :class "module-button themer-button-${themer_hover || themer_open}"
       :onclick "scripts/toggle-themer.sh"
       :style "font-family: 'Material Symbols Rounded';"
-      ''
+      (image
+        :path "images/svg/beatmappacks.svg"
+        :image-width 33
+        :image-height 33
+      )
     )
   )
 )

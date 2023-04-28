@@ -1,14 +1,14 @@
-//Auto generated color theme for image at: https://i1.sndcdn.com/avatars-000055082772-mu4m7t-t80x80.jpg
+//Auto generated color theme for image at: https://i.ytimg.com/vi/dU0plBS-J4s/sddefault.jpg?sqp=-oaymwEWCJADEOEBIAQqCghqEJQEGHgg6AJIWg&rs=AOn4CLCTHh4wMs2r_c3FP3P5sZOdKTMrmQ
 @function bluetint($color, $percentage) {  @return mix(#CDDFED, $color, $percentage); }
 @function blueshade($color, $percentage) { @return mix(#152E50, $color, $percentage); }
-$colorbarbg: #0e0912;
-$colorbg: rgba(14,9,18,0.3);
-$colortext: #e4e6df;
-$color0: #7B7787;
-$color1: #689BA3;
-$color2: #9CADAD;
-$color3: #E3B291;
-$color4: #F0D2A9;
-$color5: #B4C7C3;
-$color6: #e4e6df;
-$color7: #E3B291;
+$colorbarbg: #0F1A2E;
+$colorbg: rgba(15,26,46,0.75);
+$colortext: #c9c5c5;
+$color0: #5A5A67;
+$color1: #965258;
+$color2: #9F827E;
+$color3: #25599B;
+$color4: #5A7392;
+$color5: #6A8CA2;
+$color6: #c9c5c5;
+$color7: #25599B;

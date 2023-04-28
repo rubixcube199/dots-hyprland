@@ -11,8 +11,8 @@
 using namespace std;
 using json = nlohmann::json;
 
-#define ROWS 1
-#define COLS 10
+#define ROWS 2
+#define COLS 5
 
 string clients;
 json clientjson, apps;
@@ -38,7 +38,7 @@ string exec(const char* cmd) {
 
 void initWorkspaces() {
     for (int i = 0; i < ROWS; i++) {
-        workspaces.push_back(json::array({}));
+        workspaces.push_back(json::array({})); // []
         for (int j = 0; j < COLS; j++) {
             int workspaceNum = i * COLS + j + 1;  // Note: Workspaces are 1-base
             string workspaceInitString =
@@ -53,9 +53,10 @@ void initWorkspaces() {
 void addApp(json& client) {
     // Calculate position in overview tile
     int workspaceNum = int(client["workspace"]["id"]) - 1;  // 1-base to 0-base
+    if(workspaceNum < 0) return; //Skip scratchpads/specials, as they have negative ids
     int i = workspaceNum / COLS, j = workspaceNum % COLS;
 
-    // Newew JSON for app
+    // New JSON for app
     json newApp =
         R"({"class": "", "workspace": {"id": 8, "name": "8"}, "title": "", "at": [0, 0], "size": [0, 0], "address": [], "icon": ""})"_json;
     // Add normal stuff
@@ -70,7 +71,7 @@ void addApp(json& client) {
     std::ifstream ifs(filename);
     std::string iconpath((std::istreambuf_iterator<char>(ifs)),
                          (std::istreambuf_iterator<char>()));
-    if (iconpath.size() > 0) iconpath.pop_back();  // Remove '\n'
+    while (iconpath.size() > 0 && *iconpath.rbegin() == '\n') iconpath.pop_back();  // Remove '\n'
     newApp["icon"] = iconpath;
 
     workspaces[i][j].push_back(newApp);
@@ -88,10 +89,14 @@ void getApps() {
 }
 
 int main(int argc, char* argv[]) {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
     initWorkspaces();
     getApps();
-    if (argc == 2)
-        cout << workspaces[0][stoi(argv[1]) - 1] << '\n';
-    else
+    if (argc == 2) cout << workspaces[0][stoi(argv[1]) - 1] << '\n';
+    if (argc == 3 && string(argv[1]) == "--row" && stoi(argv[2]) >= 1 && stoi(argv[2]) <= ROWS) {
+        cout << workspaces[stoi(argv[2]) - 1] << '\n';
+    } else
         cout << workspaces << '\n';
 }
