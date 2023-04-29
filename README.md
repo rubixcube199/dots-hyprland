@@ -4,8 +4,8 @@
 </div>
 
  - Who says cinnamon is most windows-like? 
- - See the main branch for dependencies
- - For instructions see main branch. Start bar with `eww open winbar`
+ - See the main branch for dependencies/instructions
+ - Start bar with `eww open winbar`
 
  # Screenshots
  ![dots-hyprland](./screenshot2.png)
