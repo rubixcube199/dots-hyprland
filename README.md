@@ -8,5 +8,6 @@
  - Start bar with `eww open winbar`
 
  # Screenshots
+ ![dots-hyprland](./screenshot3.png)
  ![dots-hyprland](./screenshot2.png)
  ![dots-hyprland](./screenshot.png)
