@@ -8,7 +8,7 @@
       :onclick "scripts/toggle-themer.sh --close &"
       (box
         :style "
-        ${rev_themer ? '' : 'margin-top: -600px;'}
+        ${rev_themer ? '' : 'margin-left: -600px; margin-right: 600px;'}
         ${anim_open_themer ? 'transition: 200ms cubic-bezier(0.05, 0.7, 0.1, 1);' : 'transition: 150ms cubic-bezier(0.3, 0, 0.8, 0.15);'}
         min-height: 1px;
         "
@@ -21,7 +21,7 @@
         :orientation "h"
         :class "themer-menu-box"
         :style "
-        ${rev_themer ? '' : 'margin-top: -600px;'}
+        ${rev_themer ? '' : 'margin-left: -600px; margin-right: 600px;'}
         ${anim_open_themer ? 'transition: 200ms cubic-bezier(0.05, 0.7, 0.1, 1);' : 'transition: 150ms cubic-bezier(0.3, 0, 0.8, 0.15);'}
         "
         (box
@@ -156,9 +156,9 @@
   :stacking "overlay"
   :monitor 0
   :geometry (geometry
-    :x "400px"
+    :x "69px"
     :y "61px"
-    :anchor "top right"
+    :anchor "bottom left"
     ; :width "0px"
     ; :height "0px"
   )
@@ -175,7 +175,6 @@
     :onclick "scripts/toggle-themer.sh &"
     (box
       :class "module-button-pad-center"
-      :style "min-width: 53px;"
       (image
         :path "images/svg/beatmappacks.svg"
         :image-width 33

@@ -85,7 +85,7 @@
           ; :hscroll false
           ; :halign "fill"
           :class "osettings-content"
-          :style "min-height: 792px;"
+          :style "min-height: 842px;"
           (box
             :halign "fill"
             :class "osettings-scroll-bg"
@@ -976,12 +976,11 @@
   :wm-ignore true
   :monitor 0
   :focusable true
-  :exclusive true
   :geometry (geometry
-    :x "0px"
+    :x "69px"
     :y "61px"
-    :height "1019px"
-    :anchor "top left"
+    :height "1064px"
+    :anchor "center left"
   )
   (osettings)
 )

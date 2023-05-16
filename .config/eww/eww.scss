@@ -160,34 +160,38 @@ $bg1: $surface0;
 
 .module-group {
   // background-color: $colorbg;
-  min-height: 53px;
+  min-width: 53px;
   color: $fg;
   border-bottom-right-radius: 26px;
   border-bottom-left-radius: 26px;
 }
 
 .bar-bg-only {
-  margin-top: 8px;
-  margin-bottom: 8px;
-  margin-right: -1911px;
-  margin-left: 8px;
+  margin: 10px;
+  margin-bottom: -1069px;
   border-radius: 26px;
   background-color: shade($colorbg, 75%); 
-  background-image: linear-gradient(135deg, shade($onTertiary, 47%) 18%, rgba(0, 0, 0, 0) 18%, rgba(0, 0, 0, 0) 37%, shade($onTertiary, 47%) 37%, shade($onTertiary, 47%) 63%, rgba(0, 0, 0, 0) 63%, rgba(0, 0, 0, 0) 85%, shade($onTertiary, 47%) 85%);
+  background-image: linear-gradient(45deg, shade($onTertiary, 47%) 18%, rgba(0, 0, 0, 0) 18%, rgba(0, 0, 0, 0) 37%, shade($onTertiary, 47%) 37%, shade($onTertiary, 47%) 63%, rgba(0, 0, 0, 0) 63%, rgba(0, 0, 0, 0) 85%, shade($onTertiary, 47%) 85%);
+  // border: 2px solid transparent;
+}
+
+.bar-bg-border-only {
+  margin: 8px;
+  margin-bottom: -1071px;
+  border-radius: 26px;
+  background-image: linear-gradient(45deg, $color0 30%, $color2 60%, $color4 100%);
 }
 
 .bar-bg-only-compact {
-  margin-right: -1920px;
+  margin-bottom: -1080px;
   background-color: shade($colorbg, 75%);
-  background-image: linear-gradient(135deg, shade($onTertiary, 47%) 18%, rgba(0, 0, 0, 0) 18%, rgba(0, 0, 0, 0) 37%, shade($onTertiary, 47%) 37%, shade($onTertiary, 47%) 63%, rgba(0, 0, 0, 0) 63%, rgba(0, 0, 0, 0) 85%, shade($onTertiary, 47%) 85%);
+  background-image: linear-gradient(45deg, shade($onTertiary, 47%) 18%, rgba(0, 0, 0, 0) 18%, rgba(0, 0, 0, 0) 37%, shade($onTertiary, 47%) 37%, shade($onTertiary, 47%) 63%, rgba(0, 0, 0, 0) 63%, rgba(0, 0, 0, 0) 85%, shade($onTertiary, 47%) 85%);
 }
 
 .bar-normal {
   // margin: 8px;
-  min-height: 53px;
+  min-width: 53px;
   color: $fg;
-  border-bottom-right-radius: 26px;
-  border-bottom-left-radius: 26px;
 
   label {
     font-size: 1.2rem;
@@ -203,7 +207,7 @@ $bg1: $surface0;
 .bar-compact {
   background-color: shade($colorbg, 70%); //because dark background makes colors pop
   border-bottom: 1px solid $primary;
-  min-height: 53px;
+  min-width: 53px;
   color: $fg;
 
   label {
@@ -353,10 +357,7 @@ tooltip {
   min-width: 27px;
   min-height: 27px;
   color: $colorbarbg;
-  margin-top: 13px;
-  margin-bottom: 13px;
-  margin-left: 2px;
-  margin-right: 2px;
+  margin: 2px 21px;
 }
 
 .ws-text-top {
@@ -447,19 +448,18 @@ tooltip {
 .osettings-toggle-button-false {
   :first-child {
     :first-child {
-      padding: 0px 11px;
       min-width: 53px;
       min-height: 53px;
       background-color: transparent;
       // background-image: url('images/svg/settings.svg');
-      background-size: 400% auto;
+      background-size: auto 400%;
       background-repeat: no-repeat;
-      background-image: linear-gradient(45deg, rgba(0, 0, 0, 0) 60%, tint($overlay0, 10%) 60%);
+      background-image: linear-gradient(135deg, rgba(0, 0, 0, 0) 60%, tint($overlay0, 10%) 60%);
       border-radius: 26px;
 
       :active {
         background-color: $overlay0;
-        background-position: 90% 50%;
+        background-position: 50% 90%;
       }
     }
   }
@@ -477,14 +477,13 @@ tooltip {
 .osettings-toggle-button-true {
   :first-child {
     :first-child {
-      padding: 0px 11px;
       min-width: 53px;
       min-height: 53px;
       background-color: $overlay0;
-      background-position: 90% 50%;
+      background-position: 50% 90%;
       background-repeat: no-repeat;
-      background-image: linear-gradient(45deg, rgba(0, 0, 0, 0) 60%, tint($overlay0, 10%) 60%);
-      background-size: 400% auto;
+      background-image: linear-gradient(135deg, rgba(0, 0, 0, 0) 60%, tint($overlay0, 10%) 60%);
+      background-size: auto 400%;
       border-radius: 26px;
     }
   }
@@ -497,21 +496,21 @@ tooltip {
 }
 
 .module-button-pad-left {
-  margin: 8px 0;
-  margin-left: 8px;
+  margin: 0 8px;
+  margin-top: 8px;
   // background-color: shade($colorbg, 75%);
   border-top-left-radius: 26px;
   border-bottom-left-radius: 26px;
 }
 
 .module-button-pad-center {
-  margin: 8px 0;
+  margin: 0 8px;
   // background-color: shade($colorbg, 75%);
 }
 
 .module-button-pad-right {
-  margin: 8px 0;
-  margin-right: 8px;
+  margin: 0 8px;
+  margin-bottom: 8px;
   // background-color: shade($colorbg, 75%);
   border-bottom-right-radius: 26px;
   border-top-right-radius: 26px;
@@ -575,39 +574,39 @@ tooltip {
 .module-button {
   transition: 500ms cubic-bezier(0.05, 0.7, 0.1, 1);
   border-radius: 26px;
-  padding: 0px 5px;
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0) 60%, tint($overlay0, 10%) 60%);
-  background-size: 400% auto;
-  background-position: 40% 50%;
+  padding: 5px 0;
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0) 60%, tint($overlay0, 10%) 60%);
+  background-size: auto 400%;
+  background-position: 50% 40%;
 }
 
 .module-button-hover {
   transition: 500ms cubic-bezier(0.05, 0.7, 0.1, 1);
   border-radius: 26px;
-  padding: 0px 5px;
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0) 60%, tint($overlay0, 10%) 60%);
-  background-size: 400% auto;
+  padding: 5px 0;
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0) 60%, tint($overlay0, 10%) 60%);
+  background-size: auto 400%;
   background-color: $overlay0;
-  background-position: 60% 50%;
+  background-position: 50% 60%;
 }
 
 .module-button:hover {
   background-color: $overlay0;
-  background-position: 60% 50%;
+  background-position: 50% 60%;
 }
 
 .module-button:active {
   background-color: $overlay0;
-  background-position: 100% 50%;
+  background-position: 50% 100%;
 }
 
 .module-button-true {
   border-radius: 26px;
-  padding: 0px 5px;
+  padding: 5px 0;
   background-color: $overlay0;
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0) 60%, tint($overlay0, 10%) 60%);
-  background-size: 400% auto;
-  background-position: 90% 50%;
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0) 60%, tint($overlay0, 10%) 60%);
+  background-size: auto 400%;
+  background-position: 50% 90%;
 }
 
 .dynbg-image {

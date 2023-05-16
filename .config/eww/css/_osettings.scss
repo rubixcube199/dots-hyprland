@@ -6,7 +6,8 @@
     font-family: Torus;
     margin: 7px;
     margin-left: 0px;
-    border-top-right-radius: 53px;
+    border-radius: 17px;
+    border: 2px solid $color0;
 
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url('images/pictures/beach_smoothie.jpg');
@@ -22,7 +23,8 @@
     font-family: Torus;
     margin: 7px;
     margin-right: 0px;
-    border-top-left-radius: 53px;
+    border-radius: 17px;
+    border: 2px solid $color0;
 
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url('images/pictures/beach_drinks.jpeg');
@@ -45,7 +47,7 @@
     font-family: Torus;
     color: $onBackground;
     background-color: shade($colorbarbg, 5%);
-    border-top-right-radius: 53px;
+    border-radius: 17px;
 }
 
 .onotify-content {
@@ -56,7 +58,7 @@
     font-family: Torus;
     color: $onBackground;
     background-color: shade($colorbarbg, 5%);
-    border-top-left-radius: 53px;
+    border-radius: 17px;
 }
 
 .osettings-heading {
@@ -155,6 +157,7 @@
     padding-left: 28px;
     padding-right: 28px;
     background-color: shade($colorbarbg, 5%);
+    border-radius: 17px;
 }
 
 .osettings-btn {

@@ -47,8 +47,7 @@
   min-height: 39px;
   font-size: 19pt;
   color: $colortext;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 10px 0;
 }
 
 .music-title-hover {
@@ -57,23 +56,19 @@
   font-size: 19pt;
   color: $colortext;
   background-color: $overlay0;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 10px 0;
 }
 
 .music-title-bar {
   font-family: 'Torus';
   font-size: 15pt;
   color: $colorbar;
-  padding-left: 10px;
-  padding-right: 10px;
-
+  padding: 10px 0;
 }
 
 .music-artist-bar {
   color: $colorbar;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 10px 0;
   font-family: 'Torus';
   font-size: 11pt;
 }
@@ -121,7 +116,7 @@
   border-radius: 0px;
   color: $color1;
   // padding-right: 10px;
-  min-height: 53px;
+  min-width: 53px;
 }
 
 .music-icon {
@@ -187,20 +182,19 @@
 
 .osu-music-box {
   // min-width: 75px;
-  min-height: 53px;
-  background-size: auto 65%;
+  min-width: 53px;
+  background-size: 65% auto;
   background-position: 50% 50%;
   // background-image: url('images/svg/beatmaps.svg');
   // background-color: $colorbarbg;
   background-repeat: no-repeat;
-  padding-left: 15px;
 }
 
 .osu-music-box-dummy {
   min-width: 50px;
   min-height: 53px;
-  margin-right: -6px;
-  margin-left: 6px;
+  margin-bottom: -6px;
+  margin-top: 6px;
 }
 
 .osu-music-slider {
@@ -249,7 +243,7 @@
 }
 
 .bar-music-cover {
-  border-radius: 10px;
+  border-radius: 99px;
   min-height: 45px;
   min-width: 45px;
   background-size: auto 100%;
@@ -281,14 +275,13 @@
   font-weight: 500;
   padding: 3px 8px;
   border-radius: 9999px;
-  min-width: 50px;
+  min-height: 50px;
 }
 
 .music-button-box-bar {
   font-family: 'Material Symbols Rounded';
   color: $colortext;
-  min-width: 160px;
-  margin: 0 0px;
+  min-height: 160px;
   border-radius: 9999px;
 }
 
@@ -296,7 +289,7 @@
   color: $colortext;
   border-radius: 9999px;
   // margin: 3px;
-  min-width: 52px;
+  min-height: 52px;
   font-size: 32pt;
 }
 

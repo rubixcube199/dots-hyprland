@@ -62,7 +62,7 @@ chargestatus() {
 	if [ "$STATE" = "Charging" ]; then
 		echo -n ""
 	elif [ "$STATE" = "Discharging" ]; then
-		echo -n ""
+		echo -n "‎ "
 	fi
 }
 

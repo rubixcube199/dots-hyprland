@@ -9,6 +9,7 @@
         :class "module workspaces"
         :spacing 0
         :space-evenly false
+        :orientation "v"
         (for i in workspace
           (button
             :onclick "hyprctl dispatch workspace ${i.num}"
@@ -27,8 +28,8 @@
       (button
         :class "ws"
         :style "
-        margin-left:  ${31 * (activews - 1)}px;
-        margin-right: ${31 * (10 - activews)}px;
+        margin-top:  ${31 * (activews - 1)}px;
+        margin-bottom: ${31 * (10 - activews)}px;
         "
         (label
           :valign "center"

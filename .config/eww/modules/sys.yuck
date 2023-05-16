@@ -9,7 +9,7 @@
         :class "module"
         :space-evenly false
         :spacing 5
-        :halign "end"
+        :valign "end"
         (syscpu)
         (sysmem)
         (sysbatt)
@@ -123,7 +123,7 @@
                     (box
                       :class "element"
                       (button
-                        :halign "end"
+                        :valign "end"
                         :onclick "wlogout -p layer-shell &"
                         ""
                       )
@@ -145,7 +145,7 @@
                   (box
                     :class "sys-box"
                     :space-evenly false
-                    :halign "start"
+                    :valign "start"
                     (circular-progress
                       :value "${EWW_CPU.avg}"
                       :class "sys-cpu"
@@ -159,19 +159,19 @@
                       :vexpand false
                       (label
                         :text "CPU"
-                        :halign "start"
+                        :valign "start"
                         :class "sys-text-cpu"
                         :style "font-size: 12pt;"
                       )
                       (label
                         :text "${round(EWW_CPU.avg,2)}%"
-                        :halign "start"
+                        :valign "start"
                         :class "sys-text-sub"
                         :style "font-size: 12pt;"
                       )
                       (label
                         :text "${EWW_CPU.cores[0].freq} MHz"
-                        :halign "start"
+                        :valign "start"
                         :class "sys-text-sub"
                         :style "font-size: 12pt;"
                       )
@@ -182,7 +182,7 @@
                   (box
                     :class "sys-box"
                     :space-evenly false
-                    :halign "end"
+                    :valign "end"
                     (circular-progress
                       :value {memory.percentage}
                       :class "sys-mem"
@@ -194,9 +194,9 @@
                     )
                     (box
                       :orientation "v"
-                      (label :style "font-size: 12pt;" :text "Memory" :halign "start" :class "sys-text-mem")
-                      (label :style "font-size: 12pt;" :text "${memory.used} / ${memory.total}" :halign "start" :class "sys-text-sub")
-                      (label :style "font-size: 12pt;" :text "Swap ${memory.swapused} / ${memory.swaptotal}" :halign "start" :class "sys-text-sub")
+                      (label :style "font-size: 12pt;" :text "Memory" :valign "start" :class "sys-text-mem")
+                      (label :style "font-size: 12pt;" :text "${memory.used} / ${memory.total}" :valign "start" :class "sys-text-sub")
+                      (label :style "font-size: 12pt;" :text "Swap ${memory.swapused} / ${memory.swaptotal}" :valign "start" :class "sys-text-sub")
                     )
                   )
                 )
@@ -212,7 +212,7 @@
 (defwidget syscpu []
   (revealer
     :reveal "${((popup == 'system-menu' || EWW_CPU.avg>= 50) || force_sys_rev)}"
-    :transition "slideleft"
+    :transition "slideup"
     :duration "300ms"
     :onscroll "echo {} | sed -e 's/down/-/g' -e 's/up/+/g' | xargs -I% wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.03%"
     (eventbox
@@ -221,6 +221,7 @@
       (box
         :class "cpubar"
         :space-evenly false
+        :orientation "v"
         (circular-progress
           :value "${EWW_CPU.avg}"
           :class "cpubar-circle"
@@ -233,7 +234,7 @@
           )
         )
         (revealer
-          :transition "slideright"
+          :transition "slidedown"
           :reveal "${sys_rev || popup == 'system-menu' || force_sys_rev  || EWW_CPU.avg>= 50}"
           :duration "300ms"
           :class "sys-menu"
@@ -252,6 +253,7 @@
     (box
       :class "membar"
       :space-evenly false
+      :orientation "v"
       (circular-progress
         :value {memory.percentage}
         :class "membar-circle"
@@ -264,7 +266,7 @@
         )
       )
       (revealer
-        :transition "slideright"
+        :transition "slidedown"
         :reveal "${sys_rev || force_sys_rev || memory.percentage + memory.swappercentage >= 120}"
         :duration "300ms"
         :class "sys-menu"
@@ -281,8 +283,8 @@
     :class "batbar"
     :space-evenly false
     (box
+      :orientation "v" :space-evenly false
       :class "batbar"
-      :space-evenly false
       (circular-progress
         :value "${EWW_BATTERY["BATT"].capacity}"
         :class "batbar-circle"
@@ -298,7 +300,7 @@
         )
       )
       (revealer
-        :transition "slideright"
+        :transition "slidedown"
         :reveal true
         :duration "300ms"
         :class "sys-menu"
@@ -313,9 +315,9 @@
     :class "cpu-menu"
     (box
       :orientation "h"
-      :space-evenly false
-      (label :class "cpu-menu icon" :text "")
-      (label :class "cpu-menu" :text "${round(EWW_CPU.avg,0)}%")
+      :space-evenly false :orientation "v"
+      (label :angle 270 :class "cpu-menu icon" :text "")
+      (label :angle 270 :class "cpu-menu" :text "${round(EWW_CPU.avg,0)}%")
     )
   )
 )
@@ -323,30 +325,26 @@
 (defwidget memmenu[]
   (eventbox
     (box
-      :space-evenly false
-      (label :class "mem-menu-left" :text "")
-      (label :class "mem-menu-left" :text "${memory.used}")
-      (label :class "mem-menu-mid" :text "")
-      (label :class "mem-menu-right" :text "${memory.swapused}")
+      :space-evenly false :orientation "v"
+      (label :angle 270 :class "mem-menu-left" :text "")
+      (label :angle 270 :class "mem-menu-left" :text "${memory.used}")
+      (label :angle 270 :class "mem-menu-mid" :text "")
+      (label :angle 270 :class "mem-menu-right" :text "${memory.swapused}")
     )
   )
 )
 
 (defwidget sysmenu[]
   (eventbox
-    :class "sys-menu"
     :style "color: ${battery.color}"
     (box
-      :space-evenly false
+      :space-evenly false :orientation "h" 
+      :spacing -3
+      :halign "center"
+      :style "margin-left: -5px;"
+      :class "sys-batt-charge-box"
       (label :class "sys-menu-charge" :text "${battery.quickicon}")
       (label :class "batt-percentage" :text "${EWW_BATTERY["BATT"].capacity}%")
-      ; (revealer
-        ;   :reveal "${popup == 'system-menu' || force_sys_rev}"
-        ;   :transition "slideright"
-        ;   :duration "300ms"
-        ;   :class "sys-menu"
-        ;   (label :class "batt-percentage" :text " | ${battery.wattage} | ${battery.status}")
-      ; )
     )
   )
 )
@@ -356,7 +354,7 @@
     :onscroll "echo {} | sed -e 's/down/-/g' -e 's/up/+/g' | xargs -I% wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.03%"
     :class "settings-icon"
     (revealer
-      :transition "slideright"
+      :transition "slidedown"
       :reveal true
       :duration "300ms"
       :onclick "${EWW_CMD} update popup='system-menu'"
