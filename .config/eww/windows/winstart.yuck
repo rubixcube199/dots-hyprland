@@ -36,7 +36,7 @@
           (revealer
             :reveal {winsearch == ''}
             :halign "start"
-            :duration "0ms"
+            :duration "100ms"
             (label :class "winstart-search-prompt-text" :xalign 0 :text "Type to search")
           )
         )
@@ -46,7 +46,7 @@
         )
         (input
           :class "winstart-search-contents"
-          :onchange "${EWW_CMD} update winsearch='${winsearch_prefix}{}' && ${EWW_CMD} update winsearch_results=\"$(scripts/appsearch '${winsearch_prefix}{}')\" &"
+          :onchange "${EWW_CMD} update winsearch='${winsearch_prefix}{}' && ${EWW_CMD} update winsearch_results=\"$(scripts/appsearch '${winsearch_prefix}{}' --updateinfo)\" &"
           :onaccept "scripts/launchapp '${winsearch_results == '[]' ? (winsearch_prefix + {}) : winsearch_results[0].exec}' &"
         )
       )
@@ -69,19 +69,19 @@
           :class "winsearch-tag-strip"
           :space-evenly false
           (eventbox
-            :onclick "${EWW_CMD} update winsearch_prefix='' && ${EWW_CMD} update winsearch='${winsearch_prefix} ' && ${EWW_CMD} update winsearch_results=\"$(scripts/appsearch ' ')\" &"
+            :onclick "${EWW_CMD} update winsearch_prefix='' && ${EWW_CMD} update winsearch='${winsearch_prefix} ' && ${EWW_CMD} update winsearch_results=\"$(scripts/appsearch ' ' --updateinfo)\" &"
             (box :class "winsearch-tag-${winsearch_prefix == ''}"
               (label :class "wintoggle-text" :text "All")
             )
           )
           (eventbox
-            :onclick "${EWW_CMD} update winsearch_prefix='>load ' && ${EWW_CMD} update winsearch='${winsearch_prefix} ' && ${EWW_CMD} update winsearch_results=\"$(scripts/appsearch '>load ')\" &"
+            :onclick "${EWW_CMD} update winsearch_prefix='>load ' && ${EWW_CMD} update winsearch='${winsearch_prefix} ' && ${EWW_CMD} update winsearch_results=\"$(scripts/appsearch '>load ' --updateinfo)\" &"
             (box :class "winsearch-tag-${winsearch_prefix == '>load '}"
               (label :class "wintoggle-text" :text "Load theme")
             )
           )
           (eventbox
-            :onclick "${EWW_CMD} update winsearch_prefix='1*' && ${EWW_CMD} update winsearch='${winsearch_prefix} ' && ${EWW_CMD} update winsearch_results=\"$(scripts/appsearch --calculator)\" &"
+            :onclick "${EWW_CMD} update winsearch_prefix='1*' && ${EWW_CMD} update winsearch='${winsearch_prefix} ' && ${EWW_CMD} update winsearch_results=\"$(scripts/appsearch --calculator --updateinfo)\" &"
             (box :class "winsearch-tag-${winsearch_prefix == '1*'}"
               (label :class "wintoggle-text" :text "Calculate")
             )
@@ -542,7 +542,7 @@
             :halign "start"
             :space-evenly false
             :class "winstart-user"
-            :onclick "scripts/toggle-winstart.sh && gnome-control-center user-accounts &"
+            :onclick "scripts/toggle-winstart.sh --close && gnome-control-center user-accounts &"
             (box
               :space-evenly false
               :orientation "h"
@@ -577,7 +577,7 @@
     :y "51px"
     ; :height 788
     :width 673
-    :anchor "bottom left"
+    :anchor "bottom center"
   )
   (winmenu)
 )

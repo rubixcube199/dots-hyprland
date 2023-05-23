@@ -20,6 +20,7 @@ maincol="$(printf "$themejson" | gojq -c -M -r '.colors.color4')"
 # scripts/material_colors.py --path "$IMGPATH" $lightdark > tmp/_material.colorpallete
 scripts/material_colors.py --color "$maincol" "$lightdark" > tmp/_material.colorpallete &
 accent=$(scripts/material_colors.py --color "$maincol" "$lightdark" | grep '$onPrimaryContainer: ' | sed 's/$onPrimaryContainer: //g' | sed 's/;//g')
+tertiary=$(scripts/material_colors.py --color "$maincol" "$lightdark" | grep '$tertiary: ' | sed 's/$tertiary: //g' | sed 's/;//g')
 
 printf '{"image": "'"$coverpath"'", "color": '"$themejson"'}\n'
 
@@ -36,8 +37,6 @@ rgb_bg='rgba('"$rgb_bg"','"$OPACITY"')'
 
 # Write to scss
 echo '//Auto generated color theme for image at:' "$coverurl" > './tmp/_colorscheme.colorpallete'
-echo '@function bluetint($color, $percentage) {  @return mix(#CDDFED, $color, $percentage); }' >> './tmp/_colorscheme.colorpallete'
-echo '@function blueshade($color, $percentage) { @return mix(#152E50, $color, $percentage); }' >> './tmp/_colorscheme.colorpallete'
 printf '$colorbarbg: ' >> './tmp/_colorscheme.colorpallete'
 printf "$themejson" | gojq -r '.special.background' | tr '\n' ';' >> './tmp/_colorscheme.colorpallete'
 echo '' >> './tmp/_colorscheme.colorpallete'
@@ -85,5 +84,12 @@ echo '    col.inactive_border = rgba('"${gradient1#*#}66"')' >> './tmp/colors_ge
 echo '}' >> './tmp/colors_generated.conf'
 
 # Print json to stdout
-echo -n "$accent" > 'tmp/_iconcolor.txt'
+echo "$accent" > 'tmp/_iconcolor.txt'
+echo "$tertiary" >> 'tmp/_iconcolor.txt'
+printf "$themejson" | gojq -r '.colors.color2' >> 'tmp/_iconcolor.txt'
+printf "$themejson" | gojq -r '.colors.color4' >> 'tmp/_iconcolor.txt'
+printf "$themejson" | gojq -r '.colors.color5' >> 'tmp/_iconcolor.txt'
+printf "$themejson" | gojq -r '.colors.color5' >> 'tmp/_iconcolor.txt'
 
+# beatmappacks tertiary, forum color1, search color3, search color4, tournaments color4
+# 
