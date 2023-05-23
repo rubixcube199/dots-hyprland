@@ -3,8 +3,11 @@
     <h3> still wip! </h3>
 </div>
 
- - Who says cinnamon is most windows-like? 
- - See the main branch for dependencies/instructions
+## Features
+ - Actually has animations similar to Windows
+ - You'll see an anime girl instead of Trump in the Widgets panel
+## Instructions
+ - See the main branch for dependencies and installation instructions
  - Start bar with `eww open winbar`
 
  # Screenshots
