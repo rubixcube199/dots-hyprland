@@ -1,0 +1,77 @@
+Archive Manager
+Avahi SSH Server Browser
+Avahi VNC Server Browser
+Avahi Zeroconf Browser
+Bluetooth
+CMake
+Calculator
+Characters
+Color Profile Viewer
+Console
+Disks
+Document Viewer
+EndeavourOS Quickstart Installer
+EndeavourOS apps info
+EndeavourOS log tool
+Extensions
+Files
+Firefox
+Firewall
+Fonts
+Foot
+Foot Client
+Foot Server
+GPU-Viewer
+GitHub Desktop
+Hardware Locality lstopo
+Htop
+IBus Preferences
+Icon Browser
+Image Viewer
+Klipper
+KolourPaint
+Manage Printing
+Meld
+Microsoft Edge
+NVIDIA X Server Settings
+Network Tools
+Opera
+Power Statistics
+Print Settings
+PulseAudio Volume Control
+Qt Assistant
+Qt Designer
+Qt Linguist
+Qt QDBusViewer 
+Qt V4L2 test Utility
+Qt V4L2 video capture utility
+Qt5 Settings
+Reflector Simple
+Screenshot
+Settings
+Software
+Software Token
+Software Token (small)
+Steam (Runtime)
+Text Editor
+Tweaks
+UXTerm
+UpdateInTerminal
+Usage
+UserFeedback Console
+Videos
+Visual Studio Code
+WPS 2019
+WPS PDF
+WPS Presentation
+WPS Spreadsheets
+WPS Writer
+Welcome
+XTerm
+YAD settings
+btop++
+fish
+kitty
+mpv Media Player
+osu!
+yuzu

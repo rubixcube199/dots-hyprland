@@ -12,5 +12,5 @@
 
  # Screenshots
  ![dots-hyprland](./screenshot3.png)
- ![dots-hyprland](./screenshot2.png)
+ ![dots-hyprland](./screenshot4.png)
  ![dots-hyprland](./screenshot.png)
