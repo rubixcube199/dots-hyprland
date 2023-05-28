@@ -7,12 +7,14 @@
  - Actually has animations similar to Windows
  - You'll see random anime girls instead of Trump in the Widgets panel
  - The icon size doesn't suck
-## Instructions
- - See the main branch for dependencies and installation instructions
- - Start bar with `eww open winbar`
 
  # Screenshots
  ![dots-hyprland](./assets/screenshot6.png)
  ![dots-hyprland](./assets/screenshot3.png)
  ![dots-hyprland](./assets/screenshot5.png)
  ![dots-hyprland](./assets/screenshot4.png)
+
+## Instructions
+ - See the main branch for dependencies and installation instructions
+ - Start bar with `eww open winbar`
+ - VSCode theme: Community Material Theme Darker, _Hyprland opacity windowrule 0.92_
