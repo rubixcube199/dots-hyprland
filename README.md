@@ -5,12 +5,13 @@
 
 ## Features
  - Actually has animations similar to Windows
- - You'll see an anime girl instead of Trump in the Widgets panel
+ - You'll see random anime girls instead of Trump in the Widgets panel
+ - The icon size doesn't suck
 ## Instructions
  - See the main branch for dependencies and installation instructions
  - Start bar with `eww open winbar`
 
  # Screenshots
- ![dots-hyprland](./screenshot3.png)
- ![dots-hyprland](./screenshot4.png)
- ![dots-hyprland](./screenshot.png)
+ ![dots-hyprland](./assets/screenshot3.png)
+ ![dots-hyprland](./assets/screenshot4.png)
+ ![dots-hyprland](./assets/screenshot.png)
