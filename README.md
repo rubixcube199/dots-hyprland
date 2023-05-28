@@ -12,7 +12,7 @@
  - Start bar with `eww open winbar`
 
  # Screenshots
- ![dots-hyprland](./assets/screenshot.png)
+ ![dots-hyprland](./assets/screenshot6.png)
  ![dots-hyprland](./assets/screenshot3.png)
- ![dots-hyprland](./assets/screenshot4.png)
  ![dots-hyprland](./assets/screenshot5.png)
+ ![dots-hyprland](./assets/screenshot4.png)
