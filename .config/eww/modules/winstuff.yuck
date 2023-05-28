@@ -112,3 +112,21 @@
     (revealer :transition "slideright" :reveal false (label :text {awin.class}))
   )
 )
+
+(defwidget wintaskview-button []
+  (eventbox
+    :class "winbutton-only"
+    :onclick "scripts/toggle-wintaskview.sh &"
+    :onmiddleclick "playerctl play-pause"
+    :onrightclick "playerctl next || playerctl position `bc <<< \"100 * $(playerctl metadata mpris:length) / 1000000 / 100\"`"
+    (box
+      :class "winbutton-pad"
+      (image
+        :class "winnewsicon winbutton-${rev_wintaskview}"
+        :path "images/icons/wintaskview.png"
+        :image-width 30
+        :image-height 30
+      )
+    )
+  )
+)

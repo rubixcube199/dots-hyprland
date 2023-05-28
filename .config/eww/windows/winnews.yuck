@@ -566,7 +566,7 @@
 
 (defwidget winnews-button []
   (eventbox
-    :class "winbutton-only thewinbutton"
+    :class "winbutton-only"
     :onclick "scripts/toggle-winnews.sh &"
     :onmiddleclick "playerctl play-pause"
     :onrightclick "playerctl next || playerctl position `bc <<< \"100 * $(playerctl metadata mpris:length) / 1000000 / 100\"`"
@@ -576,6 +576,8 @@
       (image
         :class "winnewsicon winbutton-${rev_winnews}"
         :path "images/icons/winnews.png"
+        :image-width 30
+        :image-height 30
       )
     )
   )
