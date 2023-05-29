@@ -1,4 +1,4 @@
-(defwidget winmenu []
+(defwidget winstart_widget []
   (box
     :space-evenly false
     :orientation "v"
@@ -588,5 +588,5 @@
     :width 673
     :anchor "bottom center"
   )
-  (winmenu)
+  (winstart_widget)
 )

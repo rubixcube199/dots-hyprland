@@ -9,7 +9,7 @@
   )
 )
 
-(defwidget winnewspanel []
+(defwidget winnews_widget []
   (box
     :orientation "v" :space-evenly false
     :width {RES_WIDTH / 2}
@@ -537,9 +537,9 @@
                     ; :class "winnews-fetch-pad"
                     (box
                       :class "winnews-waifu"
-                      :style "
-                      background-image: url('${(waifu_get == 'null' || waifu_get == '') ? 'eww_covers/waifu' : waifu_get}');
-                      "
+                      ; :style "
+                      ; background-image: url('${(waifu_get == 'null' || waifu_get == '') ? 'eww_covers/waifu' : waifu_get}');
+                      ; "
                     )
                   )
                 )
@@ -561,7 +561,7 @@
     ; :height "0%"
     :anchor "top left"
   )
-  (winnewspanel)
+  (winnews_widget)
 )
 
 (defwidget winnews-button []

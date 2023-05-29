@@ -1,12 +1,12 @@
-//Auto generated color theme for image at: https://images-ext-1.discordapp.net/external/dGuye1fiIQ9_-EiUcztnEeARzo6UtsZVgVlRZyLDLQA/%3Ftoken%3D/https/pocketbase.selfhostable.net/api/files/42lnptpoti12hct/hzss19u8f6msr3g/2023_05_28_t07_56_59_utc_ZFicDIaFiP.mp4?format=jpeg&width=436&height=290
-$colorbarbg: #0a0a0f;
-$colorbg: rgba(10,10,15,0.75);
-$colortext: #baafcb;
-$color0: #433E51;
-$color1: #4D3E62;
-$color2: #3B4453;
-$color3: #464558;
-$color4: #595A70;
-$color5: #6C6D87;
-$color6: #baafcb;
-$color7: #464558;
+//Auto generated color theme for image at: https://i.ytimg.com/vi/RIN0LcB5Mz8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBgrbpWRtXNWjvJvkqKHmMWJjhHoQ
+$colorbarbg: #0C1028;
+$colorbg: rgba(12,16,40,0.75);
+$colortext: #d9d2e8;
+$color0: #4F6DD2;
+$color1: #837DB0;
+$color2: #29A3E3;
+$color3: #599ED9;
+$color4: #47C6E2;
+$color5: #A2B6DA;
+$color6: #d9d2e8;
+$color7: #599ED9;

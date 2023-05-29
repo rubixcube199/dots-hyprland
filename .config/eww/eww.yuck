@@ -41,6 +41,7 @@
 (include "./windows/winosd.yuck")
 (include "./windows/winoverview.yuck")
 (include "./windows/winpowermenu.yuck")
+(include "./windows/winshadows.yuck")
 (include "./windows/winstart.yuck")
 (include "./windows/wintaskview.yuck")
 
