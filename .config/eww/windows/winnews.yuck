@@ -534,12 +534,11 @@
                   )
                   (box
                     :orientation "v" :space-evenly false :valign "center"
-                    ; :class "winnews-fetch-pad"
                     (box
                       :class "winnews-waifu"
-                      ; :style "
-                      ; background-image: url('${(waifu_get == 'null' || waifu_get == '') ? 'eww_covers/waifu' : waifu_get}');
-                      ; "
+                      :style "
+                      background-image: url('${(waifu_get == 'null' || waifu_get == '') ? 'eww_covers/waifu' : waifu_get}');
+                      "
                     )
                   )
                 )
