@@ -85,15 +85,6 @@
     ${anim_open_winstart ? 'transition: 150ms cubic-bezier(0.05, 0.7, 0.1, 1);' : 'transition: 100ms cubic-bezier(0.3, 0, 0.8, 0.15);'}
     ${rev_winstart ? '' : 'margin-bottom: -900px;'}
     "
-    (eventbox
-      :valign "start"
-      :onclick "scripts/toggle-winstart.sh --close &"
-      :onmiddleclick "scripts/toggle-winstart.sh --close &"
-      :onrightclick "scripts/toggle-winstart.sh --close &"
-      (box
-        :class "box-that-is-there" :style "min-height: 1px;"
-      )
-    )
     (box
       :space-evenly false
       :orientation "v"
@@ -103,30 +94,13 @@
       :style "
       ${winsearch != '' ? 'min-width: 811px;' : 'min-width: 676px;'}
       "
-      (overlay
+      (box
+        :valign "end"
+        :space-evenly false
+        :class "winstart-search-prompt"
         (box
-          :valign "end"
-          :space-evenly false
-          :class "winstart-search-prompt"
-          (box
-            :halign "start"
-            :class "winsearch-icon winstart-search-searchbox-icon"
-          )
-          (revealer
-            :reveal {winsearch == ''}
-            :halign "start"
-            :duration "100ms"
-            (label :class "winstart-search-prompt-text" :xalign 0 :text "Type to search")
-          )
-        )
-        (box
-          :valign "end"
-          :class "winstart-search-accent"
-        )
-        (input
-          :class "winstart-search-contents"
-          :onchange "${EWW_CMD} update winsearch='${winsearch_prefix}{}' && ${EWW_CMD} update winsearch_results=\"$(scripts/appsearch '${winsearch_prefix}{}' --updateinfo)\" &"
-          :onaccept "scripts/launchapp '${winsearch_results == '[]' ? (winsearch_prefix + {}) : winsearch_results[0].exec}' &"
+          :halign "start"
+          :class "winsearch-icon winstart-search-searchbox-icon"
         )
       )
     )
@@ -173,7 +147,6 @@
             (box
               :orientation "v"
               :space-evenly false
-              :class "winsearch-actions-box"
               :width 404
             )
           )
@@ -191,7 +164,7 @@
           :space-evenly false
           :orientation "v"
           :class "winwin-center-noseparator-shadow"
-          :height 581
+          :height 600
           :style "
           ${winsearch != '' ? 'min-width: 811px;' : 'min-width: 676px;'}
           "
@@ -303,31 +276,6 @@
                       :space-evenly false
                       :orientation "v"
                       :class "winstart-allapps-box"
-                      (for app in allapps
-                        (button
-                          :class "winstart-allapps-app"
-                          :onclick "scripts/toggle-winstart.sh --close && gtk-launch ${app.filename} &"
-                          (box
-                            :space-evenly false
-                            :orientation "h"
-                            (revealer
-                              :transition "slideright"
-                              :duration "0ms"
-                              :reveal {app.icon != '_letter'}
-                              (image
-                                :class "winstart-allapps-app-icon"
-                                :path {(app.icon != '_letter' && app.icon != '') ? app.icon : 'images/svg/dark/app.svg'}
-                                :image-height 25
-                                :image-width 25
-                              )
-                            )
-                            (label
-                              :class "winbartext winstart-allapps-appname"
-                              :text {app.name}
-                            )
-                          )
-                        )
-                      )
                     )
                   )
                 )
@@ -335,16 +283,15 @@
             )
           )
         )
-        (centerbox
+        (box
           :space-evenly false
           :orientation "h"
           :class "winwin-bottom-shadow winstart-bottom-pad"
           :height 67
-          (button
+          (box
             :halign "start"
             :space-evenly false
             :class "winstart-user"
-            :onclick "scripts/toggle-winstart.sh --close && gnome-control-center user-accounts &"
             (box
               :space-evenly false
               :orientation "h"
@@ -356,10 +303,9 @@
             )
           )
           (box)
-          (button
+          (box
             :halign "end"
             :class "winstart-power-icon winstart-power-icon-${rev_winpowermenu}"
-            :onclick "scripts/toggle-winpowermenu.sh &"
             (image
               :path "images/svg/dark/power.svg"
             )

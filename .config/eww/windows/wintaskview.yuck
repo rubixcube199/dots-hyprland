@@ -137,6 +137,7 @@
                                 (label
                                   :hexpand true :xalign 0
                                   :class "wintaskview-text"
+                                  :limit-width {round(window.size[0] / 9, 0)}
                                   :text "${window.title}"
                                 )
                                 ; (button
