@@ -316,6 +316,39 @@
   )
 )
 
+(defwidget winactions_shadows_widget []
+  (box
+    :space-evenly false :spacing -12
+    :orientation "v"
+    :style "
+    ${anim_open_winactions ? 'transition: 150ms cubic-bezier(0.05, 0.7, 0.1, 1);' : 'transition: 150ms cubic-bezier(0.3, 0, 0.8, 0.15);'}
+    ${rev_winactions ? '' : 'margin-bottom: -700px;'}
+    "
+    ; Media controls
+    (revealer
+      :reveal {mname.title != ''}
+      :transition "slideup"
+      :duration "200ms"
+      (box
+        :space-evenly false :orientation "v"
+        :height 207
+        :class "winwin-shadow"
+        :style "
+        min-height: 207px;
+        "
+      )
+    )
+    (box
+      :space-evenly false :orientation "v"
+      :class "winwin-shadow"
+      :style "
+      min-height: 433px;
+      min-width: 398px;
+      "
+    )
+  )
+)
+
 (defwindow winnotif_shadows
   :wm-ignore true
   :monitor 0
@@ -357,4 +390,17 @@
     :anchor "bottom center"
   )
   (winstart_shadows_widget)
+)
+
+(defwindow winactions_shadows
+  :wm-ignore true
+  :monitor 0
+  :focusable false
+  :namespace "noblur"
+  :geometry (geometry
+    :x "0px"
+    :y "50px"
+    :anchor "bottom right"
+  )
+  (winactions_shadows_widget)
 )

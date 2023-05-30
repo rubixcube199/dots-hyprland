@@ -170,10 +170,9 @@
   border-top: 1px solid transparent;
 }
 
-.winnewsicon {
+.winbaricon {
   background-size: 60%;
   background-position: center;
-  // background-image: url('images/icons/winnews.png');
   min-width: 42px;
   min-height: 42px;
   border-radius: 6px;
@@ -1204,6 +1203,12 @@
 
 .winpower-window {
   padding: 5px;
+  background: rgba(40, 40, 40, 0.71);
+  border-radius: 12px;
+  border: 1px solid rgba(60, 60, 60, 0.4);
+  border-top: 1px solid rgba(64, 64, 64, 0.5);
+  margin: 12px;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.65);
 }
 
 .winpower-buttonicon {
@@ -1623,9 +1628,10 @@
 
 .wintaskview-workspaces-bg {
   border-radius: 9px;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: rgba(15, 15, 15, 0.75);
   margin: 10px;
   min-height: 60px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.65);
 }
 
 .wintaskview-text {
@@ -1785,4 +1791,72 @@
   margin: 12px;
   margin-top: 0px;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.65);
+}
+
+.winnewsicon {
+  background-position: center;
+  background-image: url('images/icons/winnews.png');
+  min-width: 42px;
+  min-height: 42px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  border-top: 1px solid transparent;
+}
+
+.winnewsicon-interaction:active {
+  :first-child {
+    :first-child {
+      background-image: url('images/icons/winnews-clicked.png');
+    }
+  }
+}
+
+.wintaskviewicon {
+  background-position: center;
+  background-size: 60%;
+  background-image: url('images/icons/wintaskview.png');
+  min-width: 42px;
+  min-height: 42px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  border-top: 1px solid transparent;
+}
+
+.wintaskviewicon-interaction:active {
+  :first-child {
+    :first-child {
+      background-size: 50%;
+      background-image: url('images/icons/wintaskview-clicked.png');
+    }
+  }
+}
+
+.winbarbutton-h {
+  :first-child {
+    :first-child {
+      border-radius: 6px;
+      border: 1px solid transparent;
+      border-top: 1px solid transparent;
+    }
+  }
+}
+
+.winbarbutton-h:hover {
+  :first-child {
+    :first-child {
+      background-color: shade($overlay0, 2%);
+      border: 1px solid $overlayedge;
+      border-top: 1px solid tint($overlayedge, 5%);
+    }
+  }
+}
+
+.winbarbutton-h:active {
+  :first-child {
+    :first-child {
+      background-color: tint($overlay0, 8%);
+      border: 1px solid tint($overlayedge, 10%);
+      border-top: 1px solid tint($overlayedge, 15%);
+    }
+  }
 }
