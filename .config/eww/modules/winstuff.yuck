@@ -130,3 +130,19 @@
     )
   )
 )
+
+(defwidget wintray-button []
+  (eventbox
+    :class "winbarbutton-h"
+    :onclick "pkill waybar || waybar -c ~/.config/eww/scripts/custom_configs/waybar-tray-config/config &"
+    (box
+      :class "winbutton-pad"
+      (image
+        :style "padding: 0 5px;"
+        :path "images/svg/dark/uparrow.svg"
+        :image-width 20
+        :image-height 20
+      )
+    )
+  )
+)

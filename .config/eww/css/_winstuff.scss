@@ -1860,3 +1860,12 @@
     }
   }
 }
+
+.wintray-button {
+  border-radius: 6px;
+  border: 1px solid $overlayedge;
+  border-top: 1px solid tint($overlayedge, 5%);
+  padding: 6px;
+  min-width: 20px;
+  min-height: 20px;
+}

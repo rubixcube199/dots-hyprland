@@ -187,6 +187,7 @@
     (box
       :halign "end"
       :space-evenly false
+      (wintray-button)
       (winactions)
       (windate)
     )
