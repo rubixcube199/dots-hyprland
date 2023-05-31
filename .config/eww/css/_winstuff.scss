@@ -1869,3 +1869,52 @@
   min-width: 20px;
   min-height: 20px;
 }
+
+.winbarbutton-h-open {
+  :first-child {
+    :first-child {
+      background-color: shade($overlay0, 2%);
+      border: 1px solid $overlayedge;
+      border-top: 1px solid tint($overlayedge, 5%);
+    }
+  }
+}
+
+.winnews-tag-strip {
+  min-height: 34px;
+  margin: 0 15px;
+  // margin-bottom: 3px;
+}
+
+.winnews-tag {
+  border-radius: 9999px;
+  padding: 10px 15px;
+  margin: 0 3px;
+  background-color: $secondaryContainer;
+  color: $onSecondaryContainer;
+}
+
+.winnews-tag:hover {
+  background-color: tint($secondaryContainer, 10%);
+  color: tint($onSecondaryContainer, 10%);
+}
+
+.winnews-tag:active {
+  background-color: tint($secondaryContainer, 20%);
+  color: tint($onSecondaryContainer, 20%);
+}
+
+.winnews-tag-false {
+  background-color: rgba(73, 73, 73, 0.25);
+  border-radius: 9999px;
+  padding: 10px 15px;
+  margin: 0 3px;
+}
+
+.winnews-tag-true {
+  background-color: $primary;
+  color: $onPrimary;
+  border-radius: 9999px;
+  padding: 10px 15px;
+  margin: 0 3px;
+}

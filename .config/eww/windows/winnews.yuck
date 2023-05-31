@@ -516,14 +516,30 @@
                       )
                     )
                   )
-                  ;totally necessary bunny ears
+                  ; Tag strip
+                  (scroll
+                    :halign "fill"
+                    :hscroll true :vscroll false
+                    (box
+                      :class "winnews-tag-strip"
+                      :space-evenly false
+                      (for id in WAIFU_TAG_ID
+                        (button
+                          :class "winnews-tag"
+                          :onclick "eww update waifu_get=$(scripts/waifupics.py ${WAIFU_CATEGORIES_ARGS[id]}) &"
+                          (label :class "wintoggle-text" :text {WAIFU_CATEGORIES[id]})
+                        )
+                      )
+                    )
+                  )
+                  ; Totally necessary bunny ears
                   (label
                     :halign "start"
                     :wrap true
                     :hexpand true
                     :halign "center"
                     :text "
-                        ⢀⡤⣄⡀
+                    ⠀⠀⢀⡤⣄⡀
                     ⠀⢠⡏⠀⠀⠳⡄⠀⠀⠀⠀⠀   ⣀⣀⣀
                     ⠀⢸⠃⠀⠀⠀⢿⠀⠀⠀⠀  ⣼⠃⠀⠘⢧
                     ⠀⢸⡆⠀⠀⠀⠸⡆⠀⠀   ⣸⠃⠀⠀⠀⠈⢧
@@ -531,14 +547,16 @@
                     ⠀　⢹⡀⠀⠀⠀⢸⠀     ⢸⠇⠀⠘⢧⡀⣸⠃
                     ⠀　⠀⢳⠀⠀⠀⢸⡆     ⢸⠀ ⠀⣼⠙
                     "
+                    :style "margin-bottom: -20px;"
                   )
+                  ; The image
                   (box
                     :orientation "v" :space-evenly false :valign "center"
                     (box
                       :class "winnews-waifu"
-                      ; :style "
-                      ; background-image: url('${(waifu_get == 'null' || waifu_get == '') ? 'eww_covers/waifu' : waifu_get}');
-                      ; "
+                      :style "
+                      background-image: url('${(waifu_get == 'null' || waifu_get == '') ? 'eww_covers/waifu' : waifu_get}');
+                      "
                     )
                   )
                 )

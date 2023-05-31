@@ -18,6 +18,9 @@
 (defvar WINTASKVIEW_RESERVED_BOTTOM 250)
 (defvar WINTASKVIEW_SPACING 30)
 (defvar MIN_ROW_HEIGHT 100)
+(defvar WAIFU_TAG_ID `[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,29,30,31,32]`)
+(defvar WAIFU_CATEGORIES `["waifu","waifu segs","neko","neko segs","megumin","shinobu","bully","cuddle","cry","hug","awoo","kiss","lick","pat","smug","bonk","yeet","blush","smile","wave","highfive","handhold","nom","bite","glomp","slap","kill","kick","happy","wink","poke","dance","cringe"]`)
+(defvar WAIFU_CATEGORIES_ARGS `["waifu","--segs waifu","neko","--segs neko","megumin","shinobu","bully","cuddle","cry","hug","awoo","kiss","lick","pat","smug","bonk","yeet","blush","smile","wave","highfive","handhold","nom","bite","glomp","slap","kill","kick","happy","wink","poke","dance","cringe"]`)
 
 ; Vars
 (defvar music_reveal false)
@@ -65,6 +68,7 @@
 (defvar supercontext_pos_x 960)
 (defvar supercontext_pos_y 540)
 (defvar ws_to_swap 0)
+(defvar tray_is_open false)
 
 ; Dynamic animation: different for open and close
 (defvar rev_wincalendar true)

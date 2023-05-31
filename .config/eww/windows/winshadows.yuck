@@ -343,7 +343,7 @@
       :class "winwin-shadow"
       :style "
       min-height: 433px;
-      min-width: 398px;
+      min-width: 404px;
       "
     )
   )
