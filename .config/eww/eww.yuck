@@ -35,6 +35,7 @@
 
 ; Windows 11 stuff
 (include "./windows/winactions.yuck")
+(include "./windows/winbsod.yuck")
 (include "./windows/wingamebar.yuck")
 (include "./windows/winnews.yuck")
 (include "./windows/winnotif.yuck")
