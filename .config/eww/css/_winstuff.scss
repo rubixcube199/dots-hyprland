@@ -1938,3 +1938,23 @@
 .winbsod-technicalinfo {
   font-size: 15pt;
 }
+
+.winnews-cava-column {
+  background-color: $primary;
+  border-top-left-radius: 99px;
+  border-top-right-radius: 99px;
+  margin: 0 4px;
+}
+
+.winnews-widget-nopad-cava {
+  border-radius: 9px;
+  background-color: $onSecondary;
+
+  :first-child {
+    border-bottom-left-radius: 99px;
+  }
+
+  :last-child {
+    border-bottom-right-radius: 99px;
+  }
+}
