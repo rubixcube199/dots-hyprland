@@ -90,6 +90,7 @@
 (defvar rev_bottombar false)
 (defvar rev_supercontext false)
 (defvar rev_wintaskview false)
+(defvar rev_winlang false)
 
 (defvar anim_open_ostg true)
 (defvar anim_open_ontf true)
@@ -108,6 +109,7 @@
 (defvar anim_open_bottombar true)
 (defvar anim_open_supercontext true)
 (defvar anim_open_wintaskview true)
+(defvar anim_open_winlang true)
 
 ; Time
 (defpoll time :interval "5s" `date +'{"date": "%d/%m", "hour": "%H", "minute": "%M", "monthname": "%B", "day": "%A", "year": "%Y"}'`)
@@ -148,6 +150,8 @@
 (deflisten cavajson `scripts/cavajson`)
 (deflisten mousepos `scripts/mousetrack`)
 (deflisten taskviewlayout `scripts/taskviewlayout-wrapper`)
+(deflisten lang_ibus :initial "{\"name\":\"English (xkb)\",\"name_abbr\":\"ENG\",\"name_ibus\":\"xkb:us::eng\"}" `scripts/language`)
+(defpoll langs :interval "5m" `cat modules/langs.json | gojq -c -M`)
 (defpoll colormode   :interval "5m" "cat scripts/workdir/__mode_colors.txt")
 (defpoll coloraccent :interval "5m" "cat css/_iconcolor.txt | head -1")
 

@@ -1958,3 +1958,32 @@
     border-bottom-right-radius: 99px;
   }
 }
+
+.winlang-text {
+  color: white;
+}
+
+.winlang-subtext {
+  color: #C1C1C1;
+}
+
+.winlang-lang-false {
+  padding: 15px;
+  margin: 4px;
+  border-radius: 6px;
+
+  background-position: -0.5% center;
+  background-size: 5px 24px;
+  background-image: url('images/svg/linetransparent.svg');
+}
+
+.winlang-lang-true {
+  padding: 15px;
+  margin: 4px;
+  border-radius: 6px;
+
+  background-color: rgba(73, 73, 73, 0.25);
+  background-position: -0.5% center;
+  background-size: 5px 24px;
+  background-image: url('images/svg/linevertical.svg');
+}

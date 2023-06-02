@@ -1,12 +1,12 @@
-//Auto generated color theme for image at: https://i.ytimg.com/vi/2zoknU-DHW8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBK1j6IJ9I7zGcOgcV7vd-ircbNvQ
-$colorbarbg: #321a2a;
-$colorbg: rgba(50,26,42,0.75);
-$colortext: #f2e3e9;
-$color0: #C1A4BA;
-$color1: #F0ABBA;
-$color2: #D5ADC7;
-$color3: #EDB4C8;
-$color4: #F4CBD6;
-$color5: #E7D8DB;
-$color6: #f2e3e9;
-$color7: #EDB4C8;
+//Auto generated color theme for image at: https://images-ext-2.discordapp.net/external/k0ND7Wzw0gBw1DcdefxiVXPcClTm5ZUZFE126UOMYF8/https/media.tenor.com/k6DPX-uznAIAAAAD/giga-chad-he-got-real.png?width=163&height=327
+$colorbarbg: #0b0b0b;
+$colorbg: rgba(11,11,11,0.75);
+$colortext: #f4f4f4;
+$color0: #817F80;
+$color1: #8E8E8E;
+$color2: #A9A9A9;
+$color3: #D1D1D1;
+$color4: #EDEDED;
+$color5: #F2F2F2;
+$color6: #f4f4f4;
+$color7: #D1D1D1;

@@ -620,9 +620,9 @@
                     :orientation "v" :space-evenly false :valign "center"
                     (box
                       :class "winnews-waifu"
-                      :style "
-                      background-image: url('${(waifu_get == 'null' || waifu_get == '') ? 'eww_covers/waifu' : waifu_get}');
-                      "
+                      ; :style "
+                      ; background-image: url('${(waifu_get == 'null' || waifu_get == '') ? 'eww_covers/waifu' : waifu_get}');
+                      ; "
                     )
                   )
                 )
@@ -651,20 +651,20 @@
                     (cavacol_winnews :dir "up" :nth 8)
                     (cavacol_winnews :dir "up" :nth 9)
                     (cavacol_winnews :dir "up" :nth 10)
-                    (cavacol_winnews :dir "up" :nth 11)
+                    (cavacol_winnews :dir "up" :nth 10)
+                    (cavacol_winnews :dir "up" :nth 10)
                     (cavacol_winnews :dir "up" :nth 12)
-                    (cavacol_winnews :dir "up" :nth 13)
                     (cavacol_winnews :dir "up" :nth 14)
-                    (cavacol_winnews :dir "up" :nth 15)
                     (cavacol_winnews :dir "up" :nth 16)
-                    (cavacol_winnews :dir "up" :nth 17)
                     (cavacol_winnews :dir "up" :nth 18)
-                    (cavacol_winnews :dir "up" :nth 19)
                     (cavacol_winnews :dir "up" :nth 20)
-                    (cavacol_winnews :dir "up" :nth 21)
                     (cavacol_winnews :dir "up" :nth 22)
-                    (cavacol_winnews :dir "up" :nth 23)
                     (cavacol_winnews :dir "up" :nth 24)
+                    (cavacol_winnews :dir "up" :nth 26)
+                    (cavacol_winnews :dir "up" :nth 28)
+                    (cavacol_winnews :dir "up" :nth 30)
+                    (cavacol_winnews :dir "up" :nth 32)
+                    (cavacol_winnews :dir "up" :nth 34)
                   )
                   (box
                     :orientation "h"
