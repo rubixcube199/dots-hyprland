@@ -1,6 +1,6 @@
 <div align="center">
     <h1>[ end-4/dots-hyprland > windoes branch ]</h1>
-    <h3> still wip! </h3>
+    <h3> your colleagues will not freak out now </h3>
 </div>
 
 ## Features
