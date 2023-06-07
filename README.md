@@ -9,6 +9,7 @@
  - The icon size doesn't suck
 
  # Screenshots
+ - A video showing everything: https://cdn.discordapp.com/attachments/1114548683770441738/1114548686400266260/hyprland11_fadeout.mp4
  ![dots-hyprland](./assets/screenshot6.png)
  ![dots-hyprland](./assets/screenshot3.png)
  ![dots-hyprland](./assets/screenshot5.png)
