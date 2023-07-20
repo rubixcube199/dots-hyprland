@@ -4,7 +4,7 @@
 </div>
 
  - See main branch for instructions, info and stuff: https://github.com/end-4/dots-hyprland/tree/main
- - The icons are from LineageOS
+ - The music and settings icons are from LineageOS
  - The calendar, system menu, music player are dynamic widgets and makes the bar expand on open, don't blur `gtk-layer-shell`!
 
 # Previews
