@@ -1,4 +1,4 @@
-<div align="center">
+![image](https://github.com/end-4/dots-hyprland/assets/97237370/c43f55a4-f383-4ed1-8171-3fd8c444fcdb)![image](https://github.com/end-4/dots-hyprland/assets/97237370/e084b0c8-2595-4fb9-9114-7acc7bfd543a)<div align="center">
     <h1>【 end_4's Hyprland dotfiles > m3ww 】</h1>
     <h3> Material design 3 woo </h3>
 </div>
@@ -21,7 +21,7 @@
 
 ## Dependencies
  - Requires [eww with systray support](https://github.com/elkowar/eww/pull/743)
- - Python dependencies (run this command)
+ - Python dependencies (Command)
 ```
 pip install pywal desktop_entry_lib poetry build Pillow
 ```
@@ -32,9 +32,9 @@ sudo pacman -S bc blueberry bluez boost boost-libs coreutils curl findutils fuzz
 [ Command for: Fedora (INCOMPLETE command so there's less name hunting for you) ]
 sudo dnf install bc blueberry bluez coreutils dunst findutils gawk gojq ImageMagick light NetworkManager network-manager-applet pavucontrol plasma-browser-integration playerctl procps ripgrep socat swayidle udev upower util-linux wget wireplumber wl-clipboard wlogout qalc sox nlohmann-json-devel
 ```
-- AUR Packages
+- AUR Packages (Command for Arch Linux with `yay` installed)
 ```
-cava geticons gojq gtklock gtklock-playerctl-module gtklock-powerbar-module gtklock-userinfo-module hyprland-git python-material-color-utilities swww wlogout
+yay -S cava geticons gojq gtklock gtklock-playerctl-module gtklock-powerbar-module gtklock-userinfo-module hyprland-git python-material-color-utilities swww wlogout
 ```
 - Manual setup
    - Get "Plasma browser integration" extension for your browser
