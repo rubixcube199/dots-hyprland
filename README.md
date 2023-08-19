@@ -21,9 +21,9 @@
 
 ## Dependencies
  - Requires [eww with systray support](https://github.com/elkowar/eww/pull/743)
- - Python dependencies (Command)
+ - Python dependencies (Command for Arch Linux with `yay` installed)
 ```
-pip install pywal desktop_entry_lib poetry build Pillow
+yay -S python-pywal python-desktop-entry-lib python-poetry python-build python-Pill
 ```
  - Normal dependencies
 ```
