@@ -1,4 +1,4 @@
-![image](https://github.com/end-4/dots-hyprland/assets/97237370/c43f55a4-f383-4ed1-8171-3fd8c444fcdb)![image](https://github.com/end-4/dots-hyprland/assets/97237370/e084b0c8-2595-4fb9-9114-7acc7bfd543a)<div align="center">
+<div align="center">
     <h1>【 end_4's Hyprland dotfiles > m3ww 】</h1>
     <h3> Material design 3 woo </h3>
 </div>
