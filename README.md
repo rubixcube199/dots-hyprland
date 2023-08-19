@@ -22,31 +22,31 @@
  - Note that you have to install the Segoe UI Variable font manually
 
 # Dependencies
- - Python dependencies
+ - Python dependencies (Command)
 ```
-pywal desktop_entry_lib poetry build Pillow
+pip install pywal desktop_entry_lib poetry build Pillow
 ```
  - Normal dependencies
 ```
-[ Possible package names (tries to match Arch) ]
-bc blueberry bluez boost boost-libs coreutils dunst findutils fzf gawk gnome-control-center ibus imagemagick libqalculate light networkmanager network-manager-applet nlohmann-json pavucontrol plasma-browser-integration playerctl procps ripgrep socat sox udev upower util-linux xorg-xrandr wget wireplumber yad
+[ Possible package names (Command for Arch Linux) ]
+sudo pacman -S bc blueberry bluez boost boost-libs coreutils dunst findutils fuzzel fzf gawk gnome-control-center ibus imagemagick libqalculate light networkmanager network-manager-applet nlohmann-json pavucontrol plasma-browser-integration playerctl procps ripgrep socat sox udev upower util-linux xorg-xrandr wget wireplumber yad
 [ Command for: Fedora (INCOMPLETE command; so there's less name hunting for you) ]
 sudo dnf install bc blueberry bluez coreutils dunst findutils gawk gojq ImageMagick light NetworkManager network-manager-applet pavucontrol plasma-browser-integration playerctl procps ripgrep socat swayidle swaybg udev upower util-linux wget wireplumber wlogout qalc sox nlohmann-json-devel
 ```
-- AUR Packages
+- AUR Packages (Command for Arch Linux with `yay` installed)
 ```
-cava eww-wayland-git geticons gojq gtklock gtklock-playerctl-module gtklock-powerbar-module gtklock-userinfo-module hyprland-git python-material-color-utilities swww xdg-desktop-portal-hyprland-git waybar-hyprland-git wlogout 
+yay -S cava eww-wayland-git geticons gojq gtklock gtklock-playerctl-module gtklock-powerbar-module gtklock-userinfo-module hyprland-git python-material-color-utilities swww xdg-desktop-portal-hyprland-git waybar-hyprland-git wlogout 
 ```
 - Manual setup
    - Get "Plasma browser integration" extension for your browser
    - Run `usermod -aG video <USERNAME>` for brightness control to work
-   - Install proprietary font: Segoe UI Variable
-- Stuff that you might wanna install if you didn't start as a lazyass on EndeavourOS+Gnome like me (install these if you decide to use my hyprland.conf)
+   - Segoe UI Variable
+- Keyring (basically authentication stuff) (Command for Arch Linux)
 ```
-gnome-keyring polkit-gnome 
+sudo pacman -S gnome-keyring polkit-gnome 
 ```
 
- - Other stuff that I use, mostly utilities (you can skip these)
+ - Utilities that I use (Command for Arch Linux)
 ```
-tesseract cliphist grim slurp fuzzel
+sudo pamcman -S tesseract cliphist grim slurp
 ```
