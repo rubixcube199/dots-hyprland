@@ -22,9 +22,9 @@
  - Note that you have to install the Segoe UI Variable font manually
 
 # Dependencies
- - Python dependencies (Command)
+ - Python dependencies (Command for Arch Linux with `yay` installed)
 ```
-pip install pywal desktop_entry_lib poetry build Pillow
+yay -S python-pywal python-desktop-entry-lib python-poetry python-build python-Pill
 ```
  - Normal dependencies
 ```
