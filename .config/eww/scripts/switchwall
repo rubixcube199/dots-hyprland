@@ -1,11 +1,10 @@
 #!/usr/bin/bash
-# Switches sww wallpaper
-# Requires: coreutils, xrandr, hyprland
+# Switches swww wallpaper
 
-# Select and set image (hyprland)
+# Select
 cd "$HOME/Pictures"
 imgpath=$(yad --width 1200 --height 800 --file --title='Choose wallpaper')
-screensizey=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f2)
+screensizey=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f2 | head -1)
 cursorposx=$(hyprctl cursorpos -j | gojq '.x')
 cursorposy=$(hyprctl cursorpos -j | gojq '.y')
 cursorposy_inverted=$(( screensizey - cursorposy ))
@@ -16,7 +15,7 @@ if [ "$imgpath" == '' ]; then
 fi
 
 echo Sending "$imgpath" to swww. Cursor pos: ["$cursorposx, $cursorposy_inverted"] &
-# Change swww wallpaper
+# Change swww img
 swww img "$imgpath" --transition-step 230 --transition-fps 60 \
     --transition-type grow --transition-angle 30 --transition-duration 1 \
     --transition-pos "$cursorposx, $cursorposy_inverted" &
