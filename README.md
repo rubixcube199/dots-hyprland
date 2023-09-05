@@ -16,6 +16,7 @@
  ![dots-hyprland](./assets/screenshot4.png)
 
 ## Instructions
+### Dependencies
  - Python dependencies (Command for Arch Linux with `yay` installed)
 ```
 yay -S python-pywal python-desktop-entry-lib python-poetry python-build python-pillow
@@ -34,7 +35,8 @@ yay -S cava eww-wayland-git geticons gojq gtklock gtklock-playerctl-module gtklo
 - Manual setup
    - Get "Plasma browser integration" extension for your browser
    - Run `usermod -aG video <USERNAME>` for brightness control to work
-   - Segoe UI Variable
+   - Install Segoe UI Variable
+   - Install VSCode theme: Community Material Theme Darker
 - Keyring (basically authentication stuff) (Command for Arch Linux)
 ```
 sudo pacman -S gnome-keyring polkit-gnome 
@@ -45,5 +47,3 @@ sudo pacman -S gnome-keyring polkit-gnome
 sudo pamcman -S tesseract cliphist grim slurp
 ```
  - Start bar with `eww open winbar`
- - Note that you have to install the Segoe UI Variable font manually
- - VSCode theme: Community Material Theme Darker
