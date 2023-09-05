@@ -23,7 +23,7 @@
  - Requires [eww with systray support](https://github.com/elkowar/eww/pull/743). *(Don't need a tray? just comment out line 5 of `.config/eww/modules/status.yuck` with a semicolon(;))*
  - Python dependencies (Command for Arch Linux with `yay` installed)
 ```
-yay -S python-pywal python-desktop-entry-lib python-poetry python-build python-Pill
+yay -S python-pywal python-desktop-entry-lib python-poetry python-build python-pillow
 ```
  - Normal dependencies
 ```
