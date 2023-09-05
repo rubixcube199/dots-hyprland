@@ -556,6 +556,14 @@ $bgdetail2: $onTertiary;
     background-color: tint($tertiary, 40%);
 }
 
+.osettings-tag-label-icon-material {
+    font-family: 'Material Symbols Rounded';
+}
+
+.osettings-tag-label-txt {
+    font-family: 'Torus';
+}
+
 .osettings-tag-nerd {
     color: $onTertiary;
     background-color: $tertiary;

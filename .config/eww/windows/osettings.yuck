@@ -104,7 +104,7 @@
                 (box
                   :orientation "v"
                   :space-evenly false
-                  (centerbox
+                  (box
                     (box
                       :orientation "h"
                       :space-evenly false
@@ -121,36 +121,65 @@
                         :text "Quick values"
                       )
                     )
-                    (box)
-                    (box
-                      :orientation "h" :space-evenly false
-                      :halign "end" :spacing 4
-                      (button :valign "center" :yalign 0.5
-                        :class "osettings-tag"
-                        :onclick "wpctl set-volume @DEFAULT_AUDIO_SINK@ 23% &"
-                        "󰎈 music"
+                    (scroll
+                      :hexpand true
+                      :hscroll true :vscroll false
+                      (box
+                        :orientation "h" :space-evenly false
+                        :halign "end" :spacing 4
+                        (button :valign "center" :yalign 0.5
+                          :class "osettings-tag"
+                          :onclick "wpctl set-volume @DEFAULT_AUDIO_SINK@ 23% &"
+                          (box
+                            :orientation "h"
+                            :space-evenly false
+                            (label
+                              :valign "center"
+                              :class "osettings-tag-label-icon-material"
+                              :text "music_note"
+                            )
+                            (label
+                              :valign "center"
+                              :class "osettings-tag-label-txt"
+                              :text "music"
+                            )
+                          )
+                        )
+                        (button :valign "center" :yalign 0.5
+                          :class "osettings-tag"
+                          :onclick "wpctl set-volume @DEFAULT_AUDIO_SINK@ 50% &"
+                          (box
+                            :orientation "h"
+                            :space-evenly false
+                            (label
+                              :valign "center"
+                              :class "osettings-tag-label-icon-material"
+                              :text "mic"
+                            )
+                            (label
+                              :valign "center"
+                              :class "osettings-tag-label-txt"
+                              :text "asmr"
+                            )
+                          )
+                        )
+                        (button :valign "center" :yalign 0.5
+                          :class "osettings-tag-material"
+                          :onclick "light -S 40 &"
+                          ""
+                        )
+                        (button :valign "center" :yalign 0.5
+                          :class "osettings-tag-material"
+                          :onclick "light -S 5 &"
+                          ""
+                        )
                       )
-                      (button :valign "center" :yalign 0.5
-                        :class "osettings-tag"
-                        :onclick "wpctl set-volume @DEFAULT_AUDIO_SINK@ 50% &"
-                        " asmr"
-                      )
-                      (button :valign "center" :yalign 0.5
-                        :class "osettings-tag-material"
-                        :onclick "light -S 40 &"
-                        ""
-                      )
-                      (button :valign "center" :yalign 0.5
-                        :class "osettings-tag-material"
-                        :onclick "light -S 5 &"
-                        ""
-                      )
+                      ; (button :valign "center" :yalign 0.5
+                        ;   :class "osettings-tag"
+                        ;   :onclick "wpctl set-volume @DEFAULT_AUDIO_SINK@ 50% &"
+                        ;   "night"
+                      ; )
                     )
-                    ; (button :valign "center" :yalign 0.5
-                      ;   :class "osettings-tag"
-                      ;   :onclick "wpctl set-volume @DEFAULT_AUDIO_SINK@ 50% &"
-                      ;   "night"
-                    ; )
                   )
                   (revealer
                     :reveal "${matches('quick settings volume audio',oquery)}"
@@ -257,21 +286,51 @@
                       :halign "start"
                       :wrap true
                       :class "osettings-section"
-                      :text "Mouse/Touchpad"
+                      :text "Mouse/touchpad"
                     )
-                    (box
-                      :orientation "h" :space-evenly false
-                      :halign "end" :spacing 4
-                      :style "margin-left: 16px;"
-                      (button :valign "center" :yalign 0.5
-                        :class "osettings-tag"
-                        :onclick "hyprctl keyword input:force_no_accel true &"
-                        "󰐾 osu"
-                      )
-                      (button :valign "center" :yalign 0.5
-                        :class "osettings-tag"
-                        :onclick "hyprctl keyword input:touchpad:disable_while_typing false &"
-                        "󰆧 minecraft"
+                    (scroll
+                      :hexpand true
+                      :hscroll true :vscroll false
+                      (box
+                        :orientation "h" :space-evenly false
+                        :halign "end" :spacing 4
+                        :style "margin-left: 16px;"
+                        (button :valign "center" :yalign 0.5
+                          :class "osettings-tag"
+                          :onclick "hyprctl keyword input:force_no_accel true &"
+                          (box
+                            :orientation "h"
+                            :space-evenly false
+                            (label
+                              :valign "center"
+                              :class "osettings-tag-label-icon-material"
+                              :text "radio_button_checked"
+                            )
+                            (label
+                              :valign "center"
+                              :class "osettings-tag-label-txt"
+                              :text "osu"
+                            )
+                          )
+                        )
+                        (button :valign "center" :yalign 0.5
+                          :class "osettings-tag"
+                          :onclick "hyprctl keyword input:touchpad:disable_while_typing false &"
+                          (box
+                            :orientation "h"
+                            :space-evenly false
+                            (label
+                              :valign "center"
+                              :class "osettings-tag-label-icon-material"
+                              :text "deployed_code"
+                            )
+                            (label
+                              :valign "center"
+                              :class "osettings-tag-label-txt"
+                              :text "minecraft"
+                            )
+                          )
+                        )
                       )
                     )
                   )
