@@ -27,7 +27,7 @@ _[Check the releases](https://github.com/end-4/dots-hyprland/releases) for confi
  - Python dependencies (Command for Arch Linux with `yay` installed)
 ```
 [ Command ]
-yay -S python-pywal python-desktop-entry-lib python-poetry python-build python-Pill
+yay -S python-pywal python-desktop-entry-lib python-poetry python-build python-pillow
 ```
  - Normal dependencies
 ```
