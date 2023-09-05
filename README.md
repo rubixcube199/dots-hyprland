@@ -46,6 +46,6 @@ sudo pacman -S gnome-keyring polkit-gnome
 sudo pacman -S tesseract cliphist grim slurp
 ```
  - Copy
-   - `.config`, `.local` to home folder
+   - `.config`, `.local`, `.themes` to home folder
    - Stuff in Import manually folder if you know what they are and want them
  - Start bar with `eww daemon && eww open winbar`. (or just log out and log in)
