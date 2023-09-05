@@ -43,9 +43,9 @@ sudo pacman -S gnome-keyring polkit-gnome
 
  - Utilities that I use (Command for Arch Linux)
 ```
-sudo pamcman -S tesseract cliphist grim slurp
+sudo pacman -S tesseract cliphist grim slurp
 ```
  - Copy
-   - `Pictures`, `.config`, `.local` to home folder
+   - `.config`, `.local` to home folder
    - Stuff in Import manually folder if you know what they are and want them
  - Start bar with `eww daemon && eww open winbar`. (or just log out and log in)
