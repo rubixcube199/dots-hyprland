@@ -24,7 +24,7 @@
 # Dependencies
  - Python dependencies (Command for Arch Linux with `yay` installed)
 ```
-yay -S python-pywal python-desktop-entry-lib python-poetry python-build python-Pill
+yay -S python-pywal python-desktop-entry-lib python-poetry python-build python-pillow
 ```
  - Normal dependencies
 ```
