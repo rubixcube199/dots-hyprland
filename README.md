@@ -15,8 +15,7 @@
  ![dots-hyprland](./assets/screenshot5.png)
  ![dots-hyprland](./assets/screenshot4.png)
 
-## Instructions
-### Dependencies
+### Installation
  - Python dependencies (Command for Arch Linux with `yay` installed)
 ```
 yay -S python-pywal python-desktop-entry-lib python-poetry python-build python-pillow
@@ -46,4 +45,7 @@ sudo pacman -S gnome-keyring polkit-gnome
 ```
 sudo pamcman -S tesseract cliphist grim slurp
 ```
- - Start bar with `eww open winbar`
+ - Copy
+   - `Pictures`, `.config`, `.local` to home folder
+   - Stuff in Import manually folder if you know what they are and want them
+ - Start bar with `eww daemon && eww open winbar`. (or just log out and log in)
