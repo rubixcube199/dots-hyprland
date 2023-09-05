@@ -16,12 +16,6 @@
  ![dots-hyprland](./assets/screenshot4.png)
 
 ## Instructions
- - See the main branch for installation instructions. Dependencies below.
- - Start bar with `eww open winbar`
- - VSCode theme: Community Material Theme Darker, _Hyprland opacity windowrule 0.92_
- - Note that you have to install the Segoe UI Variable font manually
-
-# Dependencies
  - Python dependencies (Command for Arch Linux with `yay` installed)
 ```
 yay -S python-pywal python-desktop-entry-lib python-poetry python-build python-pillow
@@ -50,3 +44,6 @@ sudo pacman -S gnome-keyring polkit-gnome
 ```
 sudo pamcman -S tesseract cliphist grim slurp
 ```
+ - Start bar with `eww open winbar`
+ - Note that you have to install the Segoe UI Variable font manually
+ - VSCode theme: Community Material Theme Darker
