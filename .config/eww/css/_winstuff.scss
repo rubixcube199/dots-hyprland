@@ -33,7 +33,7 @@
 }
 
 .winwin-top {
-  transition: 100ms cubic-bezier(0.05, 0.7, 0.1, 1);
+  transition: 300ms cubic-bezier(0, 1, 0, 1);
   background: rgba(40, 40, 40, 0.71);
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
@@ -55,7 +55,7 @@
 }
 
 .winwin-bottom-light {
-  transition: 100ms cubic-bezier(0.05, 0.7, 0.1, 1);
+  transition: 300ms cubic-bezier(0, 1, 0, 1);
   background: rgba(40, 40, 40, 0.71);
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
@@ -82,7 +82,7 @@
   border-top: 1px solid rgba(64, 64, 64, 0.8);
   animation-name: flyin-bottom;
   animation-duration: 350ms;
-  animation-timing-function: cubic-bezier(0.05, 0.7, 0.1, 1);
+  animation-timing-function: cubic-bezier(0, 1, 0, 1);
   animation-iteration-count: 1;
 }
 
@@ -564,20 +564,20 @@
 
 .winslider {
   border-radius: 9999px;
-  transition: 0ms cubic-bezier(0.05, 0.7, 0.1, 1);
+  transition: 0ms cubic-bezier(0, 1, 0, 1);
 
   trough {
     border-radius: 9999px;
     background-color: #A69999;
     min-height: 4px;
-    transition: 0ms cubic-bezier(0.05, 0.7, 0.1, 1);
+    transition: 0ms cubic-bezier(0, 1, 0, 1);
   }
 
   highlight {
     border-radius: 9999px;
     background-color: $primary;
     background-image: linear-gradient(45deg, $primary 0%, $primary 100%);
-    transition: 0ms cubic-bezier(0.05, 0.7, 0.1, 1);
+    transition: 0ms cubic-bezier(0, 1, 0, 1);
   }
 
   slider {
@@ -587,7 +587,7 @@
     min-width: 11px;
     background-color: $primary;
     margin: -8px;
-    transition: 0ms cubic-bezier(0.05, 0.7, 0.1, 1);
+    transition: 0ms cubic-bezier(0, 1, 0, 1);
   }
 
   slider:hover {
@@ -1178,21 +1178,21 @@
 .winslider-osd {
   border-radius: 9999px;
   margin: 0 9px;
-  transition: 0ms cubic-bezier(0.05, 0.7, 0.1, 1);
+  transition: 0ms cubic-bezier(0, 1, 0, 1);
 
   trough {
     border-radius: 9999px;
     background-color: #A69999;
     min-height: 4px;
     min-width: 116px;
-    transition: 0ms cubic-bezier(0.05, 0.7, 0.1, 1);
+    transition: 0ms cubic-bezier(0, 1, 0, 1);
   }
 
   highlight {
     border-radius: 9999px;
     background-color: $primary;
     background-image: linear-gradient(45deg, $primary 0%, $primary 100%);
-    transition: 0ms cubic-bezier(0.05, 0.7, 0.1, 1);
+    transition: 0ms cubic-bezier(0, 1, 0, 1);
   }
 }
 
@@ -1236,14 +1236,14 @@
 }
 
 .wingamebar-overlay {
-  background-color: rgba(10, 10, 10, 0.4);
+  background-color: rgba(10, 10, 10, 0.0);
 }
 
 .wingamebar-window {
   background: #252525;
   border-radius: 10px;
   border: 1px solid $overlay0;
-  transition: 100ms cubic-bezier(0.05, 0.7, 0.1, 1);
+  transition: 300ms cubic-bezier(0, 1, 0, 1);
 }
 
 .wingamebar-titlebar {
@@ -1772,7 +1772,7 @@
 }
 
 .winwin-top-shadow {
-  transition: 100ms cubic-bezier(0.05, 0.7, 0.1, 1);
+  transition: 300ms cubic-bezier(0, 1, 0, 1);
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   margin: 12px;
@@ -1789,7 +1789,7 @@
 }
 
 .winwin-bottom-light-shadow {
-  transition: 100ms cubic-bezier(0.05, 0.7, 0.1, 1);
+  transition: 300ms cubic-bezier(0, 1, 0, 1);
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
   margin: 12px;

@@ -3,7 +3,7 @@
 }
 
 .supercontext-button {
-  transition: 100ms cubic-bezier(0.05, 0.7, 0.1, 1);
+  transition: 300ms cubic-bezier(0, 1, 0, 1);
   border-radius: 99px;
   background-color: $primary;
   color: $onPrimary;
@@ -13,7 +13,7 @@
 }
 
 .supercontext-button-number {
-  transition: 100ms cubic-bezier(0.05, 0.7, 0.1, 1);
+  transition: 300ms cubic-bezier(0, 1, 0, 1);
   border-radius: 99px;
   background-color: $primary;
   color: $onPrimary;
@@ -24,7 +24,7 @@
 
 .supercontext-button-number-child {
   :first-child {
-    transition: 100ms cubic-bezier(0.05, 0.7, 0.1, 1);
+    transition: 300ms cubic-bezier(0, 1, 0, 1);
     border-radius: 99px;
     background-color: $primary;
     color: $onPrimary;
