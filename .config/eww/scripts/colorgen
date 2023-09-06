@@ -22,7 +22,7 @@ scripts/material_colors.py --color "$maincol" "$lightdark" > tmp/_material.color
 accent=$(scripts/material_colors.py --color "$maincol" "$lightdark" | grep '$onPrimaryContainer: ' | sed 's/$onPrimaryContainer: //g' | sed 's/;//g')
 tertiary=$(scripts/material_colors.py --color "$maincol" "$lightdark" | grep '$tertiary: ' | sed 's/$tertiary: //g' | sed 's/;//g')
 
-printf '{"image": "'"$coverpath"'", "color": '"$themejson"'}\n'
+printf '{"image": "'$coverpath'", "color": '"$themejson"'}\n'
 
 # Get color in rgb
 colorsreg=$(cat ~/.cache/wal/colors-putty.reg)

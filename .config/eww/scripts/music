@@ -103,14 +103,14 @@ get_cover() {
 			cd ..
 			scripts/colorgen 'eww_covers/'$IMGPATH $coverurl "$music_source"
 			cd "eww_covers"
-		elif [ "$COVER_URL" = "" ]; then
+		elif [ "$COVER_URL" = "" ]; then # no cover
 		    echo '{"image": "", "color": "$bg"}'
-		else
-			COVER_URL="${COVER_URL:7}"
+		else # local music
+			# echo copying "$COVER_URL" to "$IMGPATH"
 			cp "$COVER_URL"  "$IMGPATH"
 			
 			cd ..
-			scripts/colorgen '"eww_covers/'$IMGPATH'"' $coverurl "$music_source"
+			scripts/colorgen 'eww_covers/'$IMGPATH "$COVER_URL" "$music_source"
 			cd "eww_covers"
 		fi
 	done

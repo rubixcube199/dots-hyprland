@@ -97,7 +97,7 @@
                 :halign "center"  :valign "center"
                 :class "music-time-label"
                 :style "color: ${mcover.color.colors.color7 == 'null' ? 'white' : mcover.color.colors.color7};"
-                :text {music.position_time}
+                :text {round(music.position_time, 0)}
               )
             )
             (centerbox
@@ -132,7 +132,7 @@
           (scale
             :valign "end"
             :class "track-scale"
-            :value {music.position}
+            :value {round(music.position_time, 0)}
             :onchange "playerctl position `bc <<< \"{} * $(playerctl metadata mpris:length) / 1000000 / 100\"`"
             :style "highlight {background-color: ${mcover.color.colors.color4};}"
           )
