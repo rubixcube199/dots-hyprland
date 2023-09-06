@@ -3,7 +3,7 @@
 mode = normal
 framerate = 60
 autosens = 1
-bars = 100
+bars = 70
 
 [output]
 
