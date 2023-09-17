@@ -1,35 +1,26 @@
 #!/bin/python3
 import sys
-import unicodedata
 
-
-def limit_length(string, new_length) -> str:
-    """
-    Truncate a string to a specified length, adding '...' at the end if necessary.
-
-    :param string: The input string.
-    :param new_length: The desired maximum length of the output string.
-    :return: The truncated string.
-    """
+def limit_length(s, newlength):
+    # Use len() function to get number of characters in s
     char_count = 0
-    new_string = ''
-
-    for character in string:
+    newstr = ''
+    # Use unicodedata.east_asian_width() function to check for double-width characters
+    import unicodedata
+    for c in s:
         char_count += 1
-        if unicodedata.east_asian_width(character) == 'W':
+        if unicodedata.east_asian_width(c) == 'W':
             char_count += 1
-        if char_count <= new_length:
-            new_string += character
+        if char_count <= newlength:
+            newstr += c
         else:
-            new_string += '...'
+            newstr = newstr + '...'
             break
+    # Add double-width count to character count to get display length
+    return newstr
 
-    return new_string
+original = sys.argv[1]
+newlen = int(sys.argv[2])
+newstr = limit_length(original, newlen)
 
-
-if __name__ == '__main__':
-    original = sys.argv[1]
-    new_len = int(sys.argv[2])
-    new_str = limit_length(original, new_len)
-
-    print(new_str)
+print(newstr)
