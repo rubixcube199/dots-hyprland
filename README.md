@@ -29,14 +29,14 @@
  <details> 
   <summary>Bragging</summary>
      
-   - [`hybrid`](https://github.com/end-4/dots-hyprland/tree/hybrid) branch is available in [Athena OS](https://www.athenaos.org/en/configuration/hyprland/) 
-   - [`summer-gruv`](https://github.com/end-4/dots-hyprland/tree/summer-gruv) branch is the winner of Hyprland ricing competition Summer 2023. Now shown in the [Hyprland repo](https://github.com/hyprwm/hyprland#gallery) and [Hyprland Wiki](https://wiki.hyprland.org/Configuring/Example-configurations/)
-   - [`windoes`](https://github.com/end-4/dots-hyprland/tree/windoes) branch received a "Tasty rice" flair [on r/unixporn](https://www.reddit.com/r/unixporn/comments/13zdhqd/hyprland_windows_rice_with_too_much_eww_with_blur/)
+   - [`hybrid`](https://github.com/end-4/dots-hyprland/tree/hybrid) branch is available on [Athena OS](https://www.athenaos.org/en/configuration/hyprland/) 
+   - [`summer-gruv`](https://github.com/end-4/dots-hyprland/tree/summer-gruv) branch: winner of Hyprland ricing competition Summer 2023, now shown in the [Hyprland repo](https://github.com/hyprwm/hyprland#gallery) and [Hyprland Wiki](https://wiki.hyprland.org/Configuring/Example-configurations/)
+   - [`windoes`](https://github.com/end-4/dots-hyprland/tree/windoes) is a "Tasty rice" [on r/unixporn](https://www.reddit.com/r/unixporn/comments/13zdhqd/hyprland_windows_rice_with_too_much_eww_with_blur/)
 </details>
 
 # 👀 Styles
 
-_Click the images for a video showcase with animations!_
+_Click the images for video showcases with animations!_
 
 ### [m3ww](https://github.com/end-4/dots-hyprland/tree/m3ww)
    <a href="https://streamable.com/85ch8x">
@@ -73,7 +73,7 @@ _Click the images for a video showcase with animations!_
    - Stuff in `Import manually` folder if you need them
  - **For ARM users**: Compile .cpp files in `.config/eww/scripts/` (to that folder) (like this: `g++ ~/.config/ewwscripts/SCRIPTNAME.cpp -o ~/.config/eww/scripts/SCRIPTNAME`)
  
-# 🎨 eww (yes I spend too much time on this)
+# 🎨 eww (yes I've spent too much time on this)
  ## Performance
 |  ⌄  | Do use | Not recommended | Notes                 |
 | --- | ------ | ----------- | ------------------------- |
@@ -83,14 +83,14 @@ _Click the images for a video showcase with animations!_
  ## Setup
  - This eww config only works properly in `~/.config/eww`
  - Start eww with `eww daemon`
- - To open the top bar, run `eww open bar`
- - To open the Windows bar, run `eww open winbar` (`windoes`/`hybrid` branch)
- - To open the bottom line, run `eww open bottomline` (so that the music window opens if you click the bottom edge of the screen)
- - Open the overview and wait 10 seconds (for it to generate app search cache, or icons won't show properly)
+ - To open top bar: `eww open bar`
+ - To open the Windows bar: `eww open winbar` (`windoes`/`hybrid` branch)
+ - To open the bottom line: `eww open bottomline` (so that the music window opens if you click the bottom edge of the screen)
+ - Open the overview (middle-click workspaces) and wait 10 seconds (for it to generate app search cache, or icons won't show properly)
  ## Usage
  - Music controls: Middle-click for Play/Pause, Right-click for Next track, scroll to change volume
  - To open the Overview, middle/right-click the workspace indicators or run `eww open overview`
- - You can type to search in overview!
+ - In overview, type to search apps (see more below)
  ## Search
  - Type normally to search apps
  - Type something beginning with a number and it'll be calculated (`qalc` is used for backend)
@@ -107,9 +107,9 @@ _Click the images for a video showcase with animations!_
 ---
 
 # 🙏 Attribution
- - Thank you fufexan (who also thanks a lot more people) for their guidance and eww config: https://github.com/fufexan/dotfiles (very clean implementation, my config is based on this)
- - Thanks to the people at the Hypr Development Discord for their inspiration
- - Bing AI for helping me code like 80% of the C++ functions lmao
+ - Thank you fufexan (who also thanks a lot more people) for his guidance and a simple, clean [eww config](https://github.com/fufexan/dotfiles) (good start for learning eww on hyprland btw)
+ - Thanks to the people at the Hyprland discord server for their inspiration
+ - Bing AI for helping me code like 80% of the C++ functions (lmao)
  - Maybe more, but I might not remember them all.. Still, thanks.
 
 # 🌟 stonks
