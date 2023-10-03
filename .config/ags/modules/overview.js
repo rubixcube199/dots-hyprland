@@ -148,7 +148,7 @@ const CalculationResultButton = ({ result, text }) => {
                                 Widget.Label({
                                     halign: 'start',
                                     className: 'overview-search-results-txt txt txt-smallie txt-subtext',
-                                    label: `Math expression`,
+                                    label: `Expression`,
                                     truncate: "end",
                                 }),
                                 Widget.Label({
