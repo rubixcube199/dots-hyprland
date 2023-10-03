@@ -50,7 +50,7 @@ deleted = " 🗑 "
 
 [hostname]
 ssh_only = false
-format =  "[ ](bold bg:cyan fg:blue)[$hostname](bg:cyan bold fg:black)[ ](bold fg:cyan bg:green)"
+format =  "[ ](bold bg:cyan fg:blue)[$hostname ](bg:cyan bold fg:black)[ ](bold fg:cyan bg:green)"
 trim_at = ".companyname.com"
 disabled = false
 
@@ -71,7 +71,7 @@ time_format = "%T"
 [username]
 style_user = "bold bg:blue fg:black"
 style_root = "red bold"
-format = "[🭃](bold fg:blue)[$user]($style)"
+format = "[🭃](bold fg:blue)[$user ]($style)"
 disabled = false
 show_always = true
 
