@@ -1,18 +1,11 @@
 // const { Gdk, Vte } = imports.gi;
 import { App, Service, Utils, Widget } from '../imports.js';
+const { Hyprland } = Service
 import { deflisten } from '../scripts/scripts.js';
 
 const WORKSPACE_SIDE_PAD = 0.546; // rem
 const NUM_OF_WORKSPACES = 10;
 let lastWorkspace = 0;
-
-const GoHyprWorkspaces = deflisten(
-    "GoHyprWorkspaces",
-    `${App.configDir}/scripts/gohypr`,
-    (line) => {
-        return JSON.parse(line);
-    }
-);
 
 const activeWorkspaceIndicator = Widget.Box({
     // style: 'margin-left: -1px;',
@@ -22,22 +15,12 @@ const activeWorkspaceIndicator = Widget.Box({
             halign: 'start',
             className: 'bar-ws-active-box',
             connections: [
-                [GoHyprWorkspaces, label => {
-                    const ws = GoHyprWorkspaces.state.activeworkspace;
-                    if (ws < 0) { // Special workspace (Hyprland)
-                        label.setStyle(`
-                            margin-left: -${1.772 * (10 - lastWorkspace + 1)}rem;
-                            margin-top: 0.409rem;
-                        `);
-                        // label.label = `+`;
-                    }
-                    else {
-                        label.setStyle(`
+                [Hyprland.active.workspace, (box) => {
+                    const ws = Hyprland.active.workspace._id;
+                    box.setStyle(`
                         margin-left: -${1.772 * (10 - ws + 1)}rem;
-                        `);
-                        // label.label = `${ws}`;
-                        lastWorkspace = ws;
-                    }
+                    `);
+                    lastWorkspace = ws;
                 }],
             ],
             children: [
@@ -87,10 +70,8 @@ export const ModuleWorkspaces = () => Widget.EventBox({
                                     }),
                                 })),
                                 connections: [
-                                    [GoHyprWorkspaces, box => {
-                                        if (!GoHyprWorkspaces.state)
-                                            return;
-                                        const wsJson = GoHyprWorkspaces.state;
+                                    [Hyprland, (box) => { // TODO: connect to the right signal so that it doesn't update too much
+                                        // console.log('update');
                                         const kids = box.children;
                                         kids.forEach((child, i) => {
                                             child.child.toggleClassName('bar-ws-occupied', false);
@@ -98,14 +79,12 @@ export const ModuleWorkspaces = () => Widget.EventBox({
                                             child.child.toggleClassName('bar-ws-occupied-right', false);
                                             child.child.toggleClassName('bar-ws-occupied-left-right', false);
                                         });
-
-                                        for (const ws of wsJson.workspaces) {
-                                            const i = ws.id;
-                                            const thisChild = kids[i - 1];
-                                            const isLeft = !ws?.leftPopulated && wsJson.activeworkspace != i - 1;
-                                            const isRight = !ws?.rightPopulated && wsJson.activeworkspace != i + 1;
-                                            thisChild?.child.toggleClassName(`bar-ws-occupied${isLeft ? '-left' : ''}${isRight ? '-right' : ''}`, true);
-                                        };
+                                        const occupied = Array.from({ length: NUM_OF_WORKSPACES }, (_, i) => Hyprland.getWorkspace(i + 1)?.windows > 0);
+                                        for (let i = 0; i < occupied.length; i++) {
+                                            if (!occupied[i]) continue;
+                                            const child = kids[i];
+                                            child.child.toggleClassName(`bar-ws-occupied${!occupied[i - 1] ? '-left' : ''}${!occupied[i + 1] ? '-right' : ''}`, true);
+                                        }
                                     }],
                                 ],
                             }),
