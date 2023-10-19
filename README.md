@@ -40,7 +40,7 @@ _Click the images for video showcases with animations! (except illogical-impulse
 
 ### [illogical-impulse](https://github.com/end-4/dots-hyprland/tree/illogical-impulse)
    <a href="https://github.com/end-4/dots-hyprland/tree/illogical-impulse">
-    <img src="./assets/illogical_impulse.png" alt="Desktop Preview">
+    <img src="./assets/illogical_impulse.png" alt="Sidebar, volume indicator and some GTK apps">
    </a>
 
 ### [m3ww](https://github.com/end-4/dots-hyprland/tree/m3ww)
@@ -55,7 +55,7 @@ _Click the images for video showcases with animations! (except illogical-impulse
 
 ### [Hybrid](https://github.com/end-4/dots-hyprland/tree/hybrid)
    <a href="https://streamable.com/4oogot">
-    <img src="./assets/screenshot-hybrid.png" alt="Desktop Preview">
+    <img src="./assets/screenshot-hybrid.png" alt="click the circles!">
    </a>
 
 ### [Windoes](https://github.com/end-4/dots-hyprland/tree/windoes)
