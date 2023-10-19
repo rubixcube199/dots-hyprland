@@ -36,7 +36,12 @@
 
 # 👀 Styles
 
-_Click the images for video showcases with animations!_
+_Click the images for video showcases with animations! (except illogical-impulse)_
+
+### [illogical-impulse](https://github.com/end-4/dots-hyprland/tree/illogical-impulse)
+   <a href="https://github.com/end-4/dots-hyprland/tree/illogical-impulse">
+    <img src="./assets/illogical_impulse.png" alt="Desktop Preview">
+   </a>
 
 ### [m3ww](https://github.com/end-4/dots-hyprland/tree/m3ww)
    <a href="https://streamable.com/85ch8x">
