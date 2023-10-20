@@ -24,7 +24,7 @@
     
   - Pywal and [Material You](https://m3.material.io/styles/color/the-color-system/key-colors-tones) colors
   - Sexy animations
-  - The latest branch, [m3ww](https://github.com/end-4/dots-hyprland/tree/m3ww), can be scaled and supports both light and dark theme properly!
+  - The latest branches illogical_impulse and m3ww can be scaled and supports both light and dark theme properly!
 </details>
  <details> 
   <summary>Bragging</summary>
@@ -38,7 +38,7 @@
 
 _Click the images for video showcases with animations! (except illogical-impulse)_
 
-### [illogical-impulse](https://github.com/end-4/dots-hyprland/tree/illogical-impulse)
+### [illogical_impulse](https://github.com/end-4/dots-hyprland/tree/illogical-impulse)
    <a href="https://github.com/end-4/dots-hyprland/tree/illogical-impulse">
     <img src="./assets/illogical_impulse.png" alt="Sidebar, volume indicator and some GTK apps">
    </a>
