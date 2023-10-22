@@ -57,7 +57,6 @@ _Click the images for video showcases with animations! (except illogical\_impuls
     <img src="./assets/windoes-3.png" alt="Desktop Preview">
    </a>
 
-- _Coming: [Ags](https://github.com/Aylur/ags/)-powered setup_
 - For older and insignificant styles, check the releases
 
 ---
