@@ -1,10 +1,11 @@
 import { App, Service, Utils, Widget } from '../imports.js';
-const { Hyprland } = Service;
+import Hyprland from 'resource:///com/github/Aylur/ags/service/hyprland.js';
 const { CONFIG_DIR, exec, execAsync } = Utils;
 import { deflisten } from '../scripts/scripts.js';
 import { setupCursorHover } from "./lib/cursorhover.js";
 import { RoundedCorner } from "./lib/roundedcorner.js";
 import Brightness from '../scripts/brightness.js';
+import Indicator from '../scripts/indicator.js';
 
 // Removes everything after the last 
 // em dash, en dash, minus, vertical bar, or middle dot    (note: maybe add open parenthesis?)
@@ -42,11 +43,11 @@ function truncateTitle(str) {
 
 export const ModuleLeftSpace = () => Widget.EventBox({
     onScrollUp: () => {
-        Indicator.speaker(); // Since the brightness and speaker are both on the same window
+        Indicator.popup(1); // Since the brightness and speaker are both on the same window
         Brightness.screen_value += 0.05;
     },
     onScrollDown: () => {
-        Indicator.speaker(); // Since the brightness and speaker are both on the same window
+        Indicator.popup(1); // Since the brightness and speaker are both on the same window
         Brightness.screen_value -= 0.05;
     },
     child: Widget.Box({
@@ -72,7 +73,7 @@ export const ModuleLeftSpace = () => Widget.EventBox({
                                                 Widget.Label({
                                                     xalign: 0,
                                                     className: 'txt txt-smaller bar-topdesc',
-                                                    connections: [[Hyprland.active.client, label => {
+                                                    connections: [[Hyprland, label => { // Hyprland.active.client
                                                         label.label = Hyprland.active.client._class.length === 0 ? 'Desktop' : Hyprland.active.client._class;
                                                     }]],
                                                 }),
@@ -80,8 +81,8 @@ export const ModuleLeftSpace = () => Widget.EventBox({
                                                     xalign: 0,
                                                     className: 'txt txt-smallie',
                                                     connections: [
-                                                        [Hyprland.active.client, label => {
-                                                            label.label = Hyprland.active.client._title.length === 0 ? `Workspace ${Hyprland.active.workspace._id}` : truncateTitle(Hyprland.active.client._title);
+                                                        [Hyprland, label => { // Hyprland.active.client
+                                                            label.label = Hyprland.active.client._title.length === 0 ? `Workspace ${Hyprland.active.workspace.id}` : truncateTitle(Hyprland.active.client._title);
                                                         }]
                                                     ],
                                                 })

@@ -1,11 +1,10 @@
 const { Gdk, Gtk } = imports.gi;
 import { Utils, Widget } from '../imports.js';
-import { MenuService } from "../scripts/menuservice.js";
 const { execAsync, exec } = Utils;
 const { Box, EventBox } = Widget;
 import {
     ToggleIconBluetooth, ToggleIconWifi, HyprToggleIcon, ModuleNightLight,
-    ModuleEditIcon, ModuleSettingsIcon, ModulePowerIcon
+    ModuleEditIcon, ModuleReloadIcon, ModuleSettingsIcon, ModulePowerIcon
 } from "./quicktoggles.js";
 import { ModuleNotificationList } from "./notificationlist.js";
 import { ModuleMusicControls } from "./musiccontrols.js";
@@ -34,18 +33,31 @@ const togglesFlowBox = Widget({
     }
 })
 
-export const SidebarRight = () => Box({
-    vertical: true,
+const togglesBox = Widget.Box({
+    className: 'sidebar-group spacing-h-10',
+    children: [
+        ToggleIconWifi({ hexpand: 'true' }),
+        ToggleIconBluetooth({ hexpand: 'true' }),
+        HyprToggleIcon('mouse', 'Raw input', 'input:force_no_accel', { hexpand: 'true' }),
+        HyprToggleIcon('front_hand', 'No touchpad while typing', 'input:touchpad:disable_while_typing', { hexpand: 'true' }),
+        ModuleNightLight({ hexpand: 'true' }),
+    ]
+})
+
+export default () => Box({
+    // vertical: true,
+    vexpand: true,
+    hexpand: true,
     children: [
         EventBox({
-            onPrimaryClick: () => MenuService.close('sideright'),
-            onSecondaryClick: () => MenuService.close('sideright'),
-            onMiddleClick: () => MenuService.close('sideright'),
+            onPrimaryClick: () => App.closeWindow('sideright'),
+            onSecondaryClick: () => App.closeWindow('sideright'),
+            onMiddleClick: () => App.closeWindow('sideright'),
         }),
         Box({
             vertical: true,
             vexpand: true,
-            className: 'sidebar-right sideright-hide',
+            className: 'sidebar-right',
             children: [
                 Box({
                     vertical: true,
@@ -78,11 +90,13 @@ export const SidebarRight = () => Box({
                                         }),
                                         Widget.Box({ hexpand: true }),
                                         // ModuleEditIcon({ halign: 'end' }), // TODO: Make this work
+                                        ModuleReloadIcon({ halign: 'end' }),
                                         ModuleSettingsIcon({ halign: 'end' }),
                                         ModulePowerIcon({ halign: 'end' }),
                                     ]
                                 }),
-                                togglesFlowBox,
+                                // togglesFlowBox,
+                                togglesBox,
                             ]
                         }),
                         ModuleNotificationList({ vexpand: true, }),
@@ -90,17 +104,6 @@ export const SidebarRight = () => Box({
                     ]
                 }),
             ],
-            connections: [
-                [MenuService, box => { // Hide anims when closing
-                    box.toggleClassName('sideright-hide', !('sideright' === MenuService.opened));
-                }],
-                ['key-press-event', (box, event) => {
-                    if (event.get_keyval()[1] === Gdk.KEY_Escape) {
-                        MenuService.close('sideright');
-                    }
-                }]
-            ],
         }),
     ]
 });
-
