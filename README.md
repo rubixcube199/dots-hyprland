@@ -21,3 +21,7 @@
 
 ## Installation
 - See the [wiki page](https://github.com/end-4/dots-hyprland/wiki/m3ww)
+
+## Disclaimer
+- If mom gets in while you're using the anime widget on the sidebar, it's your fault for being careless.
+- And other disclaimers that come with open source stuff
