@@ -1,3 +1,6 @@
+; Init
+(defpoll INIT_CACHE :interval '69h' `mkdir -p scripts/cache`)
+
 ; Const vars
 (defvar FILE_BROWSER "nautilus")
 (defvar RES_WIDTH 1920)
