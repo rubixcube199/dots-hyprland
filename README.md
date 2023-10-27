@@ -57,7 +57,7 @@ _Click the images for video showcases with animations! (except illogical\_impuls
     <img src="./assets/windoes-3.png" alt="Desktop Preview">
    </a>
 
-- For older and insignificant styles, check the releases
+- For older stuff I never wanna touch again, check the releases
 
 ---
 
