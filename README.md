@@ -37,6 +37,10 @@ _Click the images for video showcases with animations! (except illogical\_impuls
     <img src="./assets/illogical_impulse.png" alt="Sidebar, volume indicator and some GTK apps">
    </a>
 
+
+> [!WARNING]
+> Only the above is well maintained. You are likely to encounter issues with branches below.
+
 ### [m3ww](https://github.com/end-4/dots-hyprland/tree/m3ww)
    <a href="https://streamable.com/85ch8x">
     <img src="./assets/m3ww_sideright2.png" alt="Material Eww!">
