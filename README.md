@@ -70,48 +70,19 @@ _Click the images for video showcases with animations! (except illogical\_impuls
    - Folders in `.local/share/icons` to your `/usr/share/icons`
    - Stuff in `Import manually` folder if you need them
  - **For ARM users**: Compile .cpp files in `.config/eww/scripts/` (to that folder) (like this: `g++ ~/.config/ewwscripts/SCRIPTNAME.cpp -o ~/.config/eww/scripts/SCRIPTNAME`)
+ - See the wiki for further eww-specific instructions
  
-# 🎨 eww (yes I've spent too much time on this)
- ## Performance
-|  ⌄  | Do use | Not recommended | Notes                 |
-| --- | ------ | ----------- | ------------------------- |
-| Kernel |     | cachyos, xanmod | Don't abuse power savers. Also I'm not sure what the hell I'm saying - this is just from personal experience. |
-| Login shell  | bash/zsh | fish | It's okay to use fish in a terminal - that's what I do |
-
- ## Setup
- - This eww config only works properly in `~/.config/eww`
- - Start eww with `eww daemon`
- - To open top bar: `eww open bar`
- - To open the Windows bar: `eww open winbar` (`windoes`/`hybrid` branch)
- - To open the bottom line: `eww open bottomline` (so that the music window opens if you click the bottom edge of the screen)
- - Open the overview (middle-click workspaces) and wait 10 seconds (for it to generate app search cache, or icons won't show properly)
- ## Usage
- - Music controls: Middle-click for Play/Pause, Right-click for Next track, scroll to change volume
- - To open the Overview, middle/right-click the workspace indicators or run `eww open overview`
- - In overview, type to search apps (see more below)
- ## Search
- - Type normally to search apps
- - Type something beginning with a number and it'll be calculated (`qalc` is used for backend)
- - `>save THEME`: Saves current colorscheme, with THEME as the name.
- - `>load THEME`: Loads a saved theme. Available themes will be shown as you type.
- - `>music`: Get colorscheme from current media thumbnail
- - `>wall`: Get colorscheme from wallpaper located in `~/.config/eww/images/wallpaper/wallpaper` (might take quite a while)
- - `>light`: Remember to use light mode for next color generations
- - `>dark`: Remember to use dark mode for next color generations
- - `>one`: Remember to use only one color for bar icons for next color generations
- - `>multi`: Remember to use many colors for bar icons for next color generations
- - `>r`: Reload (kills and relaunches eww with the default bar)
-
 ---
 
 # 🙏 Attribution
  - Thank you fufexan (who also thanks a lot more people) for his guidance and a simple, clean [eww config](https://github.com/fufexan/dotfiles) (good start for learning eww on hyprland btw)
+ - Copied a lot from [Aylur's dotfiles](https://github.com/Aylur/dotfiles)
  - Thanks to the people at the Hyprland discord server for their inspiration
- - Bing AI for helping me code like 80% of the C++ functions (lmao)
+ - AI bots for providing useful examples
  - Maybe more, but I might not remember them all.. Still, thanks.
 
 # 🌟 stonks
-- _A star really makes my day! Thanks!_
+- _thank you_
 
 [![Stars](https://starchart.cc/end-4/dots-hyprland.svg)](https://starchart.cc/end-4/dots-hyprland)
 
