@@ -49,8 +49,12 @@ export const keybindList = [[
             { "keys": ["", "OR", "", "+", "Tab"], "action": "Toggle overview/launcher" },
             { "keys": ["Ctrl", "", "+", "R"], "action": "Restart AGS" },
             { "keys": ["", "+", "/"], "action": "Toggle this cheatsheet" },
+            { "keys": ["", "+", "N"], "action": "Toggle sidebar" },
+            { "keys": ["", "+", "K"], "action": "Toggle virtual keyboard" },
+            { "keys": ["Ctrl", "Alt", "+", "Del"], "action": "Power/Session menu" },
 
             { "keys": ["Esc"], "action": "Exit a window" },
+            { "keys": ["rightCtrl"], "action": "Dismiss/close sidebar" },
 
             // { "keys": ["", "+", "B"], "action": "Toggle left sidebar" },
             // { "keys": ["", "+", "N"], "action": "Toggle right sidebar" },
@@ -121,6 +125,7 @@ export const keybindList = [[
             { "keys": [">img"], "action": "Select wallpaper and generate colorscheme" },
             { "keys": [">light"], "action": "Use light theme for next color generations" },
             { "keys": [">dark"], "action": "Use dark theme for next color generations" },
+            { "keys": [">todo"], "action": "Type something after that to add a To-do item" },
         ],
         "appeartick": 3
     }
