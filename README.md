@@ -66,7 +66,7 @@ _Click the images for video showcases with animations! (except illogical\_impuls
 ---
 
 # 🔧 General instructions
- - Don't download the main branch! Use one of the above listed ones.
+ - Don't use the main branch! Use one of the above listed ones.
  - **BACKUP**
  - Install dependencies. You can find the list for them in branch-specific readmes.
  - Copy
