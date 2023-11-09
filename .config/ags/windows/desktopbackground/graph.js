@@ -5,7 +5,7 @@ const { execAsync, exec } = Utils;
 const { Box, Label } = Widget;
 
 const NUM_OF_VERTICES = 30;
-const NUM_OF_EDGES = 70;
+const NUM_OF_EDGES = 29;
 // Vertices
 var vertices = [];
 for (var i = 0; i < NUM_OF_VERTICES; i++) {
@@ -15,7 +15,7 @@ for (var i = 0; i < NUM_OF_VERTICES; i++) {
     ]);
 }
 // Edges
-function generateRandomEdges(numVertices, numEdges) {
+function generateRandomEdges(numVertices, numEdges) { // TODO: make sure whole graph is connected
     var edges = new Set();
     var vertices = [];
 
@@ -42,19 +42,16 @@ function generateRandomEdges(numVertices, numEdges) {
 var edges = generateRandomEdges(NUM_OF_VERTICES, NUM_OF_EDGES);
 
 export default () => Box({
-    halign: 'fill',
-    valign: 'fill',
+    hpack: 'fill',
+    vpack: 'fill',
     homogeneous: true,
     children: [
-        Widget({
-            halign: 'fill',
-            valign: 'fill',
+        Widget.DrawingArea({
             className: 'bg-graph',
-            type: Gtk.DrawingArea,
             setup: (area) => {
                 area.connect('draw', Lang.bind(area, (area, cr) => {
-                    area.set_size_request(SCREEN_WIDTH, SCREEN_HEIGHT);
-                    console.log('allocated width/height:', area.get_allocated_width(), '/', area.get_allocated_height())
+                    // area.set_size_request(SCREEN_WIDTH, SCREEN_HEIGHT);
+                    // console.log('allocated width/height:', area.get_allocated_width(), '/', area.get_allocated_height())
                     const styleContext = area.get_style_context();
                     const color = styleContext.get_property('color', Gtk.StateFlags.NORMAL);
                     const backgroundColor = styleContext.get_property('background-color', Gtk.StateFlags.NORMAL);
@@ -63,17 +60,24 @@ export default () => Box({
 
                     cr.setSourceRGBA(backgroundColor.red, backgroundColor.green, backgroundColor.blue, backgroundColor.alpha);
                     cr.rectangle(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)
+                    cr.fill();
                     cr.setSourceRGBA(color.red, color.green, color.blue, color.alpha);
+                    // Draw edges
+                    cr.setLineWidth(borderWidth);
+                    console.log("line width:", borderWidth);
                     for (var i = 0; i < NUM_OF_EDGES; i++) {
                         console.log(vertices[edges[i][0]][0], vertices[edges[i][0]][1], '->', vertices[edges[i][1]][0], vertices[edges[i][1]][1])
                         cr.moveTo(vertices[edges[i][0]][0], vertices[edges[i][0]][1]);
                         cr.lineTo(vertices[edges[i][1]][0], vertices[edges[i][1]][1]);
-                        cr.setLineWidth(borderWidth);
                         cr.stroke();
+                    }
+                    // Draw vertices
+                    for (var i = 0; i < NUM_OF_VERTICES; i++) {
+                        cr.arc(vertices[i][0], vertices[i][1], radius, 0, 2 * Math.PI)
+                        cr.fill()
                     }
                 }))
             }
         })
     ]
 })
-

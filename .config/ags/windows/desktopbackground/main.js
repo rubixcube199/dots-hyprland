@@ -2,14 +2,14 @@ const { Gdk, Gtk } = imports.gi;
 import { App, Service, Utils, Widget } from '../../imports.js';
 const { execAsync, exec } = Utils;
 
-import TimeWidget from './timewidget.js'
-import DistroWidget from './distro.js'
+import TimeAndLaunchesWidget from './timeandlaunches.js'
+import SystemWidget from './system.js'
 import GraphWidget from './graph.js'
 
 export default () => Widget.Window({
     name: 'desktopbackground',
     anchor: ['top', 'bottom', 'left', 'right'],
-    layer: 'bottom',
+    layer: 'background',
     exclusive: false,
     visible: true,
     child: Widget.Overlay({
@@ -18,12 +18,14 @@ export default () => Widget.Window({
             vexpand: true,
         }),
         overlays: [
-            TimeWidget(),
-            DistroWidget(),
-            GraphWidget(),
+            // GraphWidget(),
+            TimeAndLaunchesWidget(),
+            SystemWidget(),
         ],
-        setup: self => {
-            self.set_overlay_pass_through(self.get_children()[1], true);
+        setup: (self) => {
+            Utils.timeout(1, () => {
+                self.set_overlay_pass_through(self.get_children()[1], true);
+            })
         },
     }),
 });

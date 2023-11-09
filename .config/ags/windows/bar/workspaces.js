@@ -6,18 +6,18 @@ const NUM_OF_WORKSPACES = 10;
 let lastWorkspace = 0;
 
 const activeWorkspaceIndicator = Widget.Box({
-    style: `
+    css: `
         padding: 0rem ${WORKSPACE_SIDE_PAD}rem;
     `,
     children: [
         Widget.Box({
-            valign: 'center',
-            halign: 'start',
+            vpack: 'center',
+            hpack: 'start',
             className: 'bar-ws-active-box',
             connections: [
                 [Hyprland.active.workspace, (box) => {
                     const ws = Hyprland.active.workspace.id;
-                    box.setStyle(`
+                    box.setCss(`
                         margin-left: ${1.774 * (ws - 1) + 0.068}rem;
                     `);
                     lastWorkspace = ws;
@@ -25,7 +25,7 @@ const activeWorkspaceIndicator = Widget.Box({
             ],
             children: [
                 Widget.Label({
-                    valign: 'center',
+                    vpack: 'center',
                     className: 'bar-ws-active',
                     label: `•`,
                 })
@@ -54,25 +54,27 @@ export const ModuleWorkspaces = () => Widget.EventBox({
                 }),
                 overlays: [
                     Widget.Overlay({
-                        setup: self => {
-                            self.set_overlay_pass_through(self.get_children()[1], true);
+                        setup: (self) => {
+                            Utils.timeout(1, () => {
+                                self.set_overlay_pass_through(self.get_children()[1], true);
+                            })
                         },
                         child: Widget.Box({
-                            halign: 'center',
-                            style: `
+                            hpack: 'center',
+                            css: `
                                 padding: 0rem ${WORKSPACE_SIDE_PAD}rem;
                             `,
                             // homogeneous: true,
                             children: Array.from({ length: NUM_OF_WORKSPACES }, (_, i) => i + 1).map(i => Widget.Button({
                                 onPrimaryClick: () => Utils.execAsync(['bash', '-c', `hyprctl dispatch workspace ${i} &`]).catch(print),
                                 child: Widget.Label({
-                                    valign: 'center',
+                                    vpack: 'center',
                                     label: `${i}`,
                                     className: 'bar-ws txt',
                                 }),
                             })),
                             connections: [
-                                [Hyprland, (box) => { // TODO: connect to the right signal so that it doesn't update too much
+                                [Hyprland, (box) => {
                                     // console.log('update');
                                     const kids = box.children;
                                     kids.forEach((child, i) => {
@@ -87,7 +89,7 @@ export const ModuleWorkspaces = () => Widget.EventBox({
                                         const child = kids[i];
                                         child.child.toggleClassName(`bar-ws-occupied${!occupied[i - 1] ? '-left' : ''}${!occupied[i + 1] ? '-right' : ''}`, true);
                                     }
-                                }],
+                                }, 'notify::workspaces'],
                             ],
                         }),
                         overlays: [
