@@ -39,7 +39,7 @@ _Click the images for video showcases with animations! (except illogical\_impuls
 
 
 > [!WARNING]
-> Only the above is well maintained. You are likely to encounter issues with branches below.
+> Only the above is well maintained. Branches below currently do NOT work (see [#99](https://github.com/end-4/dots-hyprland/issues/99))
 
 ### [m3ww](https://github.com/end-4/dots-hyprland/tree/m3ww)
    <a href="https://streamable.com/85ch8x">
