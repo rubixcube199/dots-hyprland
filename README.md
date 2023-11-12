@@ -3,6 +3,8 @@
     <h3> A polished Linux experience. </h3>
 </div>
 
+- Note: currently broken (see #99)
+
 ## Description
 - A new approach to the status bar:
   - **Only shows what you need.** Does not try to fit everything on the screen at once.
