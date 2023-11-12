@@ -3,7 +3,8 @@
     <h3></h3>
 </div>
 
-_[Check the releases](https://github.com/end-4/dots-hyprland/releases) for configurations presented in Reddit/Discord posts_. _If you came here for my summer rice, see [summer-gruv branch](https://github.com/end-4/dots-hyprland/tree/summer-gruv)_
+- _[Check the releases](https://github.com/end-4/dots-hyprland/releases) for configurations presented in Reddit/Discord posts_
+- Note: currently broken (see #99)
 
 # Description
 - For this branch, there are **2 styles that can be toggled: ( press `Super`+`Alt`+`W`)**
