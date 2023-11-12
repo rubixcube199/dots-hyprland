@@ -3,7 +3,7 @@
 </div>
 
 -  **This branch is only here to not break any links. If you want to install this setup, use the [`hybrid` branch](https://github.com/end-4/dots-hyprland/tree/hybrid) instead**
--  **You should only use this branch if you want gruvbox so bad**
+-  **~~You should only use this branch if you want gruvbox so bad~~ hella broken**
 
 ---
 
