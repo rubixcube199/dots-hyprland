@@ -3,6 +3,8 @@
     <h3> your colleagues will not freak out now </h3>
 </div>
 
+- Note: currently broken (see #99)
+
 ## Features
  - Actually has animations similar to Windows
  - You'll see random anime girls instead of Trump in the Widgets panel
