@@ -3,6 +3,8 @@
     <h3> Material design 3 woo </h3>
 </div>
 
+- Note: currently broken (see #99)
+
 ## Design
 - **Scalable widgets**: Just change the font size, they'll be scaled!
 - **Accessible**:
