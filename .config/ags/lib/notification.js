@@ -7,6 +7,18 @@ const { Box, EventBox, Icon, Scrollable, Label, Button, Revealer } = Widget;
 import { MaterialIcon } from "./materialicon.js";
 import { setupCursorHover } from "./cursorhover.js";
 
+function guessMessageType(summary) {
+    if(summary.includes('recording')) return 'screen_record';
+    if(summary.includes('battery') || summary.includes('power')) return 'power';
+    if(summary.includes('screenshot')) return 'screenshot_monitor';
+    if(summary.includes('welcome')) return 'waving_hand';
+    if(summary.includes('time')) return 'scheduleb';
+    if(summary.includes('installed')) return 'download';
+    if(summary.includes('update')) return 'update';
+    if(summary.startsWith('file')) return 'folder_copy';
+    return 'chat';
+}
+
 const NotificationIcon = (notifObject) => {
     // { appEntry, appIcon, image }, urgency = 'normal'
     if (notifObject.image) {
@@ -48,7 +60,7 @@ const NotificationIcon = (notifObject) => {
                     })
                 },
             }), false, true, 0);
-            else box.pack_start(MaterialIcon(`${notifObject.urgency == 'critical' ? 'release_alert' : 'chat'}`, 'hugerass', {
+            else box.pack_start(MaterialIcon(`${notifObject.urgency == 'critical' ? 'release_alert' : guessMessageType(notifObject.summary.toLowerCase())}`, 'hugerass', {
                 hexpand: true,
                 setup: () => box.toggleClassName(`notif-icon-material-${notifObject.urgency}`, true),
             }), false, true, 0)
@@ -129,6 +141,7 @@ export default ({
                                 justify: Gtk.Justification.LEFT,
                                 hexpand: true,
                                 maxWidthChars: 24,
+                                truncate: 'end',
                                 ellipsize: 3,
                                 wrap: true,
                                 useMarkup: notifObject.summary.startsWith('<'),
