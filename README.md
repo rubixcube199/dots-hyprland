@@ -58,6 +58,8 @@ sudo pacman -S gnome-keyring polkit-gnome
 sudo pacman -S tesseract cliphist grim slurp
 ```
 
+ - Note: If you don't need multiple keyboard layouts, comment out anything related to ibus in `~/.config/hypr/execs.conf`
+
 ## Disclaimer
 - If mom gets in while you're using the anime widget on the sidebar, it's your fault for being careless.
 - And other disclaimers that come with open source stuff
