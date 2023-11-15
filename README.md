@@ -38,15 +38,11 @@ yay -S cava eww-wayland-git geticons gojq gtklock gtklock-playerctl-module gtklo
    - Run `usermod -aG video <USERNAME>` for brightness control to work
    - Install Segoe UI Variable
    - Install VSCode theme: Community Material Theme Darker
-- Keyring (basically authentication stuff) (Command for Arch Linux)
+- Keyring and essential utilities (basically authentication stuff) (Command for Arch Linux)
 ```
-sudo pacman -S gnome-keyring polkit-gnome 
+sudo pacman -S gnome-keyring polkit-gnome tesseract cliphist grim slurp
 ```
-
- - Utilities that I use (Command for Arch Linux)
-```
-sudo pacman -S tesseract cliphist grim slurp
-```
+ - Note: If you don't need multiple keyboard layouts, comment out anything related to ibus in `~/.config/hypr/execs.conf`. In case you do, you might want to use fcitx5 instead.
  - Copy
    - `.config`, `.local`, `.themes` to home folder
    - Stuff in Import manually folder if you know what they are and want them
