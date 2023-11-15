@@ -51,6 +51,8 @@ yay -S cava eww-wayland-git geticons gojq gtklock gtklock-playerctl-module gtklo
 sudo pacman -S gnome-keyring polkit-gnome 
 ```
 
+- Note: If you don't need multiple keyboard layouts, comment out anything related to ibus in `~/.config/hypr/execs.conf`
+
  - Utilities i use (Command for Arch Linux)
 ```
 sudo pacman -S tesseract cliphist grim slurp
