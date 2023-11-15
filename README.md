@@ -53,12 +53,11 @@ yay -S cava eww-wayland-git lexend-fonts-git geticons gojq gtklock gtklock-playe
 sudo pacman -S gnome-keyring polkit-gnome 
 ```
 
+- Note: If you don't need multiple keyboard layouts, comment out anything related to ibus in `~/.config/hypr/execs.conf`. In case you do, you might want to use fcitx5 instead.
  - Other stuff that I use (Command for Arch Linux)
 ```
 sudo pacman -S tesseract cliphist grim slurp
 ```
-
- - Note: If you don't need multiple keyboard layouts, comment out anything related to ibus in `~/.config/hypr/execs.conf`
 
 ## Disclaimer
 - If mom gets in while you're using the anime widget on the sidebar, it's your fault for being careless.
