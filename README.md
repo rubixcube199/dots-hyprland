@@ -51,7 +51,7 @@ yay -S cava eww-wayland-git geticons gojq gtklock gtklock-playerctl-module gtklo
 sudo pacman -S gnome-keyring polkit-gnome 
 ```
 
-- Note: If you don't need multiple keyboard layouts, comment out anything related to ibus in `~/.config/hypr/execs.conf`. You might want to use fcitx5 instead.
+- Note: If you don't need multiple keyboard layouts, comment out anything related to ibus in `~/.config/hypr/execs.conf`. In case you do, you might want to use fcitx5 instead.
 
  - Utilities i use (Command for Arch Linux)
 ```
