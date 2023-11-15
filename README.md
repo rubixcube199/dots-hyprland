@@ -53,7 +53,7 @@ yay -S cava eww-wayland-git lexend-fonts-git geticons gojq gtklock gtklock-playe
 sudo pacman -S gnome-keyring polkit-gnome 
 ```
 
-- Note: If you don't need multiple keyboard layouts, comment out anything related to ibus in `~/.config/hypr/execs.conf`. In case you do, you might want to use fcitx5 instead.
+- Note: If you don't need multiple keyboard layouts, comment out anything related to ibus in `~/.config/hypr/execs.conf`. In case you do, you might want to use fcitx5 instead (though the language icon on the bar won't display properly)
  - Other stuff that I use (Command for Arch Linux)
 ```
 sudo pacman -S tesseract cliphist grim slurp
