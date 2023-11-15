@@ -42,7 +42,7 @@ yay -S cava eww-wayland-git geticons gojq gtklock gtklock-playerctl-module gtklo
 ```
 sudo pacman -S gnome-keyring polkit-gnome tesseract cliphist grim slurp
 ```
- - Note: If you don't need multiple keyboard layouts, comment out anything related to ibus in `~/.config/hypr/execs.conf`. In case you do, you might want to use fcitx5 instead.
+ - Note: If you don't need multiple keyboard layouts, comment out anything related to ibus in `~/.config/hypr/execs.conf`. In case you do, you might want to use fcitx5 instead (though it won't integrate with the keyboard layout menu)
  - Copy
    - `.config`, `.local`, `.themes` to home folder
    - Stuff in Import manually folder if you know what they are and want them
