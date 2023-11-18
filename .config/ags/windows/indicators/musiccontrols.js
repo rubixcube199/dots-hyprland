@@ -86,7 +86,7 @@ const TrackTitle = ({ player, ...rest }) => Label({
 const TrackArtists = ({ player, ...rest }) => Label({
     ...rest,
     xalign: 0,
-    className: 'osd-music-artists',
+    className: 'osd-music-artists txt-hugeass',
     truncate: 'end',
     connections: [[player, (self) => {
         const player = Mpris.getPlayer();
